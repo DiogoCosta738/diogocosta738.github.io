@@ -1,0 +1,136 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="gallerysheet.css">
+		<script src="gallerycode.js"></script>
+	</head>
+	<body>
+		<nav id="navbar">
+		  <ul>
+			<li class="navlink"><a class="navanchor" href="#">Home</a></li>
+			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="">4D Cross-section</a>
+				<a class = "dropdown-item" href="">Larger-than-Life Cellular Automaton</a>
+				<a class = "dropdown-item" href="">Voronoi Tiling</a>
+				<a class = "dropdown-item" href="">Apollonian Flower</a>
+				<a class = "dropdown-item" href="">Celtic Knots</a>
+				<a class = "dropdown-item" href="">Fluvial Erosion</a>
+				<a class = "dropdown-item" href="">Digital Weaving</a>
+				<a class = "dropdown-item" href="">Starsky</a>
+				<a class = "dropdown-item" href="">Chinese Lattice Windows</a>
+				<a class = "dropdown-item" href="">AmalgamA</a>
+				<a class = "dropdown-item" href="">Shader Experiments</a>
+				<a class = "dropdown-item" href="">Game Prototypes</a>
+			  </div>
+			</li>
+			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="">Cultural Evolution</a>
+				<a class = "dropdown-item" href="">MOOCs</a>
+				<a class = "dropdown-item" href="">Reading Log</a>
+				<a class = "dropdown-item" href="">Protein Quality (AA Composition)</a>
+				<a class = "dropdown-item" href="">Cool people</a>
+			  </div>
+			</li>
+		  <li class="navlink"><a class="navanchor" href="#">About</a></li>
+		  </ul>
+		</nav>
+
+		<div id="body">
+		  <div id="sidebar">
+			<a href="#intro" class="sidelink">Introduction</a>
+			<a href="#sys1" class="sidelink">System 1: Square Merging</a>
+			<a href="#sys2" class="sidelink">System 2: Overlapping Tilings</a>
+			<a href="#sys3" class="sidelink">System 3: Space-filling Curves, Hamiltonian Cycles, MSTs</a>
+			<a href="#related-work" class="sidelink">Related Work</a>
+			<a href="#gallery" class="sidelink">Gallery</a>
+		  </div>
+		  <div id="main">
+			<h1>Chinese Lattice Designs</h1>
+			<section id="intro">
+			  <h2>Introduction</h2>
+				<p>
+				<img style="width:10%; height:auto;"align="right" src="chineselattice-img\hilbert-stiny.png"/>
+					Having worked on Islamic Star Patterns and Celtic Knots, I wondered where else I could find other art systems that could be procedurally generated. In 2018 (according to a screenshot I have), I came across George Stiny's paper on a different kind of lattice window, 
+					which he called <a href="https://www.andrew.cmu.edu/user/ramesh/teaching/course/48-747/subFrames/readings/Stiny-1977-EPB3_89-98.Ice-ray..pdf" target="_blank">ice-ray</a>. Although I wasn't too keen on this kind of pattern or the 
+					<a href="https://en.wikipedia.org/wiki/Shape_grammar#:~:text=4%20Literature-,Definition,pointing%20from%20left%20to%20right." target="_blank">shape-grammar</a> method, his introduction contained the figure to the right. He writes nothing 
+					about it in the article, but it immediately struck me as some kind of <a href="" target="_blank">Hilbert-curve</a>. I didn't do anything with it, but I'll come back to it <a href="#sys3">later</a>.
+					
+				</p>
+				<p>
+					He did also reference an old book by a guy named Daniel Sheets Dye, which is fortunately available on <a href="https://openlibrary.org/works/OL6094718W/Chinese_lattice_designs?edition=chineselatticede00dyed" target="_blank">Open-Library</a>!
+					I finally decided to work on this idea in December 2019, first reading through the book and seeing if the space-filling curve had any merit or whether a different system would come to mind. I did come up with two systems I was happy with and here is the result.
+				</p>
+				<p>
+					Important to note is that these two systems (and the third addition) aren't intended to be historically accurate nor to produce every kind of pattern. The design space of patterns isn't limited to these algorithmic formulations, but I think it
+					is useful to explore the various constraints regardless - not only can we easily generate good examples that do appear in the real world, but the underlying systems can be extended or modified to create new and unexpected patterns.
+				</p>
+			<hr></section>
+			<section id="sys1">
+			  <h2>System 1: Square Merging</h2>
+			  <p> 
+					The first system is simple, but very effective. You start with a grid of squares, and you just merge adjacent squares in each step. By itself, this isn't enough, but you can add a few different constraints and the patterns
+					soon look pretty cool.
+				</p>
+				</p>
+					One constraint is to limit the number of merged squares to, say, 4. This is the Tetris number! For some reason, there are too many different shapes with 5 squares, too few with 3 squares, and the result is not as aesthetically pleasing. 4 is just right!
+					You can make this a hard constraint and try to make every single group contain exactly 4 squares, but this is probably an NP-Complete problem, so a soft constraint of merging with at most 4 squares will do.
+				</p>
+				<p> 
+					Another constraint is to merge squares only in the same ring around the center, say (although the book also has a couple of examples with only vertical merges). This is enough to generate pleasing and "real" examples as well.
+				</p>
+				<p>
+					Given the last constraint, an idea is simply to flip it on its head - merge only squares that are <i>not</i> in the same ring.
+				</p>
+				<p>
+					Finally, and this should go without saying, every pattern will have some kind of symmetry applied (mirror or rotational). And you can always combine the above constraints.
+				</p>
+			<hr></section>
+			<section id="sys2">
+			  <h2>System 2: Overlapping Tilings</h2>
+				<p>
+					The second system is also pretty simple, but it requires more interaction to work and is also a bit more limited in the patterns it produces. Basically, you just generate a simple tiling of squares, octagons, and squares,
+					and then you either make each polygon larger so that they overlap. You can also overlap the dual tilings (which are the same, in the case of squares and octagons), where each vertex becomes a polygon. Again, not as versatile,
+					but it does manage to reproduce a different kind of "real" patterns.
+				</p>
+				<p>
+					It can also be extended to produce very different patterns if you allow different edge widths, rotations, and so on. It's a bit messier to work with and easy to create overcrowded patterns, but some of the examples are pretty cool.
+				</p>
+			<hr></section>
+			<section id="sys3">
+			  <h2>System 3: Space-filling Curves, Hamiltonian Cycles, MSTs</h2>
+				<p>
+					When I first worked on this problem, I didn't end up doing anything with the space-filling idea - I didn't find any other curve that would work other than Hilbert's - and the Hamiltonian Cycles seemed too messy to
+					code, even in the specific case of grids (especially if I wanted to add other constraints). And, given that the above two systems worked pretty well, I wrapped things up and moved on.
+				</p>
+				<p>
+					Interestingly, as I prepared write this (in February 2021), it occurred to me that I didn't need to find Hamiltonian Cycles on grids; I could just find a <a href="" target="_blank">Minimal Spanning Tree (MST)</a>
+					and then transform it into a Hamiltonian Cycle by expanding the edges and vertices into squares!
+					I am not currently planning to implement this, but I like the idea anyway. Even though the example by Stiny above isn't doesn't exactly cover every (implied) vertex, it seems a promising path to explore.
+				</p>
+				<p>
+					<i>Update:</i> after a bit of thinking, the example is not quite a Hamiltonian Cycle, but it suggests a more complex constraint of the Square Merge system. For example, merge cells into a two groups <i>and</i> forbid 
+					any 4-square (a square made of 4 cells) to belong to the same group. Perhaps a SAT-enconding would be ideal to test different kinds of subconstraints. Well, maybe one day!
+					<i>Another update:</i> the encoding is actually extremely simple! Since there are only two groups, we can let "true" be group 0 and "false" be group 1. Then, all we need is two constraints for each cell in the grid, stating
+					that at least one must be true and at least one must be false of the cells: itself, to the right, below, below and to the right. Since it is this simple, I may encode it for a few grid sizes. Also, this kind of method seems
+					related to <a href="https://en.wikipedia.org/wiki/Texture_synthesis" target="_blank">pixel-based texture synthesis methods</a> as well as the popular <a href="https://github.com/mxgmn/WaveFunctionCollapse" target="_blank">wavefunction collapse algorithm</a>.
+					
+				</p>
+			<hr></section>
+			<section id="related-work">
+			  <h2>Related Work</h2>
+				<p>
+					Aside from the already mentioned <a href="https://www.andrew.cmu.edu/user/ramesh/teaching/course/48-747/subFrames/readings/Stiny-1977-EPB3_89-98.Ice-ray..pdf" target="_blank">paper by Stiny</a>, all I found on this was <a href="" target="_blank">this paper by Yu Wu</a>. It also uses shape grammars, though, and is not as focused on generating patterns.
+					In general, there isn't much out there (that I could find, at least).
+					Even about the art itself, I found only two books: <a href="https://openlibrary.org/works/OL6094718W/Chinese_lattice_designs?edition=chineselatticede00dyed" target="_blank">the first one by Daniel Sheets Dye</a> I've mentioned before, and <a href="https://www.amazon.com/Classical-Chinese-Doors-Windows-English/dp/3211321918" target="_blank">this other By Weidu Ma</a>.
+				</p>
+			<hr></section>
+			<section id="gallery">
+			  <h2>Gallery</h2>
+			  
+			<hr></section>
+		  </div>
+		</div>
+	</body>
+</html>

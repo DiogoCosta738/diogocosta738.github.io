@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+/* --------------- SCROLLBAR --------------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  background: #abc;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #234; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #456; 
+}
+
+/* --------------------------------------------- */
+html{
+  scroll-behavior: smooth;
+  font-family:"Titillium Web";
+}
+body{
+  margin:1vh;
+}
+#navbar{
+  display:flex; 
+  flex-direction:row;
+  justify-content:space-evenly;
+  align-items:stretch;
+  margin:0;
+  padding:0;
+  background-color:gray;
+}
+
+#navbar li a{
+  width:100%;
+  height:100%;
+  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  /*
+  color:white;
+  text-decoration:none;
+  */
+  color:inherit;
+  text-decoration:inherit;
+}
+#navbar li a:hover{
+  color:black;
+}
+
+#navbar ul{
+  display:flex;
+  flex-direction:row;
+  
+  justify-content:stretch;
+  align-items:stretch;
+  
+  margin:0;
+  padding:0;
+  
+  width:100%;
+  height:9vh;
+  background-color:red;
+}
+.navlink{
+  display:flex;
+  position:relative;
+  background-color:#345;/*dodgerblue;*/
+  background-image:linear-gradient(to top, #345, #234);
+  
+  justify-content:center;
+  align-items:center;
+  
+  color:white;
+  text-decoration:none;
+  text-align:center;
+  
+  width:100%;
+  height:100%;
+  border-right:1px solid black;
+}
+.navlink:hover{
+  background-color: lightblue;
+  background-image:linear-gradient(180deg, #9ab, #abc);
+  color:black;  
+}
+.navlink span{
+  padding:1%;
+  transform: rotate(0);
+  transition: transform .3s ease-out;
+}
+.navlink:hover span{
+  
+  transform: rotate(0.25turn);
+  transition: transform .3s ease-out;
+}
+.dropdown-content{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  
+  justify-content:flex-start;
+  align-items:center;
+  
+  position:absolute;
+  min-width:100%;
+  top:100%;
+  
+  max-height:0px;
+  overflow:hidden;
+  transition: max-height 0.5s ease-out;
+}
+.navlink:hover .dropdown-content{
+  max-height:1200%;
+  transition:max-height 0.5s ease-out;
+}
+
+a.dropdown-item{
+  background-color:gray;
+  color:white;
+  text-decoration:none;
+  padding:1.5% 3% 1.5% 3%;
+  width:48%;
+  width:100%;
+  text-align:left;
+}
+.dropdown-item:hover{
+  background-color: #444;
+  font-weight:bold;
+  color:white;
+}
+a.dropdown-item{
+  display:block;
+}
+#body{
+  display:flex;
+  justify-content:stretch;
+  align-items:stretch;
+  
+  height:89vh;
+  
+  background-color:lightgray;
+}
+#sidebar{
+  display:flex;
+  flex-direction:column;
+  
+  background-color:#789;
+  background-image:linear-gradient(to bottom, #789, #89a);
+  flex-grow:1;
+  flex-shrink:5;
+  
+  width:100%;
+  
+  overflow:auto;
+}
+.sidelink{
+  display:flex;
+  
+  width:100%;
+  padding:3% 5% 3% 6%;
+  
+  color:black;
+  text-decoration:0;
+  
+  
+}
+.sidelink:hover{
+  background-color:#abc;
+}
+#main{ 
+  background-color:#abc;
+  flex-grow:5;
+  flex-shrink:1;
+  
+  padding:0px 50px 0px 50px;
+  overflow:auto;
+  scroll-behavior: smooth;
+  
+  width:100%;
+}
+section{
+  padding-top:20px;
+}
+hr{
+  height:2px;
+  border:0;
+  margin:30px 0 0px 0;
+  background-color:black;
+  color:black;
+}
+section a:link{
+	text-decoration:none;
+	font-weight:bold;
+}
+section a:hover{
+	text-decoration: underline;
+}
+section a:visited{
+	text-decoration: inherit;
+    color: inherit;
+}
+
+.unselectable {
+  background-color:red;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
