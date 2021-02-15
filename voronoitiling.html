@@ -42,93 +42,90 @@
 		  <div id="sidebar">
 			<a href="#intro" class="sidelink">Introduction</a>
 			<a href="#rules" class="sidelink">How does it work?</a>
-			<a href="#rendering" class="sidelink">Rendering</a>
-			<a href="#use" class="sidelink">Use in videogames</a>
+			<a href="#rendering" class="sidelink">Coloring</a>
 			<a href="#related" class="sidelink">Related work</a>
 			<a href="#gallery" class="sidelink">Gallery</a>
 		  </div>
 		  <div id="main">
-			<h1>Celtic Knots</h1>
+			<h1>Voronoi Tilings</h1>
 			<section id="intro">
 			  <h2>Introduction</h2>
 				<p>
-					This is a fairly straightforward implementation of a program to generate <a href="https://en.wikipedia.org/wiki/Celtic_knot" target="_blank">Celtic Knots</a> on grids, like ones seen, for example, on the jaw-dropping <a href="https://en.wikipedia.org/wiki/Book_of_Kells" target="_blank">Book of Kells</a> or <a href="https://en.wikipedia.org/wiki/Lindisfarne_Gospels" target="_blank">Lindisfarne Gospels</a> as well as Celtic Crosses (or, perhaps more commonly today, on tattoos!).
-					These patterns are pretty popular with the celtic revival movements, they are likely Celtic <i>Christian></i> more than Celtic <i>Barbarian</i>, but anyway.
+					I've worked this project in between December 2017 and January 2018. I had known about (and was fascinated by!) <a href="https://en.wikipedia.org/wiki/Voronoi_diagram" target="_blank">Voronoi diagrams</a> since I've come across them in the summer of 2016 (I think?). They looked cool and organic. But I never got any headway when I looked into the algorithms so I never looked much deeper into it.
 				</p>
 				<p>
-					Once again, we have a pretty simple grid-based system to generate interesting patterns.
-					I've done this project in February of 2018, right after the <a href="voronoitiling.html" target="_blank">Voronoi Tilings</a>. I had been aware of <a href="https://link.springer.com/chapter/10.1007/978-1-4613-0195-0_27" target="_blank">Peter Cromwell's</a>
-					paper on the subject for a while, but decided to work on it after coming across <a href="https://www.glassner.com/" target="_blank">Andrew Glassner</a> and his IEEE Computer Graphics &amp; Applications on it (see 
-					<a href="https://www.glassner.com/wp-content/uploads/2014/04/CG-CGA-PDF-99-09-Celtic-Knotwork-1-Sept99.pdf" target="_blank">1</a>, <a href="https://www.glassner.com/wp-content/uploads/2014/04/CG-CGA-PDF-99-11-Celtic-Knotwork-2-Nov99.pdf" target="_blank">2</a>, <a href="https://www.glassner.com/wp-content/uploads/2014/04/CG-CGA-PDF-00-01-Celtic-Knotwork-3-Jan00.pdf" target="_blank">3</a>).
+					Then, I was looking into <a href="" target="_blank"> Greg Egan</a>'s <a href="" target="_blank">Zendegi</a> and saw a comment by <a href="" target="_blank">Craig Kaplan</a>, on <a href="" target="_blank">Islamic Star Patterns</a>. This unveiled the huge amount of mathematical work done of Islamic Tilings and, in particular, I thought to apply <a href="" target="_blank">Hankin's method</a> to less regular tilings, like those generate by Voronoi diagrams! I had by this point taken more algorithmically heavy classes, so I was more comfortable with looking into <a href="" target="_blank">Fortune's algorithm</a> (which is very unique!) and things got going. Unfortunately, my idea didn't pan out at all,since the regularity of the tilings was more important than I expected.
+					<div class="img-row">
+						<div class="img-row-item"> <img src="voronoitiling-img\islamic-regular.png" caption="islamic star pattern on a regular tiling"></img></div>
+						<div class="img-row-item"> <img src="voronoitiling-img\islamic-irregular.png" caption="islamic star pattern on an irregular tiling"></img></div>
+					</div>
 				</p>
 				<p>
-					Other useful and interesting books were <a href="https://archive.org/details/celticartpagan00alleiala" target="_blank">Celtic art in pagan and Christian times (1904)</a> which has a very early description of the method to generate them, and also the several books by George Bain and his son Ian, which show how to create these several other classes of patterns (see this one available on <a href="https://openlibrary.org/works/OL6724168W/The_methods_of_construction_of_Celtic_art?edition=methodsofconstru00bain" target="_blank">OpenLibrary</a>).
+					I didn't want the whole thing to go to waste, so I decided to look into <a href="https://en.wikipedia.org/wiki/Wallpaper_group" target="_blank">Wallpaper Groups</a> instead and apply them to the voronoi tilings. I also discovered Craig Kaplan's <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.88.417&rep=rep1&type=pdf" tagert="_blank">paper</a> with a similar idea. 
 				</p>
 				<!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor2.png" caption="!FIXME"></img></div> -->
 			<hr></section>
 			<section id="rules">
-			  <h2>Hows does it work?</h2>
+			  <h2>How does it work?</h2>
+			  
+			  <h3> Voronoi diagram</h3>
+			  <img align="right" src="voronoitiling-img\voronoi.png" caption="with luminosity cycle"></img>
 			  <p>
-				The idea is that you start from a dense "basket weave" (crossing bands that alternate being on the top and bottom at crossings), and you successively remove crossings to form a full pattern. As you can see in the figures below, you have 2 implied square grids, the red and the green grid. If you join two adjacent cells of this grid, you remove a crossing.
-				The only rule is that you can't cross green and red edges.
-				<div class="img-row">
-					<div class="img-row-item"> <img  src="celticknot-img\rule1.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="celticknot-img\rule2.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="celticknot-img\rule3.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="celticknot-img\rule4.png" caption="without luminosity cycle"></img></div>
-				</div>
+				A voronoi tiling is a pretty elegant idea - you start with a set of generator-points, and the diagram divides the plane by the set of points that are closer to the generator than any one. It's a kind of nearest-neighbor, but the results are pretty cool!
 			  </p>
 			  <p>
-				Other than that, you can easily study properties like the separate number of different threads (you may want to limit yourself to a single connected knot), add all kinds of symmetry (from the simpler mirror and rotations to one-dimensional frieze patterns or the two-dimensional wallpaper groups).
+				To generate a symmetrical tiling, you just generate to use a symmetrical distribution of generator-points. To do this, enter wallpaper groups.
 			  </p>
+			  <h3>Wallpaper Groups</h3>
+			  <p>
+				Wallpaper Groups are 17 different ways of transforming set of points symmetrically, in a way that extends infinitely in every direction. You typically start from a simple triangle and then copy it, rotate it, mirror it, and so on, throughout the plain.
+				If you choose generator-point inside that triangle, you can then set them up symmetrically as well, and then apply the voronoi diagram. 
+			  </p>
+			  <h3>In sum</h3>
+			  The method, then, is simply:
+			  <ul>
+			  <li>Choose the type of wallpaper symmetry you want;</li>
+			  <li>Generate a few points inside the triangle;</li>
+			  <li>Apply the wallpaper transformations;</li>
+			  <li>Apply a Voronoi algorithm to the resulting points.</li>
+			  </ul>
 			  <!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor1.png" caption="!FIXME"></img></div> -->
 			<hr></section>
 			<section id="rendering">
-			  <h2>Rendering</h2>
+			  <h2>Coloring</h2>
 				<p>
-					The trickiest part of the rendering was understand how Bezier Curves work, but after then things went fairly smoothly, and I still use them quite often. Once you know how to generate the curves, you can easily change the band width and its texture, as seen below.
+					The easiest way to color a voronoi tiling is to assing a color to each of the points, and let the wallpaper groups take care of the rest. You can also change the color whenever you transform the triangle. This was harder to work with, but some of the examples could be pretty cool, as you can see below.
 				</p>
 				<div class="img-row">
-					<div class="img-row-item"> <img  src="celticknot-img\render1.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="celticknot-img\render2.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="celticknot-img\render3.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="celticknot-img\render4.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item"> <img  src="voronoitiling-img\scol1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="voronoitiling-img\scol2.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="voronoitiling-img\scol3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="voronoitiling-img\scol4.png" caption="without luminosity cycle"></img></div>
 				</div>
 				<p>
-					When I worked on this project, I didn't know how to write shaders, so the patterns look a bit flat. It would be simple to change the band to a heightmap, say, with more interesting materials and even project them onto stone, say, to replicate Celtic crosses.
+					Conway et. al's book <a href="https://www.amazon.com/Symmetries-Things-John-H-Conway/dp/1568812205" target="_blank">The Symmetry of Things</a> has a pretty good treatment of frieze and wallpaper groups, and also color symmetry, but I confess I haven't look deeply into it at didn't implement it at the time. Instead, I contented myself with coloring the initial points (on the triangle) and let that be.
+					<div class="img-row">
+					<!--<div class="img-row-item"> <img src="voronoitiling-img\col1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item"> <img src="voronoitiling-img\col2.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item"> <img src="voronoitiling-img\col3.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item"> <img src="voronoitiling-img\col7.png" caption="without luminosity cycle"></img></div>-->
+						<div class="img-row-item"> <img src="voronoitiling-img\col4.png" caption="without luminosity cycle"></img></div><br>
+						<div class="img-row-item"> <img src="voronoitiling-img\col5.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item"> <img src="voronoitiling-img\col6.png" caption="without luminosity cycle"></img></div>
+						
+						<div class="img-row-item"> <img src="voronoitiling-img\col8.png" caption="without luminosity cycle"></img></div>
+				</div>
 				</p>
 			<hr></section>
-			<section id="use">
-			  <h2>Use in videogames</h2>
-				<p>
-					I didn't work on this with any particular purpose other than curiosity. That said, this is actually a very common kind of pattern used in fantasy games (and other media) - the Witcher and Dragon Age are just a couple of examples, but you'd almost be hard pressed to find a fantasy RPG without them!
-					That said, they typically create a single pattern and repeat it a lot. With a system like this, you could easily generate several examples to breathe some life into otherwise monotonous ornaments.
-				</p>
-				<p>
-					Also, by modifying the grid size, you can create different kinds of patterns:
-					<ul>
-						<li>A book/page binding if you remove the inner part of the grid;</li>
-						<li>A bracelet or ring if you create a long and thin rectangular pattern (with compatible edges, which can easily be implemented in code or post-processing);</li>
-						<li>Ornament in wood/stone like celtic crosses or in clothing;</li>
-						<li>Tattoos, etc.</li>
-					</ul>
-				</p>
-				<div style="width:100%; margin:auto; text-align:center;"><img align="middle" src="celticknot-img/hor2.png" caption="band pannel"></img></div>
-			<hr></section>
+			
 			<section id="related">
 			  <h2>Related Work</h2>
 				<p>
-					One interesting thing about Celtic Knots is that it is a very common system throughout the world. Although probably popularized in the Christian Celtic books, it probably comes from Roman mosaic, although they used 
-					exclusively <i>dense</i> knots, i.e. without any cuts. There are also several <i>wrong</i> examples, where some threads just disappeared somewhere in the pattern, or the colors mismatched in some regions of the pattern!
-					Corners especially are rife with hack jobs - robably examples made by craftsmen who didn't have much procedural knowledge.
+					First, there's <a href="https://www.gregegan.net/APPLETS/33/33.html" target="_blank">Greg Egan</a>, <a href="https://www.mi.sanu.ac.rs/vismath/kaplan/node5.html" target="_blank">Craig Kaplan</a>, and even <a href="http://www.fisme.science.uu.nl/nwd/nwd2009/handouts/tom/Islamic%205%20fold.pdf" target="_blank">Peter Cromwell</a> (which I knew from his work on Celtic Knots!) on Islamic Star Patterns. The literature is much deeper on this point, and very interesting. <a href="https://www.amazon.com/Islamic-Geometric-Patterns-Development-Construction/dp/1441902163" target="_blank">Jay Bonner's book</a> is probably the most comprehensive one on the subject, with a chapter by Kaplan on computer rendering (with variations on spherical and hyperbolical geometry).
+					There are many different approaches to Islamic Star Patterns, from Hankin's method to tile substitution to recursion and aperiodicity (some of which may be spurious, but hey, still interesting to look into!).
 				</p>
 				<p>
-					<a href="https://www.google.com/search?q=paulus+gerdes&rlz=1C1GCEA_enPT808PT808&oq=paulus+gerdes&aqs=chrome.0.69i59j46j69i59l2j0i22i30j69i60j69i61l2.2291j0j4&sourceid=chrome&ie=UTF-8" target="_blank">Paulus Gerdes</a> has
-					also studied similar <i>Sona</i> patterns from Africa and written <a href="https://www.amazon.com/Drawings-Angola-Mathematics-Paulus-Gerdes/dp/1430323132" target="_blank">several</a> <a href="https://www.amazon.com/Geometry-Africa-Mathematical-Educational-Explorations/dp/0883857154" target="_blank">books</a> <a href="https://www.amazon.com/geometry-Angola-Mathematics-African-Tradition/dp/8876990550" target="_blank">about</a> <a href="https://www.amazon.com/Lunda-Geometry-Polyominoes-Patterns-Symmetries/dp/1435726294" target="_blank">it</a>.		
-					One interesting aspect of his work is that his algorithmic system was based on setting up mirrors that deflected threads rather than starting from dense basketwork and cutting connections.
-				</p>
-				<p>
-					Finally, you can also find similar <a href="https://en.wikipedia.org/wiki/Kolam" target="_blank">Kolam</a> patterns in India, which has been given yet another algorithmic treatment using <a href="https://architecture.mit.edu/sites/architecture.mit.edu/files/attachments/publications/Knight%7CCraft%2C%20Performance%2C%20and%20Grammars.pdf" target="_blank">shape-grammars</a>.
+					Then, about the voronoi tilings, you can also see <a href="https://cs.uwaterloo.ca/~csk/other/voronoi/" target="_blank">Kaplan's work</a>, or <a href="http://www.josleys.com/show_gallery.php?galid=284" target="_blank">Jos Leys'</a> (who is better known for fractals).
 				</p>
 			<hr></section>
 			<section id="gallery">
