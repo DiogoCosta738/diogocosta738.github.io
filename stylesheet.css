@@ -203,6 +203,7 @@ hr{
 section a:link{
 	text-decoration:none;
 	font-weight:bold;
+	
 }
 section a:hover{
 	text-decoration: underline;
@@ -220,4 +221,8 @@ section a:visited{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+li{
+	padding-bottom:1%;
 }

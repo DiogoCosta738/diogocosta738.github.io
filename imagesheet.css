@@ -16,3 +16,9 @@
 	width:100%;
 	height:auto;
 }
+
+#image-div-test img{
+	width:700px;
+	padding-left:3%;
+	padding-right:3%;
+}
