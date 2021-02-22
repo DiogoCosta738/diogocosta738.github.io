@@ -1,0 +1,129 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="gallerysheet.css">
+		<link rel="stylesheet" href="imagesheet.css">
+		<script src="gallerycode.js"></script>
+	</head>
+	<body>
+		<nav id="navbar">
+		  <ul>
+			<li class="navlink"><a class="navanchor" href="#">Home</a></li>
+			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="">4D Cross-section</a>
+				<a class = "dropdown-item" href="">Larger-than-Life Cellular Automaton</a>
+				<a class = "dropdown-item" href="">Voronoi Tiling</a>
+				<a class = "dropdown-item" href="">Apollonian Flower</a>
+				<a class = "dropdown-item" href="">Celtic Knots</a>
+				<a class = "dropdown-item" href="">Fluvial Erosion</a>
+				<a class = "dropdown-item" href="">Digital Weaving</a>
+				<a class = "dropdown-item" href="">Starsky</a>
+				<a class = "dropdown-item" href="">Chinese Lattice Windows</a>
+				<a class = "dropdown-item" href="">AmalgamA</a>
+				<a class = "dropdown-item" href="">Shader Experiments</a>
+				<a class = "dropdown-item" href="">Game Prototypes</a>
+			  </div>
+			</li>
+			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="">Cultural Evolution</a>
+				<a class = "dropdown-item" href="">MOOCs</a>
+				<a class = "dropdown-item" href="">Reading Log</a>
+				<a class = "dropdown-item" href="">Protein Quality (AA Composition)</a>
+				<a class = "dropdown-item" href="">Cool people</a>
+			  </div>
+			</li>
+		  <li class="navlink"><a class="navanchor" href="#">About</a></li>
+		  </ul>
+		</nav>
+
+		<div id="body">
+		  <div id="sidebar">
+			<a href="#intro" class="sidelink">Introduction</a>
+			<a href="#noise" class="sidelink">Noise</a>
+			<a href="#ray-marching" class="sidelink">Domain Marching</a>
+			<a href="#buffers" class="sidelink">Buffers</a>
+			<a href="#other" class="sidelink">Other</a>
+		  </div>
+		  <div id="main">
+			<h1>Shader Experiments</h1>
+			<section id="intro">
+				<h2>Introduction</h2>
+					<p>
+					This page is just an assortment of tiny experiments - mostly how I learned (and still do) shaders. I started (and spent a long while) in <a href="https://www.shadertoy.com/" target="_blank">Shadertoy</a> 
+					which is a wonderful community of people sharing demo shaders. Some of them are absolute magicians and make astonishing stuff!
+					</p>
+					<p>
+					The creator of shader, <a href="https://www.iquilezles.org/" target="_blank">Inigo Quilez</a> also has many useful articles and tutorials on his website, so do check him out!
+					Someone else to keep in mind is <a href="https://www.alanzucconi.com/" target="_blank">Alan Zucconi</a> who also has some useful tutorials, especially when dealing with Unity as well.
+					</p>
+					<p>
+					As I said, these are tiny experiments, and mostly proofs-of-concept. At the very least, they let me get my hands dirty and take the first step into implementing some effects I saw in games.
+					</p>
+				<hr></section>
+			<section id="noise">
+				<h2>Noise</h2>
+					<p>
+					As the title indicates, these shaders are mostly about noise. I still find it really cool the number of creative uses for noise in texture synthesis, and these shaders are my own forays into it.
+					They use various kinds of noise, like <a href="https://en.wikipedia.org/wiki/Perlin_noise" target="_blank">Perlin Noise</a>, <a href="https://www.iquilezles.org/www/articles/fbm/fbm.htm" target="_blank">Fractional Brownian Motion</a>, Ridged Noise, <a href="https://www.iquilezles.org/www/articles/warp/warp.htm" target="_blank">Domain Warping</a>, <a href="https://www.iquilezles.org/www/articles/voronoise/voronoise.htm" target="_blank">Voronoise</a> and sometimes different combinations depending on the effect.
+					</p>
+					
+					<h3>3D Marble</h3>
+					<p>
+						This idea popped into my mind as I was walking through Anor Londo. The cool thing, to me, is that using 3D noise, you can make 3D textures - which means you can cut up a block in any way you want! You could make a whole Greek Temple with a single marble block, with every single texel matching. It can also be used to deform 2D textures (in animations) or to create seamless texture (by mapping the texture onto a torus/donut).
+					</p>
+					<p>
+						Now that I look at it years later, it can be polished up quite a bit, but I liked the idea anyway. I used two noise textures, slightly offset (on the third dimension) and averaged, to create more "smudged" black cracks. It was an improvement over the earliest marble textures from textbooks, at least, but there is obviously much better work nowadays.
+					</p>
+					<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/tt3BDf?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+					
+			<hr></section>
+			<section id="ray-marching">
+				<h2>Ray Marching</h2>
+					<p>
+						<a href="https://en.wikipedia.org/wiki/Volume_ray_casting" target="_blank">Ray Marching</a> is like the shader equivalent of Ray Tracing. You essentially send a ray for each pixel of the camera and render the result. I have mostly used it to render <a href="" target="_blank">implicit surfaces</a>, like <a href="https://www.iquilezles.org/www/articles/distfunctions/distfunctions.htm" target="_blank">distance fields</a> or heightmaps. I particularly like the way you can smoothly blend different shapes using it, unlike the traditional mesh approach.
+						There are also some astonishing examples of 3D fractals as well, which I'd love to look into at some point (for uses in procedural architecture, for example) but have yet to do so.
+						Volumetric clouds are another area I'd like to look into, eventually, but there are always more ideas than time (and motivation) to implement them!
+					</p>
+					<h3>Iridescent Blob</h3>
+						<p>
+							This is fairly simple - it's just a sphere, with a couple of modifications. The first is the use of noise to modify its surface and make it blob-y. The second is to change its hue depending on the light and viewing angle - a kind of fake <a href="https://en.wikipedia.org/wiki/Iridescence" target="_blank">iridescence</a>.
+						</p>
+						<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/ltGfWD?gui=true&t=10&paused=true&muted=false" ></iframe>
+						
+					<h3>Tower of Timbuktu</h3>
+						<p>
+							As I was just learning ray-marching, my father mentioned Timbuktu's architecture to me (for some reason). When I saw it, it immediately reminded me of the smooth shapes possible with distance fields, so I made a small tower as an example.
+							It's a simple trapezoidal prism, blended with a sphere at the top, and negatively blended with a box for a door. FBM noise is then applied to the surface to make it look sandy.
+						</p>
+						<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/XtGBRK?gui=true&t=10&paused=true&muted=false"></iframe>
+					
+					<h3>Fuji</h3>
+						<p>
+						Well, not really Fuji. Just a snowy volcano. It was a combination of Ridged Noise, a truncated cone in the middle for a height, and then <a href="" target="_blank">an erosion algorithm</a>, the same I mentioned in the <a href="erosion.html" target="_blank">erosion project</a>. 
+						The snow is just a white color when the surface normal is upward enough.
+						</p>
+						<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/MlGBD1?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+			<hr></section>
+			<section id="buffer">
+				<h2>Buffers</h2>
+				
+			<hr></section>
+			<section id="other">
+				<h2>Others</h2>
+					<h3>Reaction-Diffusion</h3>
+					<p>
+					Reaction-diffusion systems hold a special place in my heart, and I hope to go back to them someday. The basic idea is to simulate the reaction of 2 different chemical on a surface. The fascinating thing is that it is a kind of morphogenesis, the subject of one of <a href="https://en.wikipedia.org/wiki/Alan_Turing" target="_blank">Alan Turing</a>'s <a href="https://www.dna.caltech.edu/courses/cs191/paperscs191/turing.pdf" target="_blank">last papers</a>.
+					</p><p>They are also similar to cellular automata, and exhibit the kind of pattern seen all of nature, especially in fish and coral, for example. I'd love to use these in procedural generation some day - with today's GPUs, they are ripe to be used for earthly and alien creatures alike!
+					Check, for example, <a href="https://en.wikipedia.org/wiki/Greg_Turk" target="_blank">Greg Turk</a>'s brilliant <a href="https://www.cc.gatech.edu/~turk/reaction_diffusion/reaction_diffusion.html" target="_blank">PhD thesis</a> when applied to meshes, or these <a href="https://link.springer.com/book/10.1007/978-3-662-04339-4" target="_blank">two</a> <a href="https://link.springer.com/book/10.1007/978-3-662-05291-4" target="_blank">books</a>, from the same collection as the wonderful <a href="https://en.wikipedia.org/wiki/The_Algorithmic_Beauty_of_Plants" target="_blank">Algorithmic Beauty of Plants</a> on L-Systems.
+					</p><p>Below are just few superficial examples, with varying parameters.
+					</p>
+						<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/4t3Bzn?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+						<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/4lVcW3?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+						<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/ltGcDd?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+			<hr></section>
+		  </div>
+		</div>
+	</body>
+</html>
