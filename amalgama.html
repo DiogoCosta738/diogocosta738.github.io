@@ -22,7 +22,7 @@
 				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling</a>
 				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower</a>
 				<a class = "dropdown-item" href="celticknot.html">Celtic Knots</a>
-				<a class = "dropdown-item" href="erosion,html">Fluvial Erosion</a>
+				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
 				<a class = "dropdown-item" href="weaving">Digital Weaving</a>
 				<a class = "dropdown-item" href="starsky">Starsky</a>
 				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
@@ -62,7 +62,7 @@
 					The game simply consists of rotating pieces in order to form a fully connected pattern at the end. What is special about it is how the <a href="#generation">puzzle generation</a> works as well as how the <a href="#music">music</a> relates to the puzzles.
 				</p>
 				<p>
-					I worked on it in August and September of 2016. I had been playing around with <a href="" target="_blank">Stephen Wolfram</a>'s <a href="" target="_blank">totalistic cellular automata</a> for a few months, and those experiments came together in this game! The whole thing actually started with a game called <a href="https://store.steampowered.com/app/395520/Missing_Translation/" target="_blank">Missing Translation</a> that I played. 
+					I worked on it in August and September of 2016. I had been playing around with <a href="https://en.wikipedia.org/wiki/Stephen_Wolfram" target="_blank">Stephen Wolfram</a>'s <a href="https://mathworld.wolfram.com/TotalisticCellularAutomaton.html" target="_blank">totalistic cellular automata</a> for a few months, and those experiments came together in this game! The whole thing actually started with a game called <a href="https://store.steampowered.com/app/395520/Missing_Translation/" target="_blank">Missing Translation</a> that I played. 
 					It had a similar mini-game with "edge matching puzzles" and rotating pieces, but it wasn't very good at all. Most puzzles I actually completed without "seeing" the solution, while I was still rotating pieces more or less at random. I wondered if I could automatically generate puzzles and their solutions and compute maybe the average steps they took to solve as a measure of difficulty. 
 					So I made a quick prototype in Game Maker:Studio and... then it completely derailed, which was a good thing! (My idea of computational evaluation is cleaner to implement with SAT solvers, I realized years later, and may still do something with it.
 				</p>
@@ -75,7 +75,7 @@
 			  <h2>Puzzle Generation</h2>
 			  <h3>Totalistic Cellular Automata</h3>
 				  <p>
-					Strangely enough, I didn't come across cellular automata through <a href="" target="_target">Conway's Game of Life</a>, but through Stephen Wolfram's work (there is his <a href="" target="_blank">New Kind of Science</a> book, which I confess I have not read, though I know the rough ideas he presents in it). You can also see my <a href="largerthanlifeca.html">other project</a> of a different kind of CA.
+					Strangely enough, I didn't come across cellular automata through <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_target">Conway's Game of Life</a>, but through Stephen Wolfram's work (there is his <a href="https://en.wikipedia.org/wiki/A_New_Kind_of_Science" target="_blank">New Kind of Science</a> book, which I confess I have not read, though I know the rough ideas he presents in it). You can also see my <a href="largerthanlifeca.html">other project</a> of a different kind of CA.
 				  </p>
 				  <p>
 					Cellular automata are simple programs that run repeatedly on a grid of uniform cells, and their behavior depends on the states of their neighbors. In this case, cells have a binary state, 0 or 1, and their own state depends on the <i>sum</i> of their neighbors' states (hence the name totalistic). The nice thing about this is that you can encode the different rules in the form of a short number, making experimentation with many different patterns easy.
