@@ -3,6 +3,8 @@
 	justify-content: space-around;
 	width:80%;
 	margin:auto;
+	padding-left:5%;
+	padding-right:5%;
 }
 .img-row-item{
 	flex-grow:1;
