@@ -1,7 +1,7 @@
 .img-row{
 	display:flex;
 	justify-content: space-around;
-	width:100%;
+	width:80%;
 	margin:auto;
 	padding-left:5%;
 	padding-right:5%;
