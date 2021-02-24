@@ -1,0 +1,176 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="gallerysheet.css">
+		<link rel="stylesheet" href="imagesheet.css">
+		<script src="gallerycode.js"></script>
+	</head>
+	<body>
+		<nav id="navbar">
+		  <ul>
+			<li class="navlink"><a class="navanchor" href="#">Home</a></li>
+			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="">4D Cross-section</a>
+				<a class = "dropdown-item" href="">Larger-than-Life Cellular Automaton</a>
+				<a class = "dropdown-item" href="">Voronoi Tiling</a>
+				<a class = "dropdown-item" href="">Apollonian Flower</a>
+				<a class = "dropdown-item" href="">Celtic Knots</a>
+				<a class = "dropdown-item" href="">Fluvial Erosion</a>
+				<a class = "dropdown-item" href="">Digital Weaving</a>
+				<a class = "dropdown-item" href="">Starsky</a>
+				<a class = "dropdown-item" href="">Chinese Lattice Windows</a>
+				<a class = "dropdown-item" href="">AmalgamA</a>
+				<a class = "dropdown-item" href="">Shader Experiments</a>
+				<a class = "dropdown-item" href="">Game Prototypes</a>
+			  </div>
+			</li>
+			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="">Cultural Evolution</a>
+				<a class = "dropdown-item" href="">MOOCs</a>
+				<a class = "dropdown-item" href="">Reading Log</a>
+				<a class = "dropdown-item" href="">Protein Quality (AA Composition)</a>
+				<a class = "dropdown-item" href="">Cool people</a>
+			  </div>
+			</li>
+		  <li class="navlink"><a class="navanchor" href="#">About</a></li>
+		  </ul>
+		</nav>
+
+		<div id="body">
+		  <div id="sidebar">
+			<a href="#intro" class="sidelink">Introduction</a>
+			<a href="#rules" class="sidelink">What are weaving drafts?</a>
+			<a href="#rendering" class="sidelink">Coloring</a>
+			<a href="#cultural-evolution" class="sidelink">Cultural Evolution</a>
+			<a href="#beyond" class="sidelink">Beyond</a>
+			<a href="#gallery" class="sidelink">Gallery</a>
+		  </div>
+		  <div id="main">
+			<h1>Digital Weaving</h1>
+			<section id="intro">
+			  <h2>Introduction</h2>
+				<p>
+					Digital Weaving is project where I implemented real world "weaving drafts" (basically a "computer program" for looms) and attempted to evolve <a href="cultural-evolution" target="_blank">computational cultures</a> on.
+				</p>
+				<p>
+					It is another one of my favourite projects, even though the results weren't quite what I expected. It was very instructive for me to realize some of the ways in which cultural evolution works or does not work, something I can definitely use on future projects.
+				</p>
+				<p>
+				I worked on it in September and October of 2020, and I learned about the weaving drafts from <a href="https://www.glassner.com/" target="_blank">Andrew Glassner</a> (you can read his <a href="https://www.glassner.com/wp-content/uploads/2014/04/CG-CGA-PDF-02-11-Digital-Weaving-1-Nov02.pdf" target="_blank">three</a> <a href="https://www.glassner.com/wp-content/uploads/2014/04/CG-CGA-PDF-03-01-Digital-Weaving-2-Jan03.pdf" target="_blank">articles</a> <a href="https://www.glassner.com/wp-content/uploads/2014/04/CG-CGA-PDF-03-03-Digial-Weaving-3-Mar03.pdf" target="_blank">here</a>, or his <a href="https://www.glassner.com/creative/art/digital-work/digital-weaving/" target="_blank">gallery</a>).
+				</p>
+				<!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor2.png" caption="!FIXME"></img></div> -->
+			<hr></section>
+			<section id="rules">
+			  <h2>What are weaving drafts?</h2>
+			  <h3>Basics</h3>
+				  <img style="width:30%;" align="right" src="weaving-img\draft-binary-code.png" caption="with luminosity cycle"></img>
+				  <p>
+					Looms (of the kind this emulates) have horizontal and vertical threads; let's say the horizontal ones are black, the vertical ones are white. A weaving draft is a diagram that describes which thread in on top (and thus visible) at each crossing. The best way to understand it is visually!
+				  </p>
+				  <p>
+					There are three elements to the weaving draft:
+					<ul>
+						<li>Horizontal array (or warp threads), at the top;</li>
+						<li>Vertical array (or weft threads), on the right;</li>
+						<li>Motif (or tie-up), on the upper right.</li>
+					</ul>
+					These three elements determine the woven pattern, on the bottom left.
+				  </p>
+				  <p>
+					The horizontal and vertical arrays have exactly one "black" square per column and row, respectively. The motif can be any combination of black and white squares. As you can see (I hope) by following the picture on the right. You start in any square of the pattern, and look at the black square in the horizontal and vertical arrays (as shown by the red and blue lines, respectively). Then, you see you send horizontal and vertical beams from the arrays and see where they intersect in the motif.
+					The black square of the pattern leads to a black square on the motif, and the white square on the pattern leads to a white square on the motif. You can see, then, how the three elements determine the final woven pattern.
+				  </p>
+				  <p>
+					The thing I love about this system is that it has a clear element of "information compression". If you make the arrays and motif large enough, you can determine the color of every single square of the pattern, so you could represent any picture with it. The interest comes in when you reduce the sizes. Now, you can't represent every picture; if your pattern is large enough, it means that some squares are reused <i>somewhere</i>. It is not always predictable where, and that's where the fun lies! You play around with the elements and see what comes up.  
+				  </p>
+			  <h3>Structure</h3>
+				  <p>
+				To my own system (different from Glassner's), I add two others:
+				<ul>
+					<li>Unit;</li>
+					<li>Symmetry String.</li>
+				</ul>
+				<img style="width:30%;" align="right" src="weaving-img\draft-binary-unit.png" caption="with luminosity cycle"></img>
+				The <i>unit</i> is simply a small pattern on the array. This unit is repeated throughout, but transformed. You can see it the figure to the right, where I highlight three occurrences of the unit.
+				The red pattern, on the left, is the basic unit. The blue pattern, on the center, is reflected across the y-axis. The green pattern, on the right, is reflected across the x-axis. Rotations also occur, as well as both reflections. 
+				The <i>symmetry string</i> is simply a string of characters that describes how the unit is transformed to make the full array. In this example, it is "NRYNXY". This string itself can be symmetrical.
+			  </p>
+			  <!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor1.png" caption="!FIXME"></img></div> -->
+			<hr></section>
+			<section id="rendering">
+			  <h2>Coloring</h2>
+				<p>
+					Coloring was an interesting part of this project, and it lead me to new places (which I still haven't fully explored). How do you color a binary pattern? 
+					The obvious answer, of course, is with two colors - but this isn't very interesting. In real world weaving, you color the threads themselves - but the fun of a formal system is, in part, which constraints you can drop (or add).
+					I tried coloring the strands with alternating variations of the same color, but the result wasn't spectacular.
+					<div class="img-row">
+					<div class="img-row-item"> <img  src="weaving-img\color-binary1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="weaving-img\color-binary2.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="weaving-img\color-binary4.png" caption="without luminosity cycle"></img></div>
+				</div>
+				</p>
+				<p>
+					After some poking around, I came across an interesting idea, and that is of <a href="https://en.wikipedia.org/wiki/Lightness" target="_blank">perceived lightness</a>. The basic idea is that we perceive the "brightness" of a color (I saw a grayscale photo of vegetables and fruits, which were still very distinguishable in grayscale). This is a bit different from HSL's lightness value, and there are difference definitions for how lightness is actually computed, but the rough idea is a good start!
+					The pictures that follow used completely random colors, except that ones with low lightness were chosen for the black squares and vice-versa for white squares.
+					<div class="img-row">
+						<div class="img-row-item"> <img  src="weaving-img\col-lum1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item"> <img src="weaving-img\col-lum2.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item"> <img src="weaving-img\col-lum3.png" caption="without luminosity cycle"></img></div>
+					</div>
+				</p>
+				<p>
+					Not perfect, but certainly a solid start. And, of course, the hue of the palette also matters.
+					<div class="img-row">
+						<div class="img-row-item"> <img  src="weaving-img\col1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item"> <img src="weaving-img\col2.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item"> <img src="weaving-img\col3.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item"> <img  src="weaving-img\col4.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item"> <img src="weaving-img\col6.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item"> <img src="weaving-img\col5.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item"> <img  src="weaving-img\col7.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item"> <img src="weaving-img\col8.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item"> <img src="weaving-img\col9.png" caption="without luminosity cycle"></img></div>
+					</div>
+				</p>
+				<p>
+					<img style="width:20%;" align="right" src="weaving-img\draft-color.png" caption="with luminosity cycle"></img>
+					Adding a more controlled palette, but still largely clustered by lightness, the results are significantly better! Also, if you notice, these pictures seem to have somehow more structure. Where there would be large zones of black or white before, now there are colorful patterns. This is because I colored the motif rather than the threads, as seen to the right.
+					The final coloring system was:
+					<ul>
+						<li>Choose a color palette;</li>
+						<li>Distribute colors into two groups according to lightness (and drop ones too close to the middle);</li>
+						<li>Assign colors to the motif with light colors going to white squares and dark colors to the black.</li>
+					</ul>
+					All that's left in this project is to discuss how these patterns were created, and that leads to a discussion of cultural evolution.
+				</p>
+			<hr></section>
+			
+			<section id="cultural-evolution">
+			  <h2>Cultural Evolution</h2>
+			  
+			<hr></section>
+			
+			
+			<section id="beyond">
+			  <h2>Beyond</h2>
+			  <p>
+				One thing I learned from this project, is that cultural evolution is difficult to make appealing when working on too low and indirect of a level. By this I mean that I was working on a system of pixels determined in a roundabout way by the arrays. While the patterns it produces are cool, a small change in the draft can lead to very different outcomes; in simulating culture, you probably want changes to be identifiable, to see the influences. This says little about real cultural evolution in humans, but my purpose is to create systems that players can look at and see how styles change in an identifiable way from place to place.
+				In the future, I will try to use a coarser system of cultural change, perhaps by having multiple units and exchanging them whole, and so on.
+			  </p>
+			  <p>
+				Glassner create a whole language to describe the arrays. I found this a bit overkill, but my own system was very limited. Something else that would be cool to experiment it is multiple units - including, say, coupling units to the array position, using a different unit for the border of the pattern and another for the center; and also different transformations - instead of simply symmetrical transformations, individual squares could be change.
+			  </p>
+			  <p>
+				Finally (and this is something I'll probably do), to work out a more robust palette generator for binary patterns. The lightness idea has legs, I think, but I need to figure out how to generate pleasant hue palettes and put them all together.
+			  </p>
+			<hr></section>
+			<section id="gallery">
+			  <h2>Gallery</h2>
+			  
+			<hr></section>
+		  </div>
+		</div>
+	</body>
+</html>

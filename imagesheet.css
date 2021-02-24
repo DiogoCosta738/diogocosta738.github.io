@@ -5,13 +5,15 @@
 	margin:auto;
 	padding-left:5%;
 	padding-right:5%;
+	
+	flex-wrap:wrap;
 }
 .img-row-item{
 	flex-grow:1;
 	flex-shrink:1;
 	padding:10px;
 	
-	width:100%;
+	width:30%;
 	
 }
 .img-row-item img{
