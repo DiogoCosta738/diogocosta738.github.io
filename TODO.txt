@@ -1,0 +1,14 @@
+Add images to:
+	chinese lattice
+Add GALERY to:
+	voronoi
+	chinese lattice
+	celtic knot
+	ltlca
+	(amalgama?)
+	
+DO:
+	Shader Experiments
+	Game Prototypes
+	Starsky				DONE 23/2
+	Digital Weaving

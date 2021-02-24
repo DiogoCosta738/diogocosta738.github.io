@@ -9,20 +9,24 @@
 		<nav id="navbar">
 		  <ul>
 			<li class="navlink"><a class="navanchor" href="#">Home</a></li>
+			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="amalgama.html">AmalgamA</a>
+				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes</a>
+			  </div>
+			</li>
 			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
 			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="">4D Cross-section</a>
-				<a class = "dropdown-item" href="">Larger-than-Life Cellular Automaton</a>
-				<a class = "dropdown-item" href="">Voronoi Tiling</a>
-				<a class = "dropdown-item" href="">Apollonian Flower</a>
-				<a class = "dropdown-item" href="">Celtic Knots</a>
-				<a class = "dropdown-item" href="">Fluvial Erosion</a>
-				<a class = "dropdown-item" href="">Digital Weaving</a>
-				<a class = "dropdown-item" href="">Starsky</a>
-				<a class = "dropdown-item" href="">Chinese Lattice Windows</a>
-				<a class = "dropdown-item" href="">AmalgamA</a>
-				<a class = "dropdown-item" href="">Shader Experiments</a>
-				<a class = "dropdown-item" href="">Game Prototypes</a>
+				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton</a>
+				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling</a>
+				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower</a>
+				<a class = "dropdown-item" href="celticknot.html">Celtic Knots</a>
+				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+				<a class = "dropdown-item" href="starsky.html">Starsky</a>
+				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
 			  </div>
 			</li>
 			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
@@ -32,6 +36,7 @@
 				<a class = "dropdown-item" href="">Reading Log</a>
 				<a class = "dropdown-item" href="">Protein Quality (AA Composition)</a>
 				<a class = "dropdown-item" href="">Cool people</a>
+				<a class = "dropdown-item" href="">Circle of Fifths</a>
 			  </div>
 			</li>
 		  <li class="navlink"><a class="navanchor" href="#">About</a></li>
@@ -60,15 +65,15 @@
 				<!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor2.png" caption="!FIXME"></img></div> -->
 			<hr></section>
 			<section id="night">
-			<div id="image-div-test">
+			
 			  <h2>Night</h2>
 				<p>
 					The shader uses simple noise to divide polar space into cubes, which correspond to stars. Basically, it divides the sky sphere into discrete elements, and every pixel will then know which star it is part of. 
 					The code itself (and the idea) is pretty simple, but you can then do a lot with it. For example, you can assign a different random function to control color, size, twinkling speed, phase, and so on. The result is quite organic!
 				</p>
 				<div class="img-row">
-					<div class="img-row-item"> <img src="starsky-img\stars2.gif" caption="without luminosity cycle"></img></div><br>
-					<div class="img-row-item"> <img src="starsky-img\stars1.gif" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item"  style="width:50%;"> <img src="starsky-img\stars2.gif" caption="without luminosity cycle"></img></div><br>
+					<div class="img-row-item"  style="width:50%;"> <img src="starsky-img\stars1.gif" caption="with luminosity cycle"></img></div>
 				</div>
 				<p>
 				
@@ -83,7 +88,6 @@
 					Finally, you can see a fuller picture of the starry night, below. This is where shaders are great, since rendering as many stars individually wouldn't be very feasible!
 					<img  src="starsky-img\fullstars.png" style="width:100%; padding:5%;" caption="without luminosity cycle"></img>
 				</p>
-			</div>
 			<hr></section>
 			<section id="day">
 			  <h2>Day</h2>
