@@ -173,12 +173,24 @@ a.dropdown-item{
   
   color:black;
   text-decoration:0;
-  
-  
 }
 .sidelink:hover{
   background-color:#abc;
 }
+
+.sidelink-inner{
+  display:flex;
+  
+  width:100%;
+  padding:3% 5% 3% 15%;
+  
+  color:black;
+  text-decoration:0;
+}
+.sidelink-inner:hover{
+  background-color:#abc;
+}
+
 #main{ 
   background-color:#abc;
   flex-grow:5;
