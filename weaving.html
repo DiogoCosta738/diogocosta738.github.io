@@ -45,7 +45,7 @@
 		</nav>
 		<div id="body">
 		<div id="sidebar">
-			<a href="#intro" class="sidelink">Introduction</a>
+			<a href="#introduction" class="sidelink">Introduction</a>
 			<a href="#rules" class="sidelink">What are weaving drafts?</a>
 			<a href="#rules-basics" class="sidelink-inner">Basics</a>
 			<a href="#rules-structure" class="sidelink-inner">Structure</a>
@@ -163,7 +163,46 @@
 				For a more detailed preamble, read my more general writing on <a href="cultural-evolution.html" target="_blank">Cultural Evolution</a>. The general idea is to create not individual patterns, but <i>styles</i> of patterns, in a way that you can identify which style a particular pattern comes from and even its diverse influences.
 			  </p>
 			  <h3>Approach 1: Statistical Learning</h3>
+				<p>
+				My first approach was to use encapsulate a whole culture in a single agent. A single agent would learn based on the input patterns and produce many variations. For this, I started with <a href="" target="_blank">Markov Chains</a> to learn units, and <a href="" target="_blank">Markov Fields</a> to learn the motifs, though the algorithms themselves underwent several iterations with heavy borrowing from the <a href="" target="_blank">Pixel-based Texture Synthesis</a> with more general probability fields.				
+				</p>
+				<p>
+					In a naive and mathematical way, it succeeded - both units and motifs were statistically different between agents (that is, agents started the same, but evolved differently and converged on a specific range of patterns over generations). Unfortunately, this wasn't enough to create a unified style - the system was too chaotic and small variations in unit and motif created big changes in the resulting pattern.
+				</p>
+				<p>
+					It did, sometimes, create a more coherent sequence of patterns, but it wasn't reliable enough to be usable.
+				</p>
+				<div class="img-row">
+					<div class="img-row-item" style="width:20%;"> <img  src="weaving-img\cult1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item" style="width:20%;"> <img  src="weaving-img\cult2.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item" style="width:20%;"> <img  src="weaving-img\cult3.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item" style="width:20%;"> <img  src="weaving-img\cult4.png" caption="with luminosity cycle"></img></div>
+				</div>
 			  <h3>Approach 2: Dawkins' Culto-morphs</h3>
+				<p>
+					After a mild crisis-of-faith, I remember <a href="https://en.wikipedia.org/wiki/Richard_Dawkins" target="_blank">Richard Dawkins</a>' <a href="http://www.emergentmind.com/biomorphs" target="_blank">Biomorphs</a>. This is not what I initially had in mind, but it turned out much more effective in such a chaotic system!
+				</p>
+				<p>
+					Basically, you encode the pattern in a single string, like genes in DNA, and variations are produce with random mutations. The downside to this is that it doesn't generalize to multiple agents as well (sure, you imagine an orgy-like reproduction, but it gets messy), but works great for single or pairs, where combining two strings it straightforward.
+				</p>
+				<div class="img-row">
+					<div class="img-row-item"> <img  src="weaving-img\morph4.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="weaving-img\morph3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="weaving-img\morph5.png" caption="without luminosity cycle"></img></div>
+				</div>
+				<p>
+					As you can see, there is a sense of style to the patterns. Two aspects warrant some comment: 
+					(1) not every mutation has visible effects - this is just like genetic mutations, some change some internal structure that only "unlocks" future evolutionary paths, and that is certainly the case here, since not every square of the motif is necessarily used; 
+					(2) this is not a satisfying representation of culture, since it lacks any kind of tradition - you can start with a completely random pattern and generate variations from there.
+				</p>
+			  <h3>Conclusion</h3>
+				<p>
+					At the end of the day, neither of the paths was exactly what I wanted to get out of it. I tried other variations, for example, with the idea of critics and cultural differentiation (agents generate many patterns and cultural-critics decide which patterns are learned by the next generation, by being more representative of their own culture than other),
+					but these were difficult to make very appealing (at least without an additional aesthetic evaluator of some kind).
+				</p>
+				<p>
+					It was interesting to work on regardless, and opened some doors while closing others, so hopefully the next project involving cultural evolution will be more fruitful!
+				</p>
 			<hr></section>
 			
 			
