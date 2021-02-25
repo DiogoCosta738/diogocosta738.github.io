@@ -56,7 +56,7 @@
 		  </div>
 		  <div id="main">
 			<h1>Digital Weaving</h1>
-			<section id="intro">
+			<section id="introduction">
 			  <h2>Introduction</h2>
 				<p>
 					Digital Weaving is project where I implemented real world "weaving drafts" (basically a "computer program" for looms) and attempted to evolve <a href="cultural-evolution" target="_blank">computational cultures</a> on.
@@ -72,7 +72,7 @@
 			<section id="rules">
 			  <h2>What are weaving drafts?</h2>
 			  <h3 id="rules-basics">Basics</h3>
-				  <img style="width:30%;" align="right" src="weaving-img\draft-binary-code.png" caption="with luminosity cycle"></img>
+				  <img style="width:30%; padding-left:2%;" align="right" src="weaving-img\draft-binary-code.png" caption="with luminosity cycle"></img>
 				  <p>
 					Looms (of the kind this emulates) have horizontal and vertical threads; let's say the horizontal ones are black, the vertical ones are white. A weaving draft is a diagram that describes which thread in on top (and thus visible) at each crossing. The best way to understand it is visually!
 				  </p>
@@ -99,10 +99,10 @@
 					<li>Unit;</li>
 					<li>Symmetry String.</li>
 				</ul>
-				<img style="width:30%;" align="right" src="weaving-img\draft-binary-unit.png" caption="with luminosity cycle"></img>
+				<img style="width:30%; padding-left:2%; padding-top:1%;" align="right" src="weaving-img\draft-binary-unit.png" caption="with luminosity cycle"></img>
 				The <i>unit</i> is simply a small pattern on the array. This unit is repeated throughout, but transformed. You can see it the figure to the right, where I highlight three occurrences of the unit.
 				The red pattern, on the left, is the basic unit. The blue pattern, on the center, is reflected across the y-axis. The green pattern, on the right, is reflected across the x-axis. Rotations also occur, as well as both reflections. 
-				The <i>symmetry string</i> is simply a string of characters that describes how the unit is transformed to make the full array. In this example, it is "NRYNXY". This string itself can be symmetrical.
+				The <i>symmetry string</i> is simply a string of characters that describes how the unit is transformed to make the full array. In this example, it is "NRYNXY" (N=normal, R=rotated, X=reflected across x, Y=reflected across y). This string itself can be symmetrical (not the same as a palindrome).
 			  </p>
 			  <!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor1.png" caption="!FIXME"></img></div> -->
 			<hr></section>
@@ -119,7 +119,7 @@
 				</div>
 				</p>
 				<p>
-					After some poking around, I came across an interesting idea, and that is of <a href="https://en.wikipedia.org/wiki/Lightness" target="_blank">perceived lightness</a>. The basic idea is that we perceive the "brightness" of a color (I saw a grayscale photo of vegetables and fruits, which were still very distinguishable in grayscale). This is a bit different from HSL's lightness value, and there are difference definitions for how lightness is actually computed, but the rough idea is a good start!
+					After some poking around, I came across an interesting idea, and that is of <a href="https://en.wikipedia.org/wiki/Lightness" target="_blank">perceived lightness</a>. The basic idea is that different hues (like yellow, red, blue) have different "brightness" levels (I saw a grayscale photo of vegetables and fruits, which were still very distinguishable in grayscale). This is a bit different from HSL's lightness value, and there are difference definitions for how lightness is actually computed, but the rough idea is a good start!
 					The pictures that follow used completely random colors, except that ones with low lightness were chosen for the black squares and vice-versa for white squares.
 					<div class="img-row">
 						<div class="img-row-item"> <img  src="weaving-img\col-lum1.png" caption="with luminosity cycle"></img></div>
