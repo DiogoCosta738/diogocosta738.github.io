@@ -29,8 +29,10 @@ def replace_navbar(navbar, filename):
             state=1
         elif state==0 or state==2: #state==0
             newfile_list+=[line]
-            
-    newfile = open("copy_"+filename, "x")
+
+    file.close()
+    
+    newfile = open(filename, "w")
     newfile.writelines(newfile_list)
     return
 
@@ -66,5 +68,10 @@ for l in navbar_code:
         print(l)
         print("There!")
 
-replace_navbar(navbar_code, "voronoitiling.html")
+for f in list_navbar_files(path):
+    if f=="navbar.html" or f.startswith("copy"):
+        continue
+    print("Starting to process file: "+f)
+    replace_navbar(navbar_code, f)
+    print("Finished processing file: "+"copy_"+f)
 
