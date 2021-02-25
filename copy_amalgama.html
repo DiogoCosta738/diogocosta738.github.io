@@ -1,0 +1,165 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="gallerysheet.css">
+		<link rel="stylesheet" href="imagesheet.css">
+		<script src="gallerycode.js"></script>
+	</head>
+	<body>
+
+
+		<nav id="navbar">
+		  <ul>
+			<li class="navlink"><a class="navanchor" href="#">Home</a></li>
+			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="(missing gallery) amalgama.html">AmalgamA</a>
+				<a class = "dropdown-item" href="(empty) game-prototypes.html">Game Prototypes</a>
+			  </div>
+			</li>
+			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+				<a class = "dropdown-item" href="(missing gallery) largerthanlifeca.html">Larger-than-Life Cellular Automaton</a>
+				<a class = "dropdown-item" href="(missing gallery) voronoitiling.html">Voronoi Tiling</a>
+				<a class = "dropdown-item" href="(missing gallery) apolloniangasket.html">Apollonian Flower</a>
+				<a class = "dropdown-item" href="(missing gallery) celticknot.html">Celtic Knots</a>
+				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+				<a class = "dropdown-item" href="starsky.html">Starsky</a>
+				<a class = "dropdown-item" href="(missing pictures) chineselattice.html">Chinese Lattice Windows</a>
+				<a class = "dropdown-item" href="(unfinished) shader-experiments.html">Shader Experiments</a>
+			  </div>
+			</li>
+			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="">(empty) Cultural Evolution</a>
+				<a class = "dropdown-item" href="">(empty) MOOCs</a>
+				<a class = "dropdown-item" href="">(empty) Reading Log</a>
+				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
+				<a class = "dropdown-item" href="">(empty) Cool people</a>
+				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
+			  </div>
+			</li>
+		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
+		  </ul>
+		</nav>
+
+		<div id="body">
+			<div id="sidebar">
+			<a href="#intro" class="sidelink">Introduction</a>
+			<a href="#generation" class="sidelink">Puzzle Generation</a>
+			<a href="#rendering" class="sidelink">Rendering</a>
+			<a href="#music" class="sidelink">Music</a>
+			<a href="#itchio" class="sidelink">Software</a>
+		  </div>
+		  <div id="main">
+			<h1>AmalgamA</h1>
+			<section id="intro">
+			  <h2>Introduction</h2>
+				<p>
+					AmalgamA was the first game I actually finished. It's a casual puzzle game, very similar to Infinity Loop, but I didn't know about IL when I starting making AmalgamA. There is little proper game design in it, but I paid great care with the aesthetic details, and I still think there are some very cool aspects to it, even though it isn't geared towards being fun to actually play!
+				</p>
+				<p>
+					The game simply consists of rotating pieces in order to form a fully connected pattern at the end. What is special about it is how the <a href="#generation">puzzle generation</a> works as well as how the <a href="#music">music</a> relates to the puzzles.
+				</p>
+				<p>
+					I worked on it in August and September of 2016. I had been playing around with <a href="https://en.wikipedia.org/wiki/Stephen_Wolfram" target="_blank">Stephen Wolfram</a>'s <a href="https://mathworld.wolfram.com/TotalisticCellularAutomaton.html" target="_blank">totalistic cellular automata</a> for a few months, and those experiments came together in this game! The whole thing actually started with a game called <a href="https://store.steampowered.com/app/395520/Missing_Translation/" target="_blank">Missing Translation</a> that I played. 
+					It had a similar mini-game with "edge matching puzzles" and rotating pieces, but it wasn't very good at all. Most puzzles I actually completed without "seeing" the solution, while I was still rotating pieces more or less at random. I wondered if I could automatically generate puzzles and their solutions and compute maybe the average steps they took to solve as a measure of difficulty. 
+					So I made a quick prototype in Game Maker:Studio and... then it completely derailed, which was a good thing! (My idea of computational evaluation is cleaner to implement with SAT solvers, I realized years later, and may still do something with it.
+				</p>
+				<p>
+					Once I realized how the cellular automata could generate puzzles, the game grew wings of its own and all I had to do was add some bells (quite literally) and whistles.
+				</p>
+				<!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor2.png" caption="!FIXME"></img></div> -->
+			<hr></section>
+			<section id="generation">
+			  <h2>Puzzle Generation</h2>
+			  <h3>Totalistic Cellular Automata</h3>
+				  <p>
+					Strangely enough, I didn't come across cellular automata through <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_target">Conway's Game of Life</a>, but through Stephen Wolfram's work (there is his <a href="https://en.wikipedia.org/wiki/A_New_Kind_of_Science" target="_blank">New Kind of Science</a> book, which I confess I have not read, though I know the rough ideas he presents in it). You can also see my <a href="largerthanlifeca.html">other project</a> of a different kind of CA.
+				  </p>
+				  <p>
+					Cellular automata are simple programs that run repeatedly on a grid of uniform cells, and their behavior depends on the states of their neighbors. In this case, cells have a binary state, 0 or 1, and their own state depends on the <i>sum</i> of their neighbors' states (hence the name totalistic). The nice thing about this is that you can encode the different rules in the form of a short number, making experimentation with many different patterns easy.
+				  </p>
+				  <!-- Perhaps I could explain things thoroughly, with the rule array and all that? It's too much work, though, probably not worth it. -->
+			  <h3>Puzzle Generation</h3>
+				<img src="amalgama-img\grid2.png" align="right" style="width: 25vw; margin-left:40px;"/>
+				<p>
+					How do you go from a binary grid to a pattern of links? One idea is to create a link between adjacent cells with the same color (or state). This didn't look very good to me, though. Then I realized that I could superimpose a larger hexagonal grid on top of the CA, like the green hexagons in the figure to the right.
+					The game pieces are the cells marked with a blue dot, and the existence of an edge is marked by the state of the cell crossed by the green edge.
+				</p>
+				<p>
+					If you're familiar with these kinds of CA, you know that they can <i>grow</i>. You can start with a grid full of white cells and a single one in the center, and that will quickly grow, changing the state of its immediate neighbors, who change their neighbors, and so on. Most rules aren't stable, either, which means that a black cell doesn't stay black forever. This creates a natural puzzle progression, from smaller to larger, and keeps it somewhat varied.
+					You can also choose different <i>seeds</i> (I described a single black cell in the center, but you could have three, or two, or a full pattern). The rules are naturally preserve the symmetry of the seed, which is nice.
+				</p>
+				<p>
+					Honestly, I am not a big fan of Infinity Loop. When I played it, I was just looking for the next symmetrical pattern, which was prettier. I also played in short 10 minute bursts, perhaps once a day, solving a handful of small puzzles.
+					AmalgamA was similarly about that. It wasn't the puzzles themselves, but a few minutes of relaxation looking for a cool pattern.
+					The whole system of seeds and growth made it about a sequence of puzzles more than a single puzzle, however, an idea which appealed to me!
+				</p>
+				<p>
+					This created three natural game "modes":
+					<ul>
+						<li>Random mode - the game chooses a random seed and rule, and generates progressively larger but unrelated puzzles;</li>
+						<li>Growth mode - the player chooses a random seed and rule, and the player plays through the "natural" growth of puzzles;</li>
+						<li>Daily mode - every day, the game generates a different seed and rule and the players play through 15 puzzles.</li>
+					</ul>
+				</p>
+			</section><hr>
+			<section id="rendering">
+			  <h2>Rendering</h2>
+				<h3>Puzzles</h3>
+				<p>
+					As I said before, I didn't know about Infinity Loop before starting this project. So the rendering I had in mind wasn't of "sticks", but of triangles. In the end, I put both in the game, with the player choosing between whichever mode they prefer. 
+					You can see the two kinds below:
+				</p>
+			  <div class="img-row">
+				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render1.png" caption="without luminosity cycle"></img></div><br>
+				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render2.png" caption="with luminosity cycle"></img></div>
+				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render3.png" caption="without luminosity cycle"></img></div>
+				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render4.png" caption="without luminosity cycle"></img></div>
+			  </div>
+				<h3>Coloring</h3>
+				<p>
+					<img src="amalgama-img\complete.gif" align="right" style="max-width: 35%; margin-left:40px;"/>
+					The puzzles themselves are monotone. As a kind of "visual reward", however, I decided to add a bit of color to the triangle-rendering. It is fairly simple - I look for connected components in the CA graph and assign a different color to each isolated component, respecting symmetry. Each triangle also has a slight color variation for flavor.
+				</p>
+				<p>
+					The palettes were a bit lacking, as I just settled on certain angle-relation on the color wheel and then chose a handful of different colors. It would have probably worked better with either hand-picked palettes (for best looking but limited colors), or a more versatile palette generator (for more variety but probably less aesthetic appeal).
+					Either way, I am still happy with the result, especially when you finally get to the larger puzzles, where there is more variety. 
+					<div class="img-row" style="max-width:65%;">
+						<div class="img-row-item"> <img src="amalgama-img\col1.png" caption="without luminosity cycle"></img></div><br>
+						<div class="img-row-item"> <img src="amalgama-img\col2.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item"> <img src="amalgama-img\col3.png" caption="without luminosity cycle"></img></div>
+					  </div>
+				</p>
+			<hr></section>
+			<section id="music">
+			  <h2>Music</h2>
+				<p>
+					The music in the game is one of the most contentious aspect of the game! Mostly because the first impression is very abrasive - you're confronted with rather dissonant music as soon as you start the first p
+					I honestly didn't expect people to care much about the music of the game (I typically mute casual games and play my own music, and this is even more so in mobile), so I gave myself the freedom to be quirky. 
+				</p>
+				<p>
+					The music is all "procedurally" generated, using a measure of dissonance to tie it to the puzzle state. As you approach the solution, the music generated gets progressively more and more consonant, reaching pure consonance when you solve the puzzle.
+					I think I may have gotten the idea from <a href="http://www.smestorp.com/" target="_blank">Michael Brough</a>'s <a href="http://forums.tigsource.com/index.php?topic=24516.msg692843#msg692843" target="_blank">Number Quality</a>.
+					The system itself is a set of polyrhythmic sources. Each one plays a single note on a different beat. This was a collaboration between me and a friend.
+				</p>
+				<p>
+					Finally, I also coupled it with the visual-reward by giving the instruments more variety. As the color came in, some of the instruments also changed. These are tiny effects, but it's the kind of attention to detail I enjoy!
+				</p>
+			  <div class="img-row">
+				<div class="img-row-item"> <img src="amalgama-img\frame1.png" caption="without luminosity cycle"></img></div><br>
+				<div class="img-row-item"> <img src="amalgama-img\frame2.png" caption="with luminosity cycle"></img></div>
+				<div class="img-row-item"> <img src="amalgama-img\frame3.png" caption="without luminosity cycle"></img></div>
+			  </div>
+			</section><hr>
+			<section id="itchio">
+			<h3>Software</h3>
+			<p>You can download this one on my <a href="https://diogoc.itch.io/amalgama" target="_blank">itch.io page</a>. If you want to look into the code, feel free to ask.</p>
+			<hr></section>
+		  </div>
+		</div>
+	</body>
+</html>

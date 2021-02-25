@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="gallerysheet.css">
+		<link rel="stylesheet" href="imagesheet.css">
+		<script src="gallerycode.js"></script>
+	</head>
+	<body>
+
+
+		<nav id="navbar">
+		  <ul>
+			<li class="navlink"><a class="navanchor" href="#">Home</a></li>
+			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="(missing gallery) amalgama.html">AmalgamA</a>
+				<a class = "dropdown-item" href="(empty) game-prototypes.html">Game Prototypes</a>
+			  </div>
+			</li>
+			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+				<a class = "dropdown-item" href="(missing gallery) largerthanlifeca.html">Larger-than-Life Cellular Automaton</a>
+				<a class = "dropdown-item" href="(missing gallery) voronoitiling.html">Voronoi Tiling</a>
+				<a class = "dropdown-item" href="(missing gallery) apolloniangasket.html">Apollonian Flower</a>
+				<a class = "dropdown-item" href="(missing gallery) celticknot.html">Celtic Knots</a>
+				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+				<a class = "dropdown-item" href="starsky.html">Starsky</a>
+				<a class = "dropdown-item" href="(missing pictures) chineselattice.html">Chinese Lattice Windows</a>
+				<a class = "dropdown-item" href="(unfinished) shader-experiments.html">Shader Experiments</a>
+			  </div>
+			</li>
+			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="">(empty) Cultural Evolution</a>
+				<a class = "dropdown-item" href="">(empty) MOOCs</a>
+				<a class = "dropdown-item" href="">(empty) Reading Log</a>
+				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
+				<a class = "dropdown-item" href="">(empty) Cool people</a>
+				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
+			  </div>
+			</li>
+		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
+		  </ul>
+		</nav>
+
+		<div id="body">
+		  <div id="sidebar">
+			<a href="#intro" class="sidelink">Introduction</a>
+			<a href="#night" class="sidelink">Night</a>
+			<a href="#day" class="sidelink">Day</a>
+			<a href="#lowres" class="sidelink">Low resolution</a>
+			<a href="#code" class="sidelink">Source code</a>
+		  </div>
+		  <div id="main">
+			<h1>Skybox</h1>
+			<section id="intro">
+			  <h2>Introduction</h2>
+				<p>
+					This is my attempt at a skybox. I started it mostly with a desire to create a good <a href="#night">night sky</a> shader (which I think I did!) and then extended it with a simple <a href="#day" >day-night cycle</a>. I am quite happy with the result, and still use it very often in my prototypes.
+					What is special about it is that each star is procedurally generated with its own color, intensity and twinkling phase - I think it looks great in action and runs pretty well, too.
+				</p>
+				<p>
+					Years later, I was experimenting with low-res rendering (because of my newly found love of <a href="https://www.gog.com/game/ultima_underworld_1_2" target="_blank">Ultima Underworld</a>), and I modified the shader, as you can see <a href="#lowres">below</a>.
+				</p>
+				<!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor2.png" caption="!FIXME"></img></div> -->
+			<hr></section>
+			<section id="night">
+			
+			  <h2>Night</h2>
+				<p>
+					The shader uses simple noise to divide polar space into cubes, which correspond to stars. Basically, it divides the sky sphere into discrete elements, and every pixel will then know which star it is part of. 
+					The code itself (and the idea) is pretty simple, but you can then do a lot with it. For example, you can assign a different random function to control color, size, twinkling speed, phase, and so on. The result is quite organic!
+				</p>
+				<div class="img-row">
+					<div class="img-row-item"  style="width:50%;"> <img src="starsky-img\stars2.gif" caption="without luminosity cycle"></img></div><br>
+					<div class="img-row-item"  style="width:50%;"> <img src="starsky-img\stars1.gif" caption="with luminosity cycle"></img></div>
+				</div>
+				<p>
+				
+				<img  src="starsky-img\nebula2.gif" align="right" style="width:35%; padding-top:0%;" caption="without luminosity cycle"></img>
+					It does look much better in the actual game, though - since fragment shaders are rendered for every pixel on the screen, they adapt to whatever viewport size you're using, something that doesn't happen on a gif! Still, I hope the effect is conveyed well enough. The image on the right is a close-up and accelerated version to make the twinkling less subtle.
+					The colors are also less vivid.
+				</p>
+				<p>
+					Something else I tried was to use <a href="shader-experiments.html#noise" target="_blank">fbm and domain warping noise</a> to create nebulae, which you can see on the right. Once again, using 3D or 4D noise you can animate them, though these effects are probably too expensive; nebulae don't really move at observable rates, though I always like to add subtle animation for flavor (regardless of realism). I scrapped these effects, but they are possible to do with much cheaper moving textures.
+				</p>
+				<p>
+					Finally, you can see a fuller picture of the starry night, below. This is where shaders are great, since rendering as many stars individually wouldn't be very feasible!
+					<img  src="starsky-img\fullstars.png" style="width:100%; padding:5%;" caption="without luminosity cycle"></img>
+				</p>
+			<hr></section>
+			<section id="day">
+			  <h2>Day</h2>
+				<p>
+					The day part was much simpler. The sun's position was controlled outside the shader, and a variable for "sun-height" was passed for synchronization purposes. Then, I set up a simple system of 5 colors: sun_color, day_top_color, day_bottom_color, twilight_top_color and twilight_bottom_color.
+					When the sun is at its highest, the sky has a gradient that goes from day_top_color at the top to day_bottom_color at the bottom, and similarly for twilight, when the sun is at its lowest (but still near or above the horizon). For anything in between, I interpolate day_top_color with twilight_top_color and similarly for the bottom.
+					This result is again interpolate with the sun's color, strongest near the sun and slowly fading.
+				</p>
+				<p>
+					Finally, on top of that, I also interpolate the stars as the sun nears the horizon (so you start seeing the stars before it is night, though only slightly) and quickly darken the twiling colors once the sun is below the horizon.
+					Ignore the GIF's color-banding, which does not happen when properly rendered (with more than 256 colors).
+				</p>
+				<div class="img-row">
+					<div class="img-row-item"> <img src="starsky-img\daynightcycle.gif" caption="without luminosity cycle"></img></div><br>
+					<div class="img-row-item"> <img src="starsky-img\daynightcycle1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="starsky-img\daynightcycle2.png" caption="with luminosity cycle"></img></div>
+				</div>
+			  <!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor1.png" caption="!FIXME"></img></div> -->
+			<hr></section>
+			<section id="lowres">
+				<h2>Low Resolution</h2>
+				<p>
+					Lastly, I'll just add this section, since it wasn't as obvious as I expected.
+					To make a low-res version of the night-sky, a simple pixelization and color-limiting shader didn't really work. This is for two reasons: (1) the stars would disappear and reappear (because most of the pixels weren't rendered) and (2) color banding looked quite ugly and unnatural.
+				</p>
+				<p>
+					Fortunately, the first problem was easy to solve with little change - since I had a parameter for the "grid resolution", I simply made that larger. A larger grid resolution means larger and fewer stars. In full-res, stars would appear like big circles, which isn't very natural, but it plays well with the downscaling.
+				</p>
+				<div style="text-align:center;">
+				<img src="starsky-img\lowresstar.gif" align="center" style="width:60%; padding:1%;" caption="without luminosity cycle"></img>
+				</div>
+				<p>
+					The solution for the color-banding was a kind of <a href="https://en.wikipedia.org/wiki/Dither" target="_blank">dithering</a>. I added some noise to the sky before applying the color-reduction shader - again, it obviously didn't look good on the full-res rendering, but it did make it a lot more natural in low-res. More "structured" dithering styles are also possible (as you see in pixel art) but this looked enough for my purposes.
+				</p>
+				<div class="img-row">
+					<div class="img-row-item"> <img src="starsky-img\banding1.png" caption="without luminosity cycle"></img></div><br>
+					<div class="img-row-item"> <img src="starsky-img\banding2.png" caption="with luminosity cycle"></img></div>
+				</div>
+			<hr></section>
+			<section id="code">
+				<h2>Source code</h2>
+				<p>
+					This was done in Unity, but since the bulk of the work was in the shader itself, you should be able to adapt it into other engines without too much trouble. The code is rather messy, but feel free to contact me if you want to experiment with it anyway.
+				</p>
+			<hr></section>
+		  </div>
+		</div>
+	</body>
+</html>
