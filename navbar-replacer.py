@@ -34,8 +34,8 @@ def replace_navbar(navbar, filename):
 
     file.close()
     
-    #newfile = open(filename, "w")
-    newfile = open("copy_"+filename, "x")
+    newfile = open(filename, "w")
+    #newfile = open("copy_"+filename, "x")
     newfile.writelines(newfile_list)
     return
 
