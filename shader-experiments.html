@@ -50,15 +50,15 @@
 		
 		<div id="body">
 			<div id="sidebar">
-				<a href="#intro" class="sidelink">Introduction</a>
+				<a href="#introduction" class="sidelink">Introduction</a>
 				<a href="#noise" class="sidelink">Noise</a>
 				<a href="#ray-marching" class="sidelink">Domain Marching</a>
 				<a href="#buffers" class="sidelink">Buffers</a>
-				<a href="#other" class="sidelink">Other</a>
+				<a href="#others" class="sidelink">Other</a>
 			</div>
 			<div id="main">
 				<h1>Shader Experiments</h1>
-				<section id="intro">
+				<section id="introduction">
 					<h2>Introduction</h2>
 					<p>
 						This page is just an assortment of tiny experiments - mostly how I learned (and still do) shaders. I started (and spent a long while) in <a href="https://www.shadertoy.com/" target="_blank">Shadertoy</a> 
@@ -71,6 +71,9 @@
 					<p>
 						As I said, these are tiny experiments, and mostly proofs-of-concept. At the very least, they let me get my hands dirty and take the first step into implementing some effects I saw in games.
 					</p>
+					<div style="text-align:center;">
+					<i style="font-size:1.5em;">Note: most of these examples are static pictures that link to a dynamic shadertoy shader. Click on them to see the full effect!</i> 
+					</div>
 				<hr></section>
 				<section id="noise">
 					<h2>Noise</h2>
@@ -86,8 +89,56 @@
 					<p>
 						Now that I look at it years later, it can be polished up quite a bit, but I liked the idea anyway. I used two noise textures, slightly offset (on the third dimension) and averaged, to create more "smudged" black cracks. It was an improvement over the earliest marble textures from textbooks, at least, but there is obviously much better work nowadays.
 					</p>
-					<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/tt3BDf?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+					<div style="text-align:center;">
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/tt3BDf" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/marble.png"  /></a>
+					</div>
 					
+					<h3>Ridged Lava</h3>
+					<p>
+						Simple lava using a similar idea to the Marble's - two layers of ridged noise, slightly offset and averaged. Would probably benefit from some swirling noise like domain warping.
+					</p>
+					<div style="text-align:center;">
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/3lVfDW" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/lava.png"  /></a>
+					</div>
+					
+					<h3>Ridged Warping</h3>
+					<p>
+						I must confess I didn't even remember writing this shader, but I like it! Looking at the code, it is simple domain warping with ridged noise instead of fbm.
+					</p>
+					<div style="text-align:center;">
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/WlVfDW" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/turbulent_warp.png"  /></a>
+					</div>
+					
+					<h3>Domain Warp Distortion</h3>
+					<p>
+						This is straightforward domain warping applied to a texture, but changing its coordinates rather than color. It is mostly a proof-of-concept kind of thing, but I am a sucker for distortion effects in general, especially on explosions and sword slashes and so on. This is also the kind of distortion used in The Witcher 2, during the eternal battle.
+					</p>
+					<div style="text-align:center;">
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/3lKBWD" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/distortion.png"  /></a>
+					</div>
+					
+					<h3>Eyeris</h3>
+					<p>
+						Domain warping with a radial color palette, looks good in motion. The idea came from the game <a href="https://store.steampowered.com/app/308040/Back_to_Bed/" target="_blank">Back to Bed</a>, while I was proving its PSPACE-Completeness for my <a href="about.html" target="_blank">thesis</a>.
+					</p>
+					<div style="text-align:center;">
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/3tKBDD" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/eyeris.png"  /></a>
+					</div>
+					
+					<h3>Planets</h3>
+					<p>
+					These are from when I was working on the <a href="starsky.html" target="_blank">Nightsky</a> project. Straightforward application of noise, sometimes with vertex displacement as well. Looks particularly good on gas giants (although some fluid dynamics also work great).
+					</p>
+					<div class="img-row">
+						<div class="img-row-item" style="width:20%;"> <img  src="shader-experiments-img\planets1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:20%;"> <img  src="shader-experiments-img\planets2.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:20%;"> <img  src="shader-experiments-img\planets3.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:20%;"> <img  src="shader-experiments-img\planets4.png" caption="with luminosity cycle"></img></div>
+					</div>
+					<div class="img-row">
+						<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\planets5.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\planets6.png" caption="with luminosity cycle"></img></div>
+					</div>
 				<hr></section>
 				<section id="ray-marching">
 					<h2>Ray Marching</h2>
@@ -100,27 +151,53 @@
 					<p>
 						This is fairly simple - it's just a sphere, with a couple of modifications. The first is the use of noise to modify its surface and make it blob-y. The second is to change its hue depending on the light and viewing angle - a kind of fake <a href="https://en.wikipedia.org/wiki/Iridescence" target="_blank">iridescence</a>.
 					</p>
-					<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/ltGfWD?gui=true&t=10&paused=true&muted=false" ></iframe>
+					<div style="text-align:center;">
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/ltGfWD" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/iridescent.png"  /></a>
+					</div>
 					
 					<h3>Tower of Timbuktu</h3>
 					<p>
 						As I was just learning ray-marching, my father mentioned Timbuktu's architecture to me (for some reason). When I saw it, it immediately reminded me of the smooth shapes possible with distance fields, so I made a small tower as an example.
 						It's a simple trapezoidal prism, blended with a sphere at the top, and negatively blended with a box for a door. FBM noise is then applied to the surface to make it look sandy.
 					</p>
-					<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/XtGBRK?gui=true&t=10&paused=true&muted=false"></iframe>
+					<div style="text-align:center;">
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/XtGBRK" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/timbuktower.png"  /></a>
+					</div>
 					
 					<h3>Fuji</h3>
 					<p>
 						Well, not really Fuji. Just a snowy volcano. It was a combination of Ridged Noise, a truncated cone in the middle for a height, and then <a href="" target="_blank">an erosion algorithm</a>, the same I mentioned in the <a href="erosion.html" target="_blank">erosion project</a>. 
 						The snow is just a white color when the surface normal is upward enough.
 					</p>
-					<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/MlGBD1?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+					<a href="https://www.shadertoy.com/view/MlGBD1" target="_blank">
+					<div class="img-row">
+						<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\fuji1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\fuji2.png" caption="with luminosity cycle"></img></div>
+					</div>
+					</a>
 				<hr></section>
-				<section id="buffer">
+				<section id="buffers">
 					<h2>Buffers</h2>
+					This section is dedicated to more complicated shaders, namely ones that are not applied directly to a texture or the screen, but use auxiliary buffers (like depth and normal buffers, and so on).
+					It is typically used for post-processing rendering, like blur, cel-shading, outlines, and so on. It is still rather empty, since I haven't had the opportunity to experiment much with it, but I'll probably get to it at some point!
+					
+					<h3>Sun-shafts/God rays</h3>
+					<p>
+						I think this is a pretty common trick to render god rays. First, you render the whole scene into a silhouette (render every opaque object black, and semi-transparent objects shades of gray), with light sources in lighter colors. Then, you apply radial blur to the dark areas, away from the light, and it gives the effect of soft shadows.
+					</p>
+					<p>
+						This scene was deliberately low-res, since it was part of a different project that I was working on, also in low res. The clouds are simple FBM noise and are animated.
+					</p>
+					<div class="img-row">
+						<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\sunshaft_redux.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\sunshaft2.png" caption="with luminosity cycle"></img></div>
+					</div>
+					<p>
+						The idea came from Rabindranath Tagore's <a href="https://en.wikipedia.org/wiki/Gitanjali" target="_blank">Gitanjali</a> (even though I am not a big fan of his poems; much prefer his novels "Gora" and "Home and the World").
+					</p>
 					
 				<hr></section>
-				<section id="other">
+				<section id="others">
 					<h2>Others</h2>
 						<h3>Reaction-Diffusion</h3>
 							<p>
@@ -131,11 +208,25 @@
 								Check, for example, <a href="https://en.wikipedia.org/wiki/Greg_Turk" target="_blank">Greg Turk</a>'s brilliant <a href="https://www.cc.gatech.edu/~turk/reaction_diffusion/reaction_diffusion.html" target="_blank">PhD thesis</a> when applied to meshes, or these <a href="https://link.springer.com/book/10.1007/978-3-662-04339-4" target="_blank">two</a> <a href="https://link.springer.com/book/10.1007/978-3-662-05291-4" target="_blank">books</a>, from the same collection as the wonderful <a href="https://en.wikipedia.org/wiki/The_Algorithmic_Beauty_of_Plants" target="_blank">Algorithmic Beauty of Plants</a> on L-Systems.
 							</p>
 							<p>
-								Below are just few superficial examples, with varying parameters.
+								Below are just few superficial examples, with varying parameters. The first three you can interact with on shader toy - and I find it extremely satisfying to click and drag the mouse and see the patterns readjusting! The last two I made in Unity, so no interaction for you.
 							</p>
-							<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/4t3Bzn?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
-							<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/4lVcW3?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
-							<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/ltGcDd?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+							<div class="img-row">
+							<div class="img-row-item"><a href="https://www.shadertoy.com/view/4t3Bzn" target="_blank"> <img  src="shader-experiments-img\reacdif1.png" caption="with luminosity cycle"></img></a></div>
+							<div class="img-row-item"><a href="https://www.shadertoy.com/view/4lVcW3" target="_blank"> <img  src="shader-experiments-img\reacdif2.png" caption="with luminosity cycle"></img></a></div>
+							<div class="img-row-item"><a href="https://www.shadertoy.com/view/ltGcDd" target="_blank"> <img  src="shader-experiments-img\reacdif3.png" caption="with luminosity cycle"></img></a></div>
+							</div>
+							<div class="img-row">
+								<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\reacdif4.png" caption="with luminosity cycle"></img></div></a>
+								<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\reacdif5.png" caption="with luminosity cycle"></img></div></a>
+							</div>
+							
+						<h3>Simple Mandelbrot fractal</h3>
+						<p>
+							Fractals are the bread and butter of computer graphics, but I had never tried to render any. I was reading <a href="https://en.wikipedia.org/wiki/Benoit_Mandelbrot" target="_blank">Benoit Mandelbrot</a>'s <a href="https://www.amazon.com/Fractalist-Memoir-Scientific-Maverick/dp/030738991X" target="_blank">autobiography</a> and got the gist of the computation, so I tried to implement it in a shader. It's nothing special and has some artifacts, but it captures the main idea.
+						</p>
+						<div style="text-align:center;">
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/3tVfDW" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/mandelbrot.png"  /></a>
+						</div>
 				<hr></section>
 				</div>
 				</div>
