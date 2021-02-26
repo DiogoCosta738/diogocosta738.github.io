@@ -2,13 +2,10 @@
 	<head>
 		<link rel="stylesheet" href="stylesheet.css">
 		<link rel="stylesheet" href="gallerysheet.css">
+		<link rel="stylesheet" href="imagesheet.css">
 		<script src="gallerycode.js"></script>
 	</head>
 	<body>
-
-
-
-
 		<nav id="navbar">
 		  <ul>
 			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
@@ -47,19 +44,16 @@
 		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
 		  </ul>
 		</nav>
-
-
-
-
-		  <div id="sidebar">
+		  
+		<div id="body">
+		<div id="sidebar">
 			<a href="#intro" class="sidelink">Introduction</a>
 			<a href="#sys1" class="sidelink">System 1: Square Merging</a>
 			<a href="#sys2" class="sidelink">System 2: Overlapping Tilings</a>
 			<a href="#sys3" class="sidelink">System 3: Space-filling Curves, Hamiltonian Cycles, MSTs</a>
 			<a href="#related-work" class="sidelink">Related Work</a>
-			<a href="#gallery" class="sidelink">Gallery</a>
-		  </div>
-		<div id="body">
+		<!--<a href="#gallery" class="sidelink">Gallery</a>-->
+		</div>
 		  <div id="main">
 			<h1>Chinese Lattice Designs</h1>
 			<section id="intro">
@@ -83,20 +77,37 @@
 			<hr></section>
 			<section id="sys1">
 			  <h2>System 1: Square Merging</h2>
-			  <p> 
+				<p> 
 					The first system is simple, but very effective. You start with a grid of squares, and you just merge adjacent squares in each step. By itself, this isn't enough, but you can add a few different constraints and the patterns
 					soon look pretty cool.
 				</p>
-				</p>
+				<p>
 					One constraint is to limit the number of merged squares to, say, 4. This is the Tetris number! For some reason, there are too many different shapes with 5 squares, too few with 3 squares, and the result is not as aesthetically pleasing. 4 is just right!
 					You can make this a hard constraint and try to make every single group contain exactly 4 squares, but this is probably an NP-Complete problem, so a soft constraint of merging with at most 4 squares will do.
 				</p>
+				<div class="img-row">
+					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\rot1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\rot2.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\rot3.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\rot4.png" caption="with luminosity cycle"></img></div>
+				</div>
 				<p> 
 					Another constraint is to merge squares only in the same ring around the center, say (although the book also has a couple of examples with only vertical merges). This is enough to generate pleasing and "real" examples as well.
 				</p>
+				<div class="img-row">
+					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\win5.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\win6.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\win7.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\win8.png" caption="with luminosity cycle"></img></div>
+				</div>
 				<p>
 					Given the last constraint, an idea is simply to flip it on its head - merge only squares that are <i>not</i> in the same ring.
 				</p>
+				<div class="img-row">
+					<div class="img-row-item"> <img  src="chineselattice-img\comp1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="chineselattice-img\comp2.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="chineselattice-img\comp3.png" caption="without luminosity cycle"></img></div>
+				</div>
 				<p>
 					Finally, and this should go without saying, every pattern will have some kind of symmetry applied (mirror or rotational). And you can always combine the above constraints.
 				</p>
@@ -106,11 +117,32 @@
 				<p>
 					The second system is also pretty simple, but it requires more interaction to work and is also a bit more limited in the patterns it produces. Basically, you just generate a simple tiling of squares, octagons, and squares,
 					and then you either make each polygon larger so that they overlap. You can also overlap the dual tilings (which are the same, in the case of squares and octagons), where each vertex becomes a polygon. Again, not as versatile,
-					but it does manage to reproduce a different kind of "real" patterns.
+					but it does manage to reproduce a different kind of "real" patterns - all four of patterns above appear in the book (and there are other examples that start from such patterns but then change them in a less systematic way).
 				</p>
+				<div class="img-row">
+					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\interlock1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\interlock2.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\interlock3.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\interlock4.png" caption="with luminosity cycle"></img></div>
+				</div>
 				<p>
 					It can also be extended to produce very different patterns if you allow different edge widths, rotations, and so on. It's a bit messier to work with and easy to create overcrowded patterns, but some of the examples are pretty cool.
 				</p>
+				<div class="img-row">
+					<div class="img-row-item"> <img  src="chineselattice-img\balustrade4.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="chineselattice-img\balustrade5.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="chineselattice-img\balustrade6.png" caption="without luminosity cycle"></img></div>
+				</div>
+				<div class="img-row">
+					<div class="img-row-item"> <img  src="chineselattice-img\complex1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="chineselattice-img\complex2.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="chineselattice-img\complex3.png" caption="without luminosity cycle"></img></div>
+				</div>
+				<div class="img-row">
+					<div class="img-row-item"> <img  src="chineselattice-img\balustrade1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="chineselattice-img\balustrade2.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item"> <img src="chineselattice-img\balustrade3.png" caption="without luminosity cycle"></img></div>
+				</div>
 			<hr></section>
 			<section id="sys3">
 			  <h2>System 3: Space-filling Curves, Hamiltonian Cycles, MSTs</h2>
@@ -141,9 +173,11 @@
 				</p>
 			<hr></section>
 			<section id="gallery">
-			  <h2>Gallery</h2>
+			<!--
+			<h2>Gallery</h2>
 			  
 			<hr></section>
+			-->
 		  </div>
 		</div>
 	</body>
