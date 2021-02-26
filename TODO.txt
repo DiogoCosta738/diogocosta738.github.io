@@ -1,14 +1,10 @@
-Add images to:
-	chinese lattice
+
 Add GALERY to:
 	voronoi
-	chinese lattice
 	celtic knot
 	ltlca
 	(amalgama?)
 	
 DO:
-	Shader Experiments
+	Shader Experiments	(only need water shaders? that I remember)
 	Game Prototypes
-	Starsky				DONE 23/2
-	Digital Weaving		DONE 
