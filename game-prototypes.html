@@ -1,0 +1,203 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="gallerysheet.css">
+		<link rel="stylesheet" href="imagesheet.css">
+		<script src="gallerycode.js"></script>
+	</head>
+	<body>
+		<nav id="navbar">
+		  <ul>
+			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
+			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="amalgama.html">AmalgamA (missing gallery) </a>
+				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes (empty)</a>
+			  </div>
+			</li>
+			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+				<a class = "dropdown-item" href="starsky.html">Starsky</a>
+				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+				<a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+			  </div>
+			</li>
+			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="">(empty) Cultural Evolution</a>
+				<a class = "dropdown-item" href="">(empty) MOOCs</a>
+				<a class = "dropdown-item" href="">(empty) Cool people</a>
+				<!--
+				<a class = "dropdown-item" href="">(empty) Reading Log</a>
+				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
+				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
+				-->
+			  </div>
+			</li>
+		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
+		  </ul>
+		</nav>
+		<div id="body">
+			<div id="sidebar">
+				<a href="#introduction" class="sidelink">Introduction</a>
+				<a href="#gravplan" class="sidelink">Noise</a>
+				<a href="#ray-marching" class="sidelink">Domain Marching</a>
+				<a href="#buffers" class="sidelink">Buffers</a>
+				<a href="#others" class="sidelink">Other</a>
+			</div>
+			<div id="main">
+				<h1>Game Prototypes</h1>
+				<section id="introduction">
+					<h2>Introduction</h2>
+					<p>
+						This page is a repository for the small game prototypes I've done over the years. They're all small and unfinished, but there's usually something to learn or explore.
+					</p>
+					<p>
+						The first ones were done in Game Maker: Studio. When I worked on the <a href="4dcrosssection.html" target="_blank">4D cross-section project</a> I switched to Unity for the 3D stuff. I stuck with it because it had a proper OO-language and that's what I use for most projects, now.
+					</p>
+					
+				<hr></section>
+				<section id="gravplan">
+					<h2>Gravity Shooter</h2>
+					<p>
+						This was the first game I actually did on my own (the only previous one started as a Game Maker Tutorial by Derek Yu), from March and April of 2015. I still like the idea, and it would probably work as a local multiplayer game of some kind (a wackier Soldat).
+					</p>
+					<p>
+						Unlike most other games of the kind I had seen, here every planet's gravity affected the planet (most others had only one planet "active", either the closest of the last touched).
+					</p>
+					<div style="text-align:center;">
+						<img style="padding:1%;" align="center" width="50%" src="game-prototypes-img/planets1_redux.gif"  />
+					</div>
+					<p>
+						You can probably see from the weapons' style that I was very much under the influence of Vlambeer at the time! I still love the idea of the weapons' kickback being used for momentum.
+					</p>
+					<div class="img-row" style="width:100%;">
+						<div class="img-row-item" style="width:25%;"> <img  src="game-prototypes-img\planets_cheeto.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:25%;"> <img  src="game-prototypes-img\planets_rubber.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:25%;"> <img  src="game-prototypes-img\planets_shotgun.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:25%;"> <img  src="game-prototypes-img\planets_bomb.gif" caption="with luminosity cycle"></img></div>
+					</div>
+				<hr></section>
+				<section id="darkmaze">
+					<h2>Dark Maze</h2>
+					<p>
+						This was a fun experiment for the atmosphere, from May 2015. I first used Kruskal's algorithm to generate a simple maze, and then applied top-down shadows to create a rather claustrophobic atmosphere. I still love the way it looks, despite the crudity and my inexperience at the time.
+					</p>
+					<div class="img-row" style="width:100%;">
+						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\darkmaze_redux.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\maze.png" caption="with luminosity cycle"></img></div>
+					</div>
+					<p>
+						It was supposed to be a weird single-multiplayer game. Each player was alone and had a single life; after each death, another player would take up the other's place, with the world state unchanged. There would be a kind of asynchronous mind game going on, with traps and notes (not every player had the same goal). It sounded great, but actually making it into a functional game was a whole other task haha!
+					</p>
+				<hr></section>
+				<section id="rhythmmissile">
+					<h2>Rhythm Missile Command</h2>
+					<p>
+						This was my first attempt at a rhythm game, in February 2016. I think I was playing Bit Trip Runner (which is still one of my favourite games!).
+						The idea wasn't very inspired, but hey - I basically tried to make a version of missile commander where the enemies moved in rhythm to a backing track, with various different patterns (some reinforcing the rhythm, some syncopated or polyrhythmic).		
+					</p>
+					<p>
+						The gun only fired on the rhythm, and the player had to keep the beat up with the RMB when not shooting (to build a score). Your weapon also created a bigger explosion depending on the timing of the shot (and streak). The game's level design had much more structure than you can see in the gif - where I tried to get a higher density of enemy types for showcase purposes; it was not very refined either way, however.
+					</p>
+						<div style="text-align:center;">
+							<img style="padding:1%;" align="center" width="50%" src="game-prototypes-img/rhythmmissile_redux.gif"/>
+						</div>
+					<p>
+						My intention was to have "layers" to the music, depending on, say, the current state (more complex music when you were doing well) as well as the types of enemies on screen. Visually, everything would have been in sync, like 140.
+						Unfortunately, the music never got anywhere (I was trying to entice a friend to work with me but he was having none of it!) and I soon abandoned it.
+					</p>
+				<hr></section>
+				<section id="shogi">
+					<h2>Shogi</h2>
+					<p>
+						This is Japan's version of chess, essentially. It was the only online game I worked on (from February 2017). It actually worked surprisingly well, a few bugs aside. I designed the pieces differently since I cannot read Kanji, and this way there was also a hint of the piece's movement pattern.
+						For some reason, however, I screwed up the game logic (more than the network logic!) and used screen positions and collisions instead of the cleaner grid logic. It is still a good reminder, today, not to do such a thing!
+					</p>
+					<div style="text-align:center;">
+						<img style="padding:1%;" align="center" width="50%" src="game-prototypes-img/shogi.png"  />
+					</div>
+					<p>
+						I used a <a href="https://en.wikipedia.org/wiki/%C5%8Ctsuzumi" target="_blank">kotsuzumi</a> to alert when the opponent played his hand. There was also a nice little extension to highlight the tray icon on Windows, done by a very kind Game Maker user on the forums. Unfortunately, I have lost his contact and can't point to him. I will update this if I ever find it!
+					</p>
+				<hr></section>
+				<section id="grapple">
+					<h2>Grappling Hook</h2>
+					<p>
+						This is probably the most satisfying platformer I've worked on, from August 2017. When you get the swings going, it feels extremely good! I used the energy functions (kinetic and potential) for the physics on the grappling hook, but normal mass and acceleration elsewhere. Works great when the rope becomes shortened (due to collisions), too.
+					</p>
+					<div class="img-row" style="width:100%;">
+						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\grapple1.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\grapple2.gif" caption="with luminosity cycle"></img></div>
+					</div>
+				<hr></section>
+				
+				<section id="immune">
+					<h2>Immune Defense Game</h2>
+					<p>
+						This one I worked on sometime in the first half of 2017. I was reading <a href="https://en.wikipedia.org/wiki/Aubrey_de_Grey" target="_blank">Aubrey de Grey</a>'s <a href="https://en.wikipedia.org/wiki/Ending_Aging" target="_blank">Ending Aging</a>. I actually loved his explanations of biological system, they had a very "tactile" or "mechanical" feeling (that's how it felt to me, anyway), which actually translated quite well into a game system.					
+					</p>
+					<p>
+						It was basically a mixture of rock-paper-scissors and <a href="https://store.steampowered.com/app/294160/Galcon_2_Galactic_Conquest/" target="_blank">Galcon</a>; instead of capturing planets, you targetted abstract bases, which would produce their own units, in three types. The immune system analogy was that you could not see the enemy units, initially, so you had to produce weaker "scout" cells; also, each base would learn to produce cell types (rock, paper, scissors) faster, so abandoning a strategy wasn't ideal.
+					</p>
+					<div style="text-align:center;">
+						<img style="padding:1%;" align="center" width="50%" src="game-prototypes-img/immune3.png"  />
+					</div>
+					<p>
+						I had a really cool idea (so I thought) of using Metaballs to represent your "armies", as a kind of bodily goo. Each cell type's color would blend, so you could evaluate (somewhat) the army's type distribution.
+						This was before I had learned how to use shaders at all and <a href="https://xorshaders.weebly.com/" target="_blank">Xor</a> was very kind to help me out setting it up!
+					</p>
+					<div style="text-align:center;">
+						<img style="padding:1%;" align="center" width="50%" src="game-prototypes-img/immune_anim1.gif"  />
+					</div>
+					<p>
+						Each "unit" had 3-5 metaballs with random orbits around an implied center, and the color followed its distribution. As it merged with a larger army, it became smaller, and changed its army's color to reflect the change in composition. 
+						I was really happy with how smooth everything was, at the time! I could probably make it a lot shinier, now that I actually understand shaders, but it was a cool project to work on. It also provided the impetus for me to actually learn shaders.
+					</p>
+				<hr></section>
+				<section id="akari">
+					<h2>Akari</h2>
+					<p>
+						This was a fairly straightforward of Akari and Minesweeper during my master's thesis (late 2017 or early 2018), mostly as an aid while I was trying to build levels simulating circuits. Not much to it, but both games worked on all 3 regular division of the plane (triangle, square and hexagonal).
+						Next step will be to do it in hyperbolic space!
+					</p>
+					<div class="img-row" style="width:60%;">
+						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\akari_sqr.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\akari_hex.gif" caption="with luminosity cycle"></img></div>
+					</div>
+				<hr></section>
+				<section id="platformer">
+					<h2>Castlevania Platformer</h2>
+					<p>
+						I was playing through all of the 2D Castlevania games (post NES, which I had played years earlier) and got surprisingly into them, so I decided to do a small platformer with similar mechanics. This was in February 2020. The game was supposed to have a non-linear structure like Battle of Olympus or Zelda II on the NES, with some other bells and whistles. I was reading the greek epics at the time (Iliad, Odyssey and Argonautica), hence Battle of Olympus.
+					</p>
+					<p>
+						The focus, mechanically, was in building up a series of platforming abilities in a metroidvania-like way, allowing you to reach different places. Looking back at it, the controls feel a bit off.
+					</p>
+						<div style="text-align:center;">
+							<img style="padding:1%;" align="center" width="50%" src="game-prototypes-img/castleva_platforming.gif"  />
+						</div>
+					<p>
+						Unfortunately, I was too inept and slow at animating the characters (even with just a couple or frames) and lost steam - may have been different if I was working with someone (so that the game itself wasn't completely still while I animated).
+					</p>
+						<div style="text-align:center;">
+							<img style="padding:1%;" align="center" width="60%" src="game-prototypes-img/castleva_anim1.png"  />
+						</div>
+						<div style="text-align:center;">
+							<img style="padding:1%;" align="center" width="25%" src="game-prototypes-img/castleva_anim2.png"  />
+						</div>
+				<hr></section>
+				<section id="dunes">
+					<h2>Dune Driver</h2>
+				<hr></section>
+				</div>
+				</div>
+				</body>
+				</html>				

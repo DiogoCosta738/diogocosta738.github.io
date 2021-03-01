@@ -25,9 +25,7 @@ def replace_navbar(navbar, filename):
         if state==1 and line.strip().startswith("</nav>"):
             state=2
         elif state==0 and line.strip().startswith("<nav"):
-            newfile_list+=["\n"]
             newfile_list+=navbar
-            newfile_list+=["\n"]
             state=1
         elif state==0 or state==2: #state==0
             newfile_list+=[line]
