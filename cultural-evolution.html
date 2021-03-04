@@ -49,18 +49,54 @@
 		<div id="body">
 			<div id="sidebar">
 				<a href="#introduction" class="sidelink">Introduction</a>
+				<a href="#iterated-learning" class="sidelink">Iterated Learning</a>
 				<a href="#network" class="sidelink">Network</a>
 				<a href="#arts-critics" class="sidelink">Artists and Critics</a>
 				<a href="#influence" class="sidelink">Cultural Influence</a>
 				<a href="#examples" class="sidelink">Real World Examples</a>
+					<a href="#architecture" class="sidelink-inner">Architecture</a>
+					<a href="#miniature-painting" class="sidelink-inner">Miniature Painting</a>
+					<a href="#epic-poetry" class="sidelink-inner">Epic Poetry</a>
+					<a href="#shadowplay" class="sidelink-inner">Shadowplay</a>
 			</div>
 			<div id="main">
 			<h1>Cultural Evolution -- in progress --</h1>
 				<section id="introduction">
 					<h2>Introduction</h2>
+					<p>
+						This is one of my main interests, at the moment, especially when applied to video games, but also more generally. It basically started when I took a Complex Networks course in university (about computational networks, multi-agent simulations on them, and game theory), and then read the book <a href="" target="_blank">Evolution of Language</a>, an edited set of paper on the evolution of language. 
+						This book had a huge influence on me, in particular the chapter by <a href="https://en.wikipedia.org/wiki/Simon_M._Kirby" target="_blank">Simon Kirby</a> on an <a href="http://www.lel.ed.ac.uk/~kenny/publications/smith_03_iterated.pdf" target="_blank">Iterated Learning Model</a> where fairly simple rules led to the creation of structured (recursive) language. 
+					</p>
+					<p>
+						If you put the two together, you have a model to evolve structured art forms, and a way of relating them in space (through networks). Of course, it's easier said than done! Especially when dealing with arts and crafts, you need to add aesthetics in some way for it to look interesting to real people and not just a random assortment of bits.
+					</p>
+					<p>
+						Some other people whose work in the area I find really interesting (though more on the sociological side than the artistic) are <a href="https://en.wikipedia.org/wiki/Peter_Turchin" target="_blank">Peter Turchin</a> (on history), <a href="https://en.wikipedia.org/wiki/Peter_Richerson" target="_blank">Peter Richerson</a> and <a href="https://en.wikipedia.org/wiki/Robert_Boyd_(anthropologist)" target="_blank">Robert Boyd</a> (the <i>de facto</i> pioneers of the field), <a href="https://en.wikipedia.org/wiki/David_Sloan_Wilson" target="_blank">David Sloan Wilson</a> (on religion), and I'll add more as they come to mind.
+					</p>
+					<p>
+						Also extremely important, though perhaps a bit tangential, is <a href="https://en.wikipedia.org/wiki/Milman_Parry" target="_blank">Milman Parry</a> and <a href="https://en.wikipedia.org/wiki/Albert_Lord" target="_blank">Albert Lord</a> and the latter's book <a href="https://en.wikipedia.org/wiki/The_Singer_of_Tales" target="_blank">Singer of Tales</a> (see <a href="#epic-poetry">Epic Poetry</a> below) which was extremely reinforcing to these ideas, showing a very clear real world example despite being entirely unrelated to the theory.
+					</p>
+				<hr></section>
+				<section id="iterated-learning">
+					<h2>Iterated Learning</h2>
+					<p>
+						Iterated Learning is essentially the game of the Broken Telephone (or Chinese Whispers). Basically, you want to propagate information through agents: the first agent produces something, the second tries to learn that something (hopefully faithfully) and passes it onto a third. Things become interesting when the things you're communicating are perhaps too complex to learn completely. Then, you need to figure out rules to simplify the system, or access imperfections. These imperfections can build up and lead to noise, or can lead to a more learnable system, with its inherent structure.
+					</p>
+					<p>
+						You can also add an element of expression. Imagine you're trying to learn, say, how to play the blues. There are thousands if not millions of songs and interpretations. You don't get to learn (or reproduce) them all, not even close. You typically find a smaller set that you love the most, and you develop a certain style based on that. Both the songs that are learned and the method through which they are learned is important and can lead to vastly different art forms as styles slowly (or perhaps rapidly) drift apart and are redefined.
+					</p>
 				<hr></section>
 				<section id="network">
 					<h2>Network</h2>
+					<p>
+						Simon Kirby's articles were mostly about a single chain of agents, not a "real" network. That is, you have a genealogy of single parent and offspring. The parent produces, the offspring learns. On the next iteration, the offspring becomes the parent and spawns its own offspring and the process repeats.						
+					</p>
+					<p>
+						This can be generalized to a whole network, with a lot more complexity, too, if you add different kinds of relations. Perhaps there is a strong familial component, and so children still learn mostly from parents. Or maybe this is all about friends, played on a different kind of local network. Or maybe there are established schools which decide what to teach on a national level. Or maybe there are some really popular pieces of art that are copied everywhere just because people like them and end up being more influential.
+					</p>
+					<p>
+						You can imagine all kinds of situations where a network can play a role. The kind of network itself will influence what is learning and how things "evolve".
+					</p>
 				<hr></section>
 				<section id="arts-critics">
 					<h2>Artists and Critics</h2>
@@ -73,7 +109,7 @@
 					<p>
 						Obviously, cultural evolution, of the kind I'm writing about, is just about everywhere you look. That said, there are some specific examples I find interesting.
 					</p>
-					<h3>Architecture</h3>
+					<h3 id="architecture">Architecture</h3>
 					<p>
 						Architecture was the first domain in which I thought to apply this model. The idea came from Age of Empires, where the various cultures are visually identified by their architecture, mostly (with some forced standardization like the Mongols' walled cities). I envisioned a kind of 4X or City-building game where each culture could have its own living architecture, reflecting different their diplomatic and trade relations as well.
 					</p>
@@ -84,7 +120,7 @@
 					<p>
 						Another aspect that favours architecture is that it is composed of fairly discrete elements with continuous variations - you can look at columns, roofs and stories at the highest level, then descend to capital, shaft and column (for columns), and so on. This makes it more controllable (one culture can borrow, say, columns wholesale, and vary the roof slope only slightly) though still a big undertaking, of course.
 					</p>
-					<h3>Miniature Painting</h3>
+					<h3 id="miniature-painting">Miniature Painting</h3>
 					<p>
 						This is a kind of painting seen mostly in books, often featuring patterned textures and weird perspective. Just as interesting is the cultural relations - perhaps taken from China to Persia by the Mongols, where it developed in different ways. it further specialized by the Ottomans (Turkey) and Mughal (India) examples.
 						There are also "western" miniature paintings, mostly for illumination of holy books, but I am not sure whether they have a common origin.		
@@ -104,7 +140,7 @@
 						</div>
 					</div>
 					
-					<h3>Epic poetry</h3>
+					<h3 id="epic-poetry">Epic poetry</h3>
 					<p>
 						Epic poetry is one of my favourite examples, but also one of the most elusive - especially when you consider the oral epics.
 					</p>
@@ -119,7 +155,7 @@
 						The structure of this is ripe for cultural influence, though, be it in the themes (which battle are fought, against whom), the customs they portray, or the music they accompany. There are always many versions of the "same" story circulating, and the story may never be told in exactly the same way twice - but this is exactly what one wants when simulating culture. Constant tweaking and reevaluation (sometimes aesthetic, sometimes political, or whatever else).
 						It is, granted, perhaps a bit harder to program at the moment - or maybe poetry is simply not my area (also true)!
 					</p>
-					<h3>Shadowplay</h3>
+					<h3 id="shadowplay">Shadowplay</h3>
 					<p>
 						This one is more recent, and about shadow puppet theater. Specifically, the Indian and South-East Asian varieties. I became interesting in Gamelan music, and found out it is extremely common across South-East Asia (From India to Thailand and all across Indonesia).
 						Like miniature painting, it is another example of a specialized art form that nonetheless is full of local flavor! You can see, for example, how the puppets themselves look very different in Java and Bali, which are extremely close together in space - the reason being perhaps Islam, which was against human representation in art; the puppets from Java, where Islam took hold, are a lot more stylized, whereas in Bali the puppets have more human-like.
