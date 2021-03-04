@@ -60,9 +60,21 @@
 			<div id="sidebar">
 				<a href="#introduction" class="sidelink">Introduction</a>
 				<a href="#noise" class="sidelink">Noise</a>
+					<a href="#marble" class="sidelink-inner">3D Marble</a>
+					<a href="#ridged-lava" class="sidelink-inner">Ridged Lava</a>
+					<a href="#ridged-warping" class="sidelink-inner">Ridged Warping</a>
+					<a href="#domain-warp-distortion" class="sidelink-inner">Domain Warp Distortion</a>
+					<a href="#eyeris" class="sidelink-inner">Eyeris</a>
+					<a href="#planets" class="sidelink-inner">Planets</a>
 				<a href="#ray-marching" class="sidelink">Domain Marching</a>
+					<a href="#iridescent-blob" class="sidelink-inner">Iridescent Blob</a>
+					<a href="#tower-of-timbuktu" class="sidelink-inner">Tower of Timbuktu</a>
+					<a href="#fuji" class="sidelink-inner">Fuji</a>
 				<a href="#buffers" class="sidelink">Buffers</a>
+					<a href="#sun-shafts" class="sidelink-inner">Sun Shafts/God rays</a>
 				<a href="#others" class="sidelink">Other</a>
+					<a href="#reaction-diffusion" class="sidelink-inner">Reaction Diffusion</a>
+					<a href="#simple-mandelbrot" class="sidelink-inner">Simple Mandelbrot</a>
 			</div>
 			<div id="main">
 				<h1>Shader Experiments</h1>
@@ -90,7 +102,7 @@
 						They use various kinds of noise, like <a href="https://en.wikipedia.org/wiki/Perlin_noise" target="_blank">Perlin Noise</a>, <a href="https://www.iquilezles.org/www/articles/fbm/fbm.htm" target="_blank">Fractional Brownian Motion</a>, Ridged Noise, <a href="https://www.iquilezles.org/www/articles/warp/warp.htm" target="_blank">Domain Warping</a>, <a href="https://www.iquilezles.org/www/articles/voronoise/voronoise.htm" target="_blank">Voronoise</a> and sometimes different combinations depending on the effect.
 					</p>
 					
-					<h3>3D Marble</h3>
+					<h3 id="marble">3D Marble</h3>
 					<p>
 						This idea popped into my mind as I was walking through Anor Londo. The cool thing, to me, is that using 3D noise, you can make 3D textures - which means you can cut up a block in any way you want! You could make a whole Greek Temple with a single marble block, with every single texel matching. It can also be used to deform 2D textures (in animations) or to create seamless texture (by mapping the texture onto a torus/donut).
 					</p>
@@ -101,7 +113,7 @@
 						<a style="text-align:center;" href="https://www.shadertoy.com/view/tt3BDf" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/marble.png"  /></a>
 					</div>
 					
-					<h3>Ridged Lava</h3>
+					<h3 id="ridged-lava">Ridged Lava</h3>
 					<p>
 						Simple lava using a similar idea to the Marble's - two layers of ridged noise, slightly offset and averaged. Would probably benefit from some swirling noise like domain warping.
 					</p>
@@ -109,7 +121,7 @@
 						<a style="text-align:center;" href="https://www.shadertoy.com/view/3lVfDW" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/lava.png"  /></a>
 					</div>
 					
-					<h3>Ridged Warping</h3>
+					<h3 id="ridged-warping">Ridged Warping</h3>
 					<p>
 						I must confess I didn't even remember writing this shader, but I like it! Looking at the code, it is simple domain warping with ridged noise instead of fbm.
 					</p>
@@ -117,7 +129,7 @@
 						<a style="text-align:center;" href="https://www.shadertoy.com/view/WlVfDW" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/turbulent_warp.png"  /></a>
 					</div>
 					
-					<h3>Domain Warp Distortion</h3>
+					<h3 id="domain-warp-distortion">Domain Warp Distortion</h3>
 					<p>
 						This is straightforward domain warping applied to a texture, but changing its coordinates rather than color. It is mostly a proof-of-concept kind of thing, but I am a sucker for distortion effects in general, especially on explosions and sword slashes and so on. This is also the kind of distortion used in The Witcher 2, during the eternal battle.
 					</p>
@@ -125,7 +137,7 @@
 						<a style="text-align:center;" href="https://www.shadertoy.com/view/3lKBWD" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/distortion.png"  /></a>
 					</div>
 					
-					<h3>Eyeris</h3>
+					<h3 id="eyeris">Eyeris</h3>
 					<p>
 						Domain warping with a radial color palette, looks good in motion. The idea came from the game <a href="https://store.steampowered.com/app/308040/Back_to_Bed/" target="_blank">Back to Bed</a>, while I was proving its PSPACE-Completeness for my <a href="about.html" target="_blank">thesis</a>.
 					</p>
@@ -133,7 +145,7 @@
 						<a style="text-align:center;" href="https://www.shadertoy.com/view/3tKBDD" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/eyeris.png"  /></a>
 					</div>
 					
-					<h3>Planets</h3>
+					<h3 id="planets">Planets</h3>
 					<p>
 					These are from when I was working on the <a href="starsky.html" target="_blank">Nightsky</a> project. Straightforward application of noise, sometimes with vertex displacement as well. Looks particularly good on gas giants (although some fluid dynamics also work great).
 					</p>
@@ -155,7 +167,7 @@
 						There are also some astonishing examples of 3D fractals as well, which I'd love to look into at some point (for uses in procedural architecture, for example) but have yet to do so.
 						Volumetric clouds are another area I'd like to look into, eventually, but there are always more ideas than time (and motivation) to implement them!
 					</p>
-					<h3>Iridescent Blob</h3>
+					<h3 id="iridescent-blob">Iridescent Blob</h3>
 					<p>
 						This is fairly simple - it's just a sphere, with a couple of modifications. The first is the use of noise to modify its surface and make it blob-y. The second is to change its hue depending on the light and viewing angle - a kind of fake <a href="https://en.wikipedia.org/wiki/Iridescence" target="_blank">iridescence</a>.
 					</p>
@@ -163,7 +175,7 @@
 						<a style="text-align:center;" href="https://www.shadertoy.com/view/ltGfWD" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/iridescent.png"  /></a>
 					</div>
 					
-					<h3>Tower of Timbuktu</h3>
+					<h3 id="tower-of-timbuktu">Tower of Timbuktu</h3>
 					<p>
 						As I was just learning ray-marching, my father mentioned Timbuktu's architecture to me (for some reason). When I saw it, it immediately reminded me of the smooth shapes possible with distance fields, so I made a small tower as an example.
 						It's a simple trapezoidal prism, blended with a sphere at the top, and negatively blended with a box for a door. FBM noise is then applied to the surface to make it look sandy.
@@ -172,7 +184,7 @@
 						<a style="text-align:center;" href="https://www.shadertoy.com/view/XtGBRK" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/timbuktower.png"  /></a>
 					</div>
 					
-					<h3>Fuji</h3>
+					<h3 id="fuji">Fuji</h3>
 					<p>
 						Well, not really Fuji. Just a snowy volcano. It was a combination of Ridged Noise, a truncated cone in the middle for a height, and then <a href="" target="_blank">an erosion algorithm</a>, the same I mentioned in the <a href="erosion.html" target="_blank">erosion project</a>. 
 						The snow is just a white color when the surface normal is upward enough.
@@ -189,7 +201,7 @@
 					This section is dedicated to more complicated shaders, namely ones that are not applied directly to a texture or the screen, but use auxiliary buffers (like depth and normal buffers, and so on).
 					It is typically used for post-processing rendering, like blur, cel-shading, outlines, and so on. It is still rather empty, since I haven't had the opportunity to experiment much with it, but I'll probably get to it at some point!
 					
-					<h3>Sun-shafts/God rays</h3>
+					<h3 id="sun-shafts">Sun-shafts/God rays</h3>
 					<p>
 						I think this is a pretty common trick to render god rays. First, you render the whole scene into a silhouette (render every opaque object black, and semi-transparent objects shades of gray), with light sources in lighter colors. Then, you apply radial blur to the dark areas, away from the light, and it gives the effect of soft shadows.
 					</p>
@@ -207,7 +219,7 @@
 				<hr></section>
 				<section id="others">
 					<h2>Others</h2>
-						<h3>Reaction-Diffusion</h3>
+						<h3 id="reaction-diffusion">Reaction-Diffusion</h3>
 							<p>
 								Reaction-diffusion systems hold a special place in my heart, and I hope to go back to them someday. The basic idea is to simulate the reaction of 2 different chemical on a surface. The fascinating thing is that it is a kind of morphogenesis, the subject of one of <a href="https://en.wikipedia.org/wiki/Alan_Turing" target="_blank">Alan Turing</a>'s <a href="https://www.dna.caltech.edu/courses/cs191/paperscs191/turing.pdf" target="_blank">last papers</a>.
 							</p>
@@ -228,7 +240,7 @@
 								<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\reacdif5.png" caption="with luminosity cycle"></img></div></a>
 							</div>
 							
-						<h3>Simple Mandelbrot fractal</h3>
+						<h3 id="simple-mandelbrot">Simple Mandelbrot</h3>
 						<p>
 							Fractals are the bread and butter of computer graphics, but I had never tried to render any. I was reading <a href="https://en.wikipedia.org/wiki/Benoit_Mandelbrot" target="_blank">Benoit Mandelbrot</a>'s <a href="https://www.amazon.com/Fractalist-Memoir-Scientific-Maverick/dp/030738991X" target="_blank">autobiography</a> and got the gist of the computation, so I tried to implement it in a shader. It's nothing special and has some artifacts, but it captures the main idea.
 						</p>
