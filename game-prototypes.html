@@ -203,12 +203,72 @@
 				<hr></section>
 				<section id="dunes">
 					<h2>Dune Driver</h2>
+					<p>
+						This came about when I first read some of Moebius' comic books. I loved the colors and landscapes and it made me want to make some sort of desert riding prototype.
+						This was also around the time when I was making the <a href="starsky.html">Nightsky</a> project.
+					</p>
+					<p>
+						The dunes are fairly straightforward - just a sum of 3D normal distributions. I made them oblong and facing the same direction to simulate how the wind shapes dunes.
+					</p>
+					<div class="img-row" style="width:80%;">
+						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\dunes1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\dunes2.png" caption="with luminosity cycle"></img></div>
+					</div>
+					<p>
+						This was also the first time I tried to implement any kind of 3D movement. In particular, I focused on giving it a "natural motion" (rather than hugging the ground and always pointing to its normal). It feels pretty satisfying to control, especially at low speeds.
+					</p>
+					<p>
+						I also accidentally found out that Mario Kart's "drift" is mostly about adding an ortogonal component to the movement!
+					</p>
+					<div class="img-row" style="width:70%;">
+					<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\dune_rider1_redux.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:34%;"> <img  src="game-prototypes-img\dune_rider2_redux2.gif" caption="with luminosity cycle"></img></div>
+					</div>
+					
+					
+					
+					
+					
 				<hr></section>
 				<section id="diablo">
 					<h2>Diablo-like ARPG</h2>
 				<hr></section>
 				<section id="angkhorror">
 					<h2>Angkhorror</h2>
+					<p>
+						This project came about at the intersection of <a href="https://kittyhorrorshow.itch.io/" target="_blank">KittyHorrorShow</a> and reading about <a href="https://www.amazon.com/Angkor-Civilization-Ancient-Peoples-Places/dp/0500284423" target="_blank">Angkor and the Khmer Civilization</a>. I really loved her games "Grandmother" and "Monastery", and I had wanted to expriment with low-res rendering ever since I played Ultima Underworld in early 2020.
+					</p>
+					<div class="img-row" style="width:70%;">
+						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\angkhorror.gif" caption="with luminosity cycle"></img></div>
+					</div>
+					<p>
+						It was very cool to work on, especially since I had never done any 3D modeling. I tried Blender for a while, but the program was incredibly bloated (for one who isn't specialized in modeling), so I decided to implement my own tools and see what came of it.
+						I modeled everything myself with these customs tools, except the statues' bodies - for which I used a basic rigged model and then set their positions (and duplicated arms and heads where applicable!).
+					</p>
+					<div class="img-row" style="width:70%;">
+						<div class="img-row-item" style="width:15.5%;"> <img  src="game-prototypes-img\angkhorror_model1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:10%; "> <img  src="game-prototypes-img\angkhorror_model2.png" caption="with luminosity cycle"></img></div>
+					</div>
+					<div class="img-row" style="width:70%;">
+						<div class="img-row-item" style="width:17.5%;"> <img  src="game-prototypes-img\angkhorror_model3.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:10%; "> <img  src="game-prototypes-img\angkhorror_model4.png" caption="with luminosity cycle"></img></div>
+					</div>
+					<div class="img-row" style="width:70%;">
+						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\angkhorror_model5.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:25%; "> <img  src="game-prototypes-img\angkhorror_model6.png" caption="with luminosity cycle"></img></div>
+					</div>
+					<p>
+						I've also generated most of the textures myself, with various kinds of <a href="shader-experiments.html#noise" target="_blank">noise</a>, as well as creating their normal maps. The downscaling was particularly interesting, since the algorithm for the textures and the actual rendering was different (for aesthetic purposes) - textures benefitted from averaging the pixel within a certain area to preserve the original image as much as possible; but the rendering worked better if you sampled a single pixel from the area rather than averaging, precisely because it more faithfully simulates "low" resolution (where you don't have the computational power to render more pixels than you see on the screen).
+						The sky also required a different approach described <a href="starsky.html#lowres" target="_blank">here</a>.
+					</p>
+					<div class="img-row" style="width:70%;">
+						<div class="img-row-item" style="width:18%;"> <img  src="game-prototypes-img\angkhorror_tex1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:10%; "> <img  src="game-prototypes-img\angkhorror_tex1_low.png" caption="with luminosity cycle"></img></div>
+					</div>
+					<div class="img-row" style="width:70%;">
+						<div class="img-row-item" style="width:11.5%;"> <img  src="game-prototypes-img\angkhorror_tex2.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="width:10%; "> <img  src="game-prototypes-img\angkhorror_tex2_low.png" caption="with luminosity cycle"></img></div>
+					</div>
 				<hr></section>
 				<section id="jamelan">
 					<h2>Jamelan</h2>
