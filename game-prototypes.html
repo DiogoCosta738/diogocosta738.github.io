@@ -236,7 +236,7 @@
 				<section id="angkhorror">
 					<h2>Angkhorror</h2>
 					<p>
-						This project came about at the intersection of <a href="https://kittyhorrorshow.itch.io/" target="_blank">KittyHorrorShow</a> and reading about <a href="https://www.amazon.com/Angkor-Civilization-Ancient-Peoples-Places/dp/0500284423" target="_blank">Angkor and the Khmer Civilization</a>. I really loved her games "Grandmother" and "Monastery", and I had wanted to expriment with low-res rendering ever since I played Ultima Underworld in early 2020.
+						This project came about at the intersection of <a href="https://kittyhorrorshow.itch.io/" target="_blank">KittyHorrorShow</a> and reading about <a href="https://www.amazon.com/Angkor-Civilization-Ancient-Peoples-Places/dp/0500284423" target="_blank">Angkor and the Khmer Civilization</a>. I really loved her games "Grandmother" and "Monastery", and I had wanted to experiment with low-res rendering ever since I played Ultima Underworld in early 2020.
 					</p>
 					<div class="img-row" style="width:70%;">
 						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\angkhorror.gif" caption="with luminosity cycle"></img></div>
@@ -258,7 +258,7 @@
 						<div class="img-row-item" style="width:25%; "> <img  src="game-prototypes-img\angkhorror_model6.png" caption="with luminosity cycle"></img></div>
 					</div>
 					<p>
-						I've also generated most of the textures myself, with various kinds of <a href="shader-experiments.html#noise" target="_blank">noise</a>, as well as creating their normal maps. The downscaling was particularly interesting, since the algorithm for the textures and the actual rendering was different (for aesthetic purposes) - textures benefitted from averaging the pixel within a certain area to preserve the original image as much as possible; but the rendering worked better if you sampled a single pixel from the area rather than averaging, precisely because it more faithfully simulates "low" resolution (where you don't have the computational power to render more pixels than you see on the screen).
+						I've also generated most of the textures myself, with various kinds of <a href="shader-experiments.html#noise" target="_blank">noise</a>, as well as creating their normal maps. The downscaling was particularly interesting, since the algorithm for the textures and the actual rendering was different (for aesthetic purposes) - textures benefitted from averaging the pixels within a certain area to preserve the original image as much as possible; but the rendering worked better if you sampled a single pixel from the area rather than averaging, precisely because it more faithfully simulates "low" resolution (where you don't have the computational power to render more pixels than you see on the screen).
 						The sky also required a different approach described <a href="starsky.html#lowres" target="_blank">here</a>.
 					</p>
 					<div class="img-row" style="width:70%;">
@@ -269,6 +269,9 @@
 						<div class="img-row-item" style="width:11.5%;"> <img  src="game-prototypes-img\angkhorror_tex2.png" caption="with luminosity cycle"></img></div>
 						<div class="img-row-item" style="width:10%; "> <img  src="game-prototypes-img\angkhorror_tex2_low.png" caption="with luminosity cycle"></img></div>
 					</div>
+					<p>
+						Unfortunately, I also stopped working on this (scope creep plus an obsessive attention to the literary detail); <a href="shader-experiments.html#sun-shafts" target="_blank">here</a> you can see an offshoot of the project.
+					</p>
 				<hr></section>
 				<section id="jamelan">
 					<h2>Jamelan</h2>
