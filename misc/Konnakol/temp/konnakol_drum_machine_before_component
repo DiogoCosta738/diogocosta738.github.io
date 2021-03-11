@@ -1,0 +1,88 @@
+class AudioButton extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  
+  render(){
+    var source = "https://github.com/DiogoCosta738/diogocosta738.github.io/blob/main/misc/Konnakol/konnakol-00" + this.props.index+".wav?raw=true";
+    return(
+      <div class="drum-pad" id={this.props.letter}>
+        <audio src={source}></audio>
+        <div class="drum-pad-text">
+          {this.props.letter} (No)
+        </div>
+      </div>
+    );
+  }
+}
+class App extends React.Component{
+  constructor(props){
+    super(props);
+    
+  }
+  play(){
+    this.props.audio.play();
+  }
+  
+  render(){
+    return(
+      <div id = "drum-machine">
+        <div id="drum-machine-header">Test</div>
+        <div id="drum-machine-body">
+          <div id="buttons">
+            <AudioButton letter="Q" index="0" />
+            <div class="drum-pad" id="Q">
+              <audio src="https://github.com/DiogoCosta738/diogocosta738.github.io/blob/main/misc/Konnakol/konnakol-001.wav?raw=true"></audio>
+              <div class="drum-pad-text">Q (Ta)</div></div>
+            <div class="drum-pad" id="W">
+               <audio src="https://github.com/DiogoCosta738/diogocosta738.github.io/blob/main/misc/Konnakol/konnakol-002.wav?raw=true"></audio>
+              <div class="drum-pad-text">W (Ka)</div></div>
+            <div class="drum-pad" id="E">
+               <audio src="https://github.com/DiogoCosta738/diogocosta738.github.io/blob/main/misc/Konnakol/konnakol-003.wav?raw=true"></audio>
+              <div class="drum-pad-text">E (Di)</div></div>
+            <div class="drum-pad" id="A">
+               <audio src="https://github.com/DiogoCosta738/diogocosta738.github.io/blob/main/misc/Konnakol/konnakol-004.wav?raw=true"></audio>
+              <div class="drum-pad-text">A (Mi)</div></div>
+            <div class="drum-pad" id="S">
+               <audio src="https://github.com/DiogoCosta738/diogocosta738.github.io/blob/main/misc/Konnakol/konnakol-005.wav?raw=true"></audio>
+              <div class="drum-pad-text">S (Ki)</div></div>
+            <div class="drum-pad" id="D">
+               <audio src="https://github.com/DiogoCosta738/diogocosta738.github.io/blob/main/misc/Konnakol/konnakol-006.wav?raw=true"></audio>
+              <div class="drum-pad-text">D (Na)</div></div>
+            <div class="drum-pad" id="Z">
+               <audio src="https://github.com/DiogoCosta738/diogocosta738.github.io/blob/main/misc/Konnakol/konnakol-007.wav?raw=true"></audio>
+              <div class="drum-pad-text">Z (Tom)</div></div>
+            <div class="drum-pad" id="X">
+               <audio src="https://github.com/DiogoCosta738/diogocosta738.github.io/blob/main/misc/Konnakol/konnakol-008.wav?raw=true"></audio>
+              <div class="drum-pad-text">X (Ju)</div></div>
+            <div class="drum-pad" id="C">
+               <audio src="https://github.com/DiogoCosta738/diogocosta738.github.io/blob/main/misc/Konnakol/konnakol-009.wav?raw=true"></audio>
+              <div class="drum-pad-text">C (No)</div></div>
+          </div>
+          <div id="controls">
+            
+            <div class="toggle" id="power">
+              <div class="toggle-text">Power</div>
+              {/*<!-- Rectangular switch from https://www.w3schools.com/howto/howto_css_switch.asp -->*/}
+              <label class="switch">
+                <input type="checkbox"/>
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div id="display">Placeholder</div>
+            <input type="range" id="volume-slider"></input>
+            <div class="toggle" id="bank">
+              <div class="toggle-text">Bank</div>
+              {/*<!-- Rectangular switch from https://www.w3schools.com/howto/howto_css_switch.asp -->*/}
+              <label class="switch">
+                <input type="checkbox"/>
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+ReactDOM.render(<App />,document.getElementById("root"))
