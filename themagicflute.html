@@ -1,0 +1,129 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="gallerysheet.css">
+		<link rel="stylesheet" href="imagesheet.css">
+		<script src="gallerycode.js"></script>
+	</head>
+	<body>
+		<nav id="navbar">
+		  <ul>
+			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
+			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
+				<a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
+				<a class = "dropdown-item" href="amalgama.html">AmalgamA (missing gallery)</a>
+				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes (incomplete)</a>
+			  </div>
+			</li>
+			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+				<a class = "dropdown-item" href="starsky.html">Starsky</a>
+				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+				<a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+			  </div>
+			</li>
+			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
+			  <div class="dropdown-content">
+				<a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
+				<a class = "dropdown-item" href="">(empty) MOOCs</a>
+				<a class = "dropdown-item" href="">(empty) Cool people</a>
+				<!--
+				<a class = "dropdown-item" href="">(empty) Reading Log</a>
+				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
+				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
+				-->
+			  </div>
+			</li>
+		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
+		  </ul>
+		</nav>
+
+		<div id="body">
+			<div id="sidebar">
+			<a href="#intro" class="sidelink">Introduction</a>
+			<a href="#game-design" class="sidelink">Game Design</a>
+			<a href="#visual-effects" class="sidelink">Visual Effects</a>
+			<a href="#tools" class="sidelink">Tools</a>
+		  </div>
+		  <div id="main">
+			<h1>The Magic Flute</h1>
+			<section id="intro">
+			  <h2>Introduction</h2>
+				<p>
+					The Magic Flute was the main project I've worked on while at Classplash. I was responsible for most of the programming of the game, visual effects/animations, as well as designing different game modes. I've also done minor writing on the script adaptation to fit the animated story scenes and general editing and rephrasing.
+				</p>
+				<p>
+					It's the official game companion to the movie <a href="https://www.imdb.com/title/tt8206398/" target="_blank">The Magic Flute (2022)</a>.
+					It's a fairly straightforward rhythm game, not unlike a Guitar Hero, although it uses the microphone to hear what you're playing on a real recorded instrument. We've also decided to implement touch controls as an alternative, unlike in the past games.
+					The music comes mostly from Mozart's opera The Magic Flute (with a couple of extra Mozart or more modern pop songs thrown in related to the movie).
+				</p>
+				<p>
+					You can get the game on <a href="https://play.google.com/store/apps/details?id=com.classplash.themagicflute" target="_blank">Android</a> or <a href="https://apps.apple.com/us/app/the-magic-flute-the-game/id1608902917" target="_blank">iOS</a>. The first three or four songs are free (though very simple), while the remaining of the game is behind a single payment.
+				</p>
+				<!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor2.png" caption="!FIXME"></img></div> -->
+			<hr></section>
+			<section id="game-design">
+			  <h2>Game Design</h2>
+			  <h3>Boost Mode</h3>
+				  <p>
+					The game consists of colored notes coming from the left side that the player must play as they hit the flute target on the right side.
+					The game was, at least in part, a way to teach young players how to play a real recorded and introduce them to some of the aspect of sheet music.
+					Initially, every note is color-coded and has a schematic of its finger positions. If the player performs well, these visual aids will gradually disappear until the maximum boost mode is reached where notes lose all color and only their sheet position will determine the pitch that must be played.
+				  </p>
+				  <p>
+					One important feature that was implemented (but later discarded due to production issues) was a vertical reorchestration of the songs to accompany the boost mode. The backing tracks would start basic, with few layers, and the better the player performed, the more layers would be added, resulting in a richer sound, culminating in the full orchestra only in the maximum boost mode. 
+					Similar to the way the BIT.TRIP games work.
+				  </p>
+			  <h3>Training Modes</h3>
+				<p>
+					While the basic play mode works well for simple songs, it soon becomes too difficult when fast sections are introduced, as the visual aids are good mnemonics, but not something to be readable in real-time by novices.
+				</p>
+				<p>
+					To address this problem, I've designed and implemented a solution using a MIDI backing track that would wait for the player to play the correct note before advancing. The reason MIDI was used was to maintain the "flow" of the song. When using a real orchestrated track, waiting for the player would mean silencing the track completely, which was not satisfying. With MIDI, it was possible use simpler strings that were sustained while waiting for the player.
+				</p>
+			</section><hr>
+			<section id="visual-effects">
+			  <h2>Visual Effects</h2>
+				<h3>Game</h3>
+				<p>
+					To spice the game up a bit, I've created several visual effects by using particle systems and custom shaders.
+				</p>
+			  <div class="img-row">
+				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render1.png" caption="without luminosity cycle"></img></div><br>
+				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render2.png" caption="with luminosity cycle"></img></div>
+				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render3.png" caption="without luminosity cycle"></img></div>
+				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render4.png" caption="without luminosity cycle"></img></div>
+			  </div>
+			  <h3>Story</h3>
+			  <p>
+				  In the story, too, I've created several visual effects, using noise textures, particle effects and distance fields.
+			  </p>
+			  <h3>Book</h3>
+				<p>
+					Tim's father's book plays an important role in the movie, so we've implemented an in-game book for the tutorials. Render textures were used to map the page contents onto the book pages, which were animated using simple 2D masks, thus bypassing any need for additional 3D modelling and the like.
+					Not to take skeuomorphism too far, we've kept some interactive elements like buttons and sliders to avoid cumbersome interaction.
+				</p>
+			  <h3>Others</h3>
+				<p>
+					There was also the opportunity for mini-game experiments during pre-production. Out of which came some things I quite like, even though they were never used.
+				</p>
+			<hr></section>
+			<section id="tools">
+			  <h2>Tools</h2>
+				<p>
+					
+				</p>
+			</section><hr>
+		  </div>
+		</div>
+	</body>
+</html>
