@@ -52,7 +52,6 @@
 			<a href="#intro" class="sidelink">Introduction</a>
 			<a href="#game-design" class="sidelink">Game Design</a>
 			<a href="#visual-effects" class="sidelink">Visual Effects</a>
-			<a href="#tools" class="sidelink">Tools</a>
 		  </div>
 		  <div id="main">
 			<h1>The Magic Flute</h1>
@@ -77,7 +76,7 @@
 				  <p>
 					The game consists of colored notes coming from the left side that the player must play as they hit the flute target on the right side.
 					The game was, at least in part, a way to teach young players how to play a real recorded and introduce them to some of the aspect of sheet music.
-					Initially, every note is color-coded and has a schematic of its finger positions. If the player performs well, these visual aids will gradually disappear until the maximum boost mode is reached where notes lose all color and only their sheet position will determine the pitch that must be played.
+					Initially, every note is color-coded and has a schematic of its finger positions. To make the sheet reading more salient, these visual aids will gradually disappear when the player performs well, until the maximum boost mode is reached, at which point the notes lose all color and only their sheet position will determine the pitch that must be played. Missing notes makes it so that the visual aids reappear.
 				  </p>
 				  <p>
 					One important feature that was implemented (but later discarded due to production issues) was a vertical reorchestration of the songs to accompany the boost mode. The backing tracks would start basic, with few layers, and the better the player performed, the more layers would be added, resulting in a richer sound, culminating in the full orchestra only in the maximum boost mode. 
@@ -90,39 +89,71 @@
 				<p>
 					To address this problem, I've designed and implemented a solution using a MIDI backing track that would wait for the player to play the correct note before advancing. The reason MIDI was used was to maintain the "flow" of the song. When using a real orchestrated track, waiting for the player would mean silencing the track completely, which was not satisfying. With MIDI, it was possible use simpler strings that were sustained while waiting for the player.
 				</p>
+			  <h3>Alternative controls</h3>
+			  <p>
+				Being a movie tie-in, it would make little sense to focus exclusively on the microphone input as in previous games, so I designed and implemented touch and keyboard controls.<br>
+				In the case of touch controls, every note in an octave is displayed in a row, while the higher octave is achieved by holding a "shift-like" key on either side of the controller (to be used with either hand depending on the target note).<br>
+				In the case of keyboard controls, the scheme is similar, although two rows of keys are used, to mimick a piano with a row of whole tones and another of semitones. The shift key became space bar, as it is very natural to press it with the thumb of either hand.
+			  </p>
 			</section><hr>
 			<section id="visual-effects">
 			  <h2>Visual Effects</h2>
 				<h3>Game</h3>
 				<p>
-					To spice the game up a bit, I've created several visual effects by using particle systems and custom shaders.
+					To spice the game up a bit, I've created several visual effects by using particle systems and custom shaders applied to the sheet lines and flute when notes are hit and sustained.<br>
+					The best way to get a feel for it is through videos, so I've embedded three below. The first is an example of successful play (through the whole boost range), the second an unsuccessful play (losing boost), while the last is an example of gameover.
 				</p>
-			  <div class="img-row">
-				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render1.png" caption="without luminosity cycle"></img></div><br>
-				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render2.png" caption="with luminosity cycle"></img></div>
-				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render3.png" caption="without luminosity cycle"></img></div>
-				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render4.png" caption="without luminosity cycle"></img></div>
+			  <div style="margin:auto; text-align:center;">
+				<iframe width="400" height="315" src="https://www.youtube.com/embed/NpZjFwHnamQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe width="400" height="315" src="https://www.youtube.com/embed/kXhDXb-BFF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe width="400" height="315" src="https://www.youtube.com/embed/hTUfMjfSBmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			  </div>
+				<p>
+					I've also created a shader to create a "mosaic-like" effect on a background, dynamically.<br>
+					This was done by using a voronoi texture to sample the background texture so that each cell would retain a single color. The background textures were the same as used in the story sequences, but strongly down-sampled and blurred to create a smooth effect.<br>
+					This is also used for the game over effect, in which darkness encroaches on the flute.
+					<div style="margin:auto; text-align:center;">
+						<img src="tmf-img\gamefx_mosaic.gif" caption="mosaic effect example" style = "width: 49%"></img>
+					</div>
+				</p>
 			  <h3>Story</h3>
 			  <p>
-				  In the story, too, I've created several visual effects, using noise textures, particle effects and distance fields.
+				  In the story, too, I've created several visual effects, using noise textures, particle effects and distance fields.<br>
+				  Pardon the color banding in the gifs! But I believe the general idea is conveyed.<br>
+				  Some of the effects were applied to characters:
+				  <div style="margin:auto; text-align:center;">
+						<img src="tmf-img\charfx_queen.gif" caption="rage aura effect example" style = "width: 32%"></img>
+						<img src="tmf-img\charfx_ladies.gif" caption="spell aura effect example" style = "width: 32%"></img>
+						<img src="tmf-img\charfx_papageno.gif" caption="fear aura effect example" style = "width: 32%"></img>
+				  </div>
+				  <br>
+				  While others were applied to the background:
+				  <div style="margin:auto; text-align:center;">
+						<img src="tmf-img\bgfx_fire.gif" caption="fire background effect example" style = "width: 49%"></img>
+						<img src="tmf-img\bgfx_water.gif" caption="underwater background effect example" style = "width: 49%"></img>
+				  </div>
+				  <br>
 			  </p>
 			  <h3>Book</h3>
 				<p>
 					Tim's father's book plays an important role in the movie, so we've implemented an in-game book for the tutorials. Render textures were used to map the page contents onto the book pages, which were animated using simple 2D masks, thus bypassing any need for additional 3D modelling and the like.
 					Not to take skeuomorphism too far, we've kept some interactive elements like buttons and sliders to avoid cumbersome interaction.
+					<div style="margin:auto; text-align:center;">
+						<img src="tmf-img\bookfx.gif" caption="book ui example" style = "width: 49%"></img>
+				    </div>
 				</p>
 			  <h3>Others</h3>
 				<p>
-					There was also the opportunity for mini-game experiments during pre-production. Out of which came some things I quite like, even though they were never used.
+					There was also the opportunity for mini-game experiments during pre-production. Out of which came some things I quite like, even though they were never used.<br>
+					I'm particularly proud of the eye, created from scratch in a shader, and the moth/firefly movement; it starts randomly (though in a very controlled manner, after playing with ideas by Craig Reynolds of boids fame), but becomes gradually attracted to the lit areas (which were controlled by the flute note). <br>
 				</p>
+				<div style="margin:auto; text-align:center;">
+					<img src="tmf-img\eye.gif" caption="eye texture created from scratch in a shader" style = "height: 300"></img>
+					<img src="tmf-img\eye_anim1.gif" caption="eye animation" style = "height: 300"></img>
+					<img src="tmf-img\wisp4.gif" caption="wisp created from scratch in a shader" style = "height: 300"></img>
+					<img src="tmf-img\fireflies.gif" caption="moth/firefly movement (random and attracted to light)" style = "height: 300"></img>
+				</div>
 			<hr></section>
-			<section id="tools">
-			  <h2>Tools</h2>
-				<p>
-					
-				</p>
-			</section><hr>
 		  </div>
 		</div>
 	</body>
