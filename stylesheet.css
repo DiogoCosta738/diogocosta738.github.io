@@ -25,10 +25,6 @@ html{
   scroll-behavior: smooth;
   font-family:"Titillium Web";
 }
-body{
-  margin:1vh;
-}
-
 
 #navbar{
   display:flex; 
@@ -112,7 +108,7 @@ body{
   flex-wrap:wrap;
   
   justify-content:flex-start;
-  align-items:center;
+  align-items:left;
   
   position:absolute;
   min-width:100%;
@@ -132,10 +128,9 @@ body{
 a.dropdown-item{
   background-color:gray;
   color:white;
+
   text-decoration:none;
-  padding:1.5% 3% 1.5% 3%;
-  width:48%;
-  width:100%;
+  padding:0.5em 2em 0.5em 2em;
   text-align:left;
 }
 .dropdown-item:hover{
@@ -203,7 +198,7 @@ a.dropdown-item{
   overflow:auto;
   scroll-behavior: smooth;
   
-  width:100%;
+  width:80%;
 }
 h3{
 	padding-top:20px;
