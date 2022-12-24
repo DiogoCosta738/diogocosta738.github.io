@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Angkhorror - a low-fi horror walking simulator with Indian-esque architecture</title>
+		<meta name="description" content="Details for Angkhorror game (abandoned), a horror low-fi walking simulator with Indian-esque architecture.">
+	
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://www.jayvanhutten.com/fb_prev.jpg">
+		<script src="royalslider/jquery-1.8.3.min.js"></script>
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/sidebar.css" rel="stylesheet">
+		<link href="css/layout.css" rel="stylesheet">
+		<link href="css/labels.css" rel="stylesheet">
+		<link href="css/jay.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+	
+		<link href="royalslider/royalslider.css" rel="stylesheet">
+		<link href="royalslider/skins/jay/rs-jay.css" rel="stylesheet">
+		
+		<link rel="shortcut icon" href="favicon.png">
+		
+		<script src="royalslider/config.js"></script>
+		<script src="script-min.js"></script>
+	</head>
+	<body>
+    <!-- nav -->
+    <div id="navbarContainer">
+      <div class="navbar">
+        <a class="navlink" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Games<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+            <a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
+            <a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
+            <a class = "dropdown-item" href="amalgama.html">AmalgamA</a>
+            <a class = "dropdown-item" href="angkhorror.html">Angkhorror</a>
+            <a class = "dropdown-item" href="game-prototypes.html">Game Prototypes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Projects<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+          <a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+          <a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+          <a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+          <a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+          <a class = "dropdown-item" href="starsky.html">Starsky</a>
+          <a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+          <a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+          <a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+          <a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Other<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="open-collaborations.html">Open Collaborations</a>
+          <a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
+          <a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
+          <!-- <a class = "dropdown-item" href="web-development.html">Web Development</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /nav -->   		
+		<!--
+		<div id="sidebar">
+			<a href="#intro" class="sidelink">Introduction</a>
+			<a href="#modelling" class="sidelink">3D Modelling</a>
+			<a href="#ornament" class="sidelink">Ornament and Texture Synthesis</a>
+			<a href="#sky" class="sidelink">Sky</a>
+			<a href="#sun-shafts" class="sidelink">Sun-shafts / God-Rays</a>
+		</div>
+		-->
+		
+		<div id="body">
+		  	<div id="main">
+				<div class="page-title">Angkhorror</div>
+				<div class="page-subtitle">Solo, abandoned (2020)</div>
+				<div class="page-tags">
+					<span class="label generaldesign">General Design</span>
+					<span class="label vfx">VFX</span>
+					<span class="label programming">Programming</span>
+					<span class="label tools">Tools</span>
+					<span class="label art3D">3D Art</span>
+				</div>
+				<section id="intro">
+					<h2>Introduction</h2>
+					<p>
+						<img src="game-prototypes-img\angkhorror.gif" align="right" style="width: 500px; margin-left:40px;"/>
+						This project came about at the intersection of <a href="https://kittyhorrorshow.itch.io/" target="_blank">KittyHorrorShow</a> and reading about <a href="https://www.amazon.com/Angkor-Civilization-Ancient-Peoples-Places/dp/0500284423" target="_blank">Angkor and the Khmer Civilization</a>. I really liked her games "Grandmother" and "Monastery", and I had wanted to experiment with low-res rendering ever since I had played Ultima Underworld in early 2020, so it all came together, here.
+					</p>
+					<p>
+						The "narrative" was a play on how the gold went from adorning idols (in which gods resided) in past centuries to adorning secular museum goers (to the horror of said gods stuck in their idols watching the passersby).
+					</p>
+				</section>
+				<section id="modelling">
+					<h2>3D Modelling</h2>
+					<p>
+						It was very cool to work on, especially since I had never done any 3D modelling. I tried Blender for a while, but the program was incredibly bloated (for one who isn't specialized in modelling), so I decided to implement my own tools and see what came of it.
+					</p>
+					<p>
+						I modeled everything myself with these customs tools, except the statues' bodies - for which I used a basic rigged model and then set their positions (and duplicated arms and heads where applicable!).<br>
+					</p>
+					<p>
+						The tool was basic, but fit the purpose. I started by creating a "base", an horizontal crossection. Then I created the "vertical contour" (a cone would be a circular base with vertical contour going from 1 to 0). It was also possible to twist and rotate the "axis" of the model, for some of the props.<br>
+					</p>
+					<p>
+						The architecture itself used to "fractal-like" techniques: the first to use repeated subdivision to create an intricate "base" (like a koch snowflake), and the second to simply copy the model, in a smaller scale successively.
+					</p>
+					<div class="img-row">
+						<div class="img-row-item" style="height:345px;"> <img style="height:345px;" src="game-prototypes-img\angkhorror_model1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="height:345px;"> <img style="height:345px;" src="game-prototypes-img\angkhorror_model2.png" caption="with luminosity cycle"></img></div>
+					</div>
+					<div class="img-row">
+						<div class="img-row-item" style="height:300px;"> <img style="height:300px;" src="game-prototypes-img\angkhorror_model3.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="height:300px;"> <img style="height:300px;" src="game-prototypes-img\angkhorror_model4.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="height:300px;"> <img style="height:300px;" src="game-prototypes-img\angkhorror_model5.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="height:300px;"> <img style="height:300px;" src="game-prototypes-img\angkhorror_model6.png" caption="with luminosity cycle"></img></div>
+					</div>
+				</section>
+				<section id="ornament">
+					<h2>Ornamentation and Texture Synthesis</h2>
+					<p>
+						I've also generated most of the textures myself, with various kinds of <a href="shader-experiments.html#noise" target="_blank">noise</a>, as well as creating their normal maps.
+					<p>
+						The downscaling was particularly interesting, since the algorithm for the textures and the actual rendering was different (for aesthetic purposes).<br>
+						The texturing benefitted from averaging the pixels within a certain area to preserve the original image as much as possible; but the rendering worked better if you sampled a single pixel from the area rather than averaging, precisely because it more faithfully simulates "low" resolution (where you don't have the computational power to render more pixels than you see on the screen).
+					</p>
+					<p>
+						The sky also required a completely different approach described <a href="starsky.html#lowres" target="_blank">here</a>.
+					</p>
+					<div class="img-row">
+						<div class="img-row-item" style ="height:350px;"> <img style ="height:350px;" src="game-prototypes-img\angkhorror_tex1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style ="height:350px;"> <img style ="height:350px;" src="game-prototypes-img\angkhorror_tex1_low.png" caption="with luminosity cycle"></img></div>
+					</div>
+					<div class="img-row" >
+						<div class="img-row-item" style ="height:550px;"> <img style ="height:550px;" src="game-prototypes-img\angkhorror_tex2.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style ="height:550px;"> <img style ="height:550px;" src="game-prototypes-img\angkhorror_tex2_low.png" caption="with luminosity cycle"></img></div>
+					</div>
+				</section>
+				<section id="sky">
+					<h2>Sky</h2>
+					<p>See <a href="starsky.html">this other page</a> for details.</p>
+					<div class="img-row" >
+						<div class="img-row-item" style ="height:350px;"> <img style ="height:370px;" src="starsky-img/lowresstars.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style ="height:350px;"> <img style ="height:370px;" src="starsky-img/banding2.png" caption="with luminosity cycle"></img></div>
+					</div>
+				</section>
+				<section id="sun-shafts">
+					<h2>Sun-shafts / God-rays</h2>
+						An offshoot from Angkhorror was an experiment with god-rays, using simply procedural clouds (2D layer of clouds using 3D fbm to create an organic morphing effect).
+						<p>
+							The inspiration for this came from Rabindranath Tagore's Gitanjali 42:
+						</p>
+						<p class ="poem">
+							<i>
+								Early in the day it was whispered that we should sail in a boat, only thou and I, and never a soul in the world would know of this our pilgrimage to no country and to no end.<br>
+								In that shoreless ocean, at thy silently listening smile my songs would swell in melodies, free as waves, free from all bondage of words.<br>
+								Is the time not come yet? Are there works still to do? Lo, the evening has come down upon the shore and in the fading light the seabirds come flying to their nests.<br>
+								Who knows when the chains will be off, and the boat, like the last glimmer of sunset, vanish into the night?<br>
+							</i>
+						</p>
+						<p>
+						Though, to be totally honest, I still prefer his novels (Gora, especially) to his poems (though the lyrical aspect of his prose).
+						</p>
+						<p style="font-weight:bold; color:black">ANYWAY</p>
+						<p>
+							I think this is a pretty common trick to render god rays. First, you render the whole scene into a silhouette (render every opaque object black, and semi-transparent objects shades of gray), with light sources in lighter colors. Then, you apply radial blur to the dark areas, away from the light, and it gives the effect of soft shadows.
+						</p>
+					<p>
+						I also like how the sea textures turned out.
+					</p>
+					<div class="img-row">
+						<div class="img-row-item" style="height:450px;"> <img style="height:450px;" src="shader-experiments-img\sunshaft_redux.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="height:450px;"> <img style="height:450px;" src="shader-experiments-img\sunshaft2.png" caption="with luminosity cycle"></img></div>
+					</div>
+				</section>
+				<hr>
+		  </div>
+		</div>
+	</body>
+</html>

@@ -221,9 +221,11 @@ section a:link{
 	font-weight:bold;
 	
 }
+
 section a:hover{
 	text-decoration: underline;
 }
+
 section a:visited{
 	text-decoration: inherit;
     color: inherit;

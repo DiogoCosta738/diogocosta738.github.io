@@ -1,97 +1,110 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="stylesheet" href="gallerysheet.css">
-		<link rel="stylesheet" href="imagesheet.css">
-		<script src="gallerycode.js"></script>
+		<title>Skybox - Shader for thousands of twinkling stars at no additional cost</title>
+		<meta name="description" content="Details for Skybox project, a shader to simulate a colorful day-night cycle with thousands of individually twinkling stars at night">
+	
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://www.jayvanhutten.com/fb_prev.jpg">
+		<script src="royalslider/jquery-1.8.3.min.js"></script>
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/layout.css" rel="stylesheet">
+		<link href="css/labels.css" rel="stylesheet">
+		<link href="css/jay.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+	
+		<link href="royalslider/royalslider.css" rel="stylesheet">
+		<link href="royalslider/skins/jay/rs-jay.css" rel="stylesheet">
+		
+		<link rel="shortcut icon" href="favicon.png">
+		
+		<script src="royalslider/config.js"></script>    
+		<script src="script-min.js"></script>
 	</head>
 	<body>
-
-
-
-
-
-
-		<nav id="navbar">
-		  <ul>
-			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
-			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
-				<a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
-				<a class = "dropdown-item" href="amalgama.html">AmalgamA (missing gallery)</a>
-				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes (incomplete)</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
-				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
-				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
-				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
-				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
-				<a class = "dropdown-item" href="starsky.html">Starsky</a>
-				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
-				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
-				<a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
-				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
-				<a class = "dropdown-item" href="web-development.html">Web Development</a>
-				<a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
-				<!--
-				<a class = "dropdown-item" href="">(empty) Reading Log</a>
-				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
-				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
-				-->
-			  </div>
-			</li>
-		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
-		  </ul>
-		</nav>
-
-
-
-
+    <!-- nav -->
+    <div id="navbarContainer">
+      <div class="navbar">
+        <a class="navlink" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Games<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+            <a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
+            <a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
+            <a class = "dropdown-item" href="amalgama.html">AmalgamA</a>
+            <a class = "dropdown-item" href="angkhorror.html">Angkhorror</a>
+            <a class = "dropdown-item" href="game-prototypes.html">Game Prototypes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Projects<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+          <a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+          <a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+          <a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+          <a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+          <a class = "dropdown-item" href="starsky.html">Starsky</a>
+          <a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+          <a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+          <a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+          <a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Other<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="open-collaborations.html">Open Collaborations</a>
+          <a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
+          <a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
+          <!-- <a class = "dropdown-item" href="web-development.html">Web Development</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /nav -->   		
+		<!--
+			<div id="sidebar">
+				<a href="#intro" class="sidelink">Introduction</a>
+				<a href="#night" class="sidelink">Night</a>
+				<a href="#day" class="sidelink">Day</a>
+				<a href="#lowres" class="sidelink">Low resolution</a>
+				<a href="#code" class="sidelink">Source code</a>
+		  	</div>
+		-->
 
 		<div id="body">
-		  <div id="sidebar">
-			<a href="#intro" class="sidelink">Introduction</a>
-			<a href="#night" class="sidelink">Night</a>
-			<a href="#day" class="sidelink">Day</a>
-			<a href="#lowres" class="sidelink">Low resolution</a>
-			<a href="#code" class="sidelink">Source code</a>
-		  </div>
+		  
 		  <div id="main">
-			<h1>Skybox</h1>
+			<div class="page-title">Skybox</div>
+			<div class="page-subtitle">Solo (2018, 2020)</div>
 			<section id="intro">
 			  <h2>Introduction</h2>
 				<p>
-					This is my attempt at a skybox. I started it mostly with a desire to create a good <a href="#night">night sky</a> shader (which I think I did!) and then extended it with a simple <a href="#day" >day-night cycle</a>. I am quite happy with the result, and still use it very often in my prototypes.
+					This is my attempt at a skybox. I started it mostly with a desire to create a good <a href="#night">night sky</a> shader (of which I think I did a great job, if I may say so myself!) and then extended it with a simple <a href="#day" >day-night cycle</a>. I am quite happy with the result, and still use it very often in my prototypes.
 					What is special about it is that each star is procedurally generated with its own color, intensity and twinkling phase - I think it looks great in action and runs pretty well, too.
 				</p>
 				<p>
 					Years later, I was experimenting with low-res rendering (because of my newly found love of <a href="https://www.gog.com/game/ultima_underworld_1_2" target="_blank">Ultima Underworld</a>), and I modified the shader, as you can see <a href="#lowres">below</a>.
 				</p>
-				<!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor2.png" caption="!FIXME"></img></div> -->
-			<hr></section>
+			</section>
+
+			<hr>
+
 			<section id="night">
-			
-			  <h2>Night</h2>
+			  	<h2>Night</h2>
 				<p>
 					The shader uses simple noise to divide polar space into cubes, which correspond to stars. Basically, it divides the sky sphere into discrete elements, and every pixel will then know which star it is part of. 
 					The code itself (and the idea) is pretty simple, but you can then do a lot with it. For example, you can assign a different random function to control color, size, twinkling speed, phase, and so on. The result is quite organic!
 				</p>
 				<div class="img-row">
-					<div class="img-row-item"  style="width:50%;"> <img src="starsky-img\stars2.gif" caption="without luminosity cycle"></img></div><br>
-					<div class="img-row-item"  style="width:50%;"> <img src="starsky-img\stars1.gif" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri2"> <img src="starsky-img\stars2.gif" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri2"> <img src="starsky-img\stars1.gif" caption="with luminosity cycle"></img></div>
 				</div>
 				<p>
-				
-				<img  src="starsky-img\nebula2.gif" align="right" style="width:35%; padding-top:0%;" caption="without luminosity cycle"></img>
+				<img  src="starsky-img\nebula2.gif" align="right" style="width:450px; padding-top:0%;" caption="without luminosity cycle"></img>
 					It does look much better in the actual game, though - since fragment shaders are rendered for every pixel on the screen, they adapt to whatever viewport size you're using, something that doesn't happen on a gif! Still, I hope the effect is conveyed well enough. The image on the right is a close-up and accelerated version to make the twinkling less subtle.
 					The colors are also less vivid.
 				</p>
@@ -100,11 +113,14 @@
 				</p>
 				<p>
 					Finally, you can see a fuller picture of the starry night, below. This is where shaders are great, since rendering as many stars individually wouldn't be very feasible!
-					<img  src="starsky-img\fullstars.png" style="width:100%; padding:5%;" caption="without luminosity cycle"></img>
 				</p>
-			<hr></section>
+				<img  src="starsky-img\fullstars.png" style="width:100%;" caption="without luminosity cycle"></img>
+			</section>
+
+			<hr>
+
 			<section id="day">
-			  <h2>Day</h2>
+			  	<h2>Day</h2>
 				<p>
 					The day part was much simpler. The sun's position was controlled outside the shader, and a variable for "sun-height" was passed for synchronization purposes. Then, I set up a simple system of 5 colors: sun_color, day_top_color, day_bottom_color, twilight_top_color and twilight_bottom_color.
 					When the sun is at its highest, the sky has a gradient that goes from day_top_color at the top to day_bottom_color at the bottom, and similarly for twilight, when the sun is at its lowest (but still near or above the horizon). For anything in between, I interpolate day_top_color with twilight_top_color and similarly for the bottom.
@@ -112,15 +128,17 @@
 				</p>
 				<p>
 					Finally, on top of that, I also interpolate the stars as the sun nears the horizon (so you start seeing the stars before it is night, though only slightly) and quickly darken the twiling colors once the sun is below the horizon.
-					Ignore the GIF's color-banding, which does not happen when properly rendered (with more than 256 colors).
+					Ignore the GIF's color-banding, which does not happen when properly rendered (as seen in the screenshots to its right).
 				</p>
 				<div class="img-row">
-					<div class="img-row-item"> <img src="starsky-img\daynightcycle.gif" caption="without luminosity cycle"></img></div><br>
-					<div class="img-row-item"> <img src="starsky-img\daynightcycle1.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="starsky-img\daynightcycle2.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="starsky-img\daynightcycle.gif" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="starsky-img\daynightcycle1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="starsky-img\daynightcycle2.png" caption="with luminosity cycle"></img></div>
 				</div>
-			  <!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor1.png" caption="!FIXME"></img></div> -->
-			<hr></section>
+			</section>
+
+			<hr>
+
 			<section id="lowres">
 				<h2>Low Resolution</h2>
 				<p>
@@ -131,14 +149,14 @@
 					Fortunately, the first problem was easy to solve with little change - since I had a parameter for the "grid resolution", I simply made that larger. A larger grid resolution means larger and fewer stars. In full-res, stars would appear like big circles, which isn't very natural, but it plays well with the downscaling.
 				</p>
 				<div style="text-align:center;">
-				<img src="starsky-img\lowresstar.gif" align="center" style="width:60%; padding:1%;" caption="without luminosity cycle"></img>
+				<img src="starsky-img\lowresstar.gif" align="center" style="width:1000px;" caption="without luminosity cycle"></img>
 				</div>
 				<p>
-					The solution for the color-banding was a kind of <a href="https://en.wikipedia.org/wiki/Dither" target="_blank">dithering</a>. I added some noise to the sky before applying the color-reduction shader - again, it obviously didn't look good on the full-res rendering, but it did make it a lot more natural in low-res. More "structured" dithering styles are also possible (as you see in pixel art) but this looked enough for my purposes.
+					The solution for the color-banding was a kind of <a href="https://en.wikipedia.org/wiki/Dither" target="_blank">dithering</a>. I added some noise to the sky before applying the color-reduction shader - again, it obviously didn't look good on the full-res rendering, but it did make it a lot more natural in low-res. More "structured" dithering styles are also possible (as you see in traditional pixel art) but this looked enough for my purposes.
 				</p>
 				<div class="img-row">
-					<div class="img-row-item"> <img src="starsky-img\banding1.png" caption="without luminosity cycle"></img></div><br>
-					<div class="img-row-item"> <img src="starsky-img\banding2.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri2"> <img src="starsky-img\banding1.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri2"> <img src="starsky-img\banding2.png" caption="with luminosity cycle"></img></div>
 				</div>
 			<hr></section>
 			<section id="code">

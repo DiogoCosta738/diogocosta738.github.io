@@ -1,52 +1,73 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="stylesheet" href="gallerysheet.css">
-		<link rel="stylesheet" href="imagesheet.css">
-		<script src="gallerycode.js"></script>
+		<title>Game Prototypes</title>
+		<meta name="description" content="Assorted small prototypes done over the years">
+	
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://www.jayvanhutten.com/fb_prev.jpg">
+		<script src="royalslider/jquery-1.8.3.min.js"></script>
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/sidebar.css" rel="stylesheet">
+		<link href="css/layout.css" rel="stylesheet">
+		<link href="css/labels.css" rel="stylesheet">
+		<link href="css/jay.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+	
+		<link href="royalslider/royalslider.css" rel="stylesheet">
+		<link href="royalslider/skins/jay/rs-jay.css" rel="stylesheet">
+		
+		<link rel="shortcut icon" href="favicon.png">
+		
+		<script src="royalslider/config.js"></script>
+		<script src="script-min.js"></script>
 	</head>
 	<body>
-		<nav id="navbar">
-		  <ul>
-			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
-			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
-				<a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
-				<a class = "dropdown-item" href="amalgama.html">AmalgamA (missing gallery)</a>
-				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes (incomplete)</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
-				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
-				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
-				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
-				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
-				<a class = "dropdown-item" href="starsky.html">Starsky</a>
-				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
-				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
-				<a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
-				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
-				<a class = "dropdown-item" href="web-development.html">Web Development</a>
-				<a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
-				<!--
-				<a class = "dropdown-item" href="">(empty) Reading Log</a>
-				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
-				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
-				-->
-			  </div>
-			</li>
-		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
-		  </ul>
-		</nav>
+    <!-- nav -->
+    <div id="navbarContainer">
+      <div class="navbar">
+        <a class="navlink" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Games<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+            <a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
+            <a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
+            <a class = "dropdown-item" href="amalgama.html">AmalgamA</a>
+            <a class = "dropdown-item" href="angkhorror.html">Angkhorror</a>
+            <a class = "dropdown-item" href="game-prototypes.html">Game Prototypes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Projects<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+          <a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+          <a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+          <a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+          <a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+          <a class = "dropdown-item" href="starsky.html">Starsky</a>
+          <a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+          <a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+          <a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+          <a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Other<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="open-collaborations.html">Open Collaborations</a>
+          <a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
+          <a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
+          <!-- <a class = "dropdown-item" href="web-development.html">Web Development</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /nav -->   
 		<div id="body">
+			<!--
 			<div id="sidebar">
 				<a href="#introduction" class="sidelink">Introduction</a>
 				<a href="#gravplan" class="sidelink">Gravity Shooter</a>
@@ -62,18 +83,33 @@
 				<a href="#angkhorror" class="sidelink">Angkhorror</a>
 				<a href="#jamelan" class="sidelink">Jamelan</a>
 			</div>
+			-->
 			<div id="main">
-				<h1>Game Prototypes</h1>
+				<div class="page-title">Game Prototypes</div>
+				<div class="page-subtitle">Solo (2014-2020)</div>
+				<div class="page-tags">
+					<span class="label gamedesign">Game Design</span>
+					<span class="label programming">Programming</span>
+				</div>
 				<section id="introduction">
 					<h2>Introduction</h2>
 					<p>
 						This page is a repository for the small game prototypes I've done over the years. They're all small and unfinished, but there's usually something to learn or explore.
 					</p>
 					<p>
-						The first ones were done in Game Maker: Studio. When I worked on the <a href="4dcrosssection.html" target="_blank">4D cross-section project</a> I switched to Unity for the 3D stuff. I stuck with it because it had a proper OO-language and that's what I use for most projects, now.
+						The first ones were done in Game Maker: Studio. When I worked on the <a href="4dcrosssection.html" target="_blank">4D cross-section project</a> I switched to Unity for the 3D stuff. I stuck with it because it had a proper OO-language and that's what I use for most projects, now.<br>
 					</p>
-					
-				<hr></section>
+					<p>
+						I will probably try something like Unreal or Godot soon enough to see how I find C++.
+					</p>
+
+					<p>
+						The list is sorted, roughly, from oldest to newest. That said, the better developed games and prototypes have a page of their own (check the Home page or the navigation bar at the top).
+					</p>
+				</section>
+
+				<hr>
+				
 				<section id="gravplan">
 					<h2>Gravity Shooter</h2>
 					<p>
@@ -88,11 +124,11 @@
 					<p>
 						You can probably see from the weapons' style that I was very much under the influence of Vlambeer at the time! I still love the idea of the weapons' kickback being used for momentum.
 					</p>
-					<div class="img-row" style="width:100%;">
-						<div class="img-row-item" style="width:25%;"> <img  src="game-prototypes-img\planets_cheeto.gif" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:25%;"> <img  src="game-prototypes-img\planets_rubber.gif" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:25%;"> <img  src="game-prototypes-img\planets_shotgun.gif" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:25%;"> <img  src="game-prototypes-img\planets_bomb.gif" caption="with luminosity cycle"></img></div>
+					<div class="img-row">
+						<div class="img-row-item iri4"> <img  src="game-prototypes-img\planets_cheeto.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri4"> <img  src="game-prototypes-img\planets_rubber.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri4"> <img  src="game-prototypes-img\planets_shotgun.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri4"> <img  src="game-prototypes-img\planets_bomb.gif" caption="with luminosity cycle"></img></div>
 					</div>
 				<hr></section>
 				<section id="darkmaze">
@@ -100,9 +136,9 @@
 					<p>
 						This was a fun experiment for the atmosphere, from May 2015. I first used Kruskal's algorithm to generate a simple maze, and then applied top-down shadows to create a rather claustrophobic atmosphere. I still love the way it looks, despite the crudity and my inexperience at the time.
 					</p>
-					<div class="img-row" style="width:100%;">
-						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\darkmaze_redux.gif" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\maze.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row">
+						<div class="img-row-item iri2"> <img  src="game-prototypes-img\darkmaze_redux.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri2"> <img  src="game-prototypes-img\maze.png" caption="with luminosity cycle"></img></div>
 					</div>
 					<p>
 						It was supposed to be a weird single-multiplayer game. Each player was alone and had a single life; after each death, another player would take up the other's place, with the world state unchanged. There would be a kind of asynchronous mind game going on, with traps and notes (not every player had the same goal). It sounded great, but actually making it into a functional game was a whole other task haha!
@@ -143,9 +179,9 @@
 					<p>
 						This is probably the most satisfying platformer I've worked on, from August 2017. When you get the swings going, it feels extremely good! I used the energy functions (kinetic and potential) for the physics on the grappling hook, but normal mass and acceleration elsewhere. Works great when the rope becomes shortened (due to collisions), too.
 					</p>
-					<div class="img-row" style="width:100%;">
-						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\grapple1.gif" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\grapple2.gif" caption="with luminosity cycle"></img></div>
+					<div class="img-row">
+						<div class="img-row-item iri2"> <img  src="game-prototypes-img\grapple1.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri2"> <img  src="game-prototypes-img\grapple2.gif" caption="with luminosity cycle"></img></div>
 					</div>
 				<hr></section>
 				<section id="immune">
@@ -177,11 +213,14 @@
 						This was a fairly straightforward of Akari and Minesweeper during my master's thesis (late 2017 or early 2018), mostly as an aid while I was trying to build levels simulating circuits. Not much to it, but both games worked on all 3 regular division of the plane (triangle, square and hexagonal).
 						Next step will be to do it in hyperbolic space!
 					</p>
-					<div class="img-row" style="width:60%;">
-						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\akari_sqr.gif" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\akari_hex.gif" caption="with luminosity cycle"></img></div>
+					<div class="img-row">
+						<div class="img-row-item" style="height:300px;"> <img style="height:300px;" src="game-prototypes-img\akari_sqr.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="height:300px;"> <img style="height:300px;" src="game-prototypes-img\akari_hex.gif" caption="with luminosity cycle"></img></div>
 					</div>
-				<hr></section>
+				</section>
+
+				<hr>
+
 				<section id="castleva-plat">
 					<h2>Castlevania Platformer</h2>
 					<p>
@@ -191,18 +230,21 @@
 						The focus, mechanically, was in building up a series of platforming abilities in a metroidvania-like way, allowing you to reach different places. Looking back at it, the controls feel a bit off.
 					</p>
 						<div style="text-align:center;">
-							<img style="padding:1%;" align="center" width="50%" src="game-prototypes-img/castleva_platforming.gif"  />
+							<img style="padding:1%;" align="center" width="800px" src="game-prototypes-img/castleva_platforming.gif"  />
 						</div>
 					<p>
 						Unfortunately, I was too inept and slow at animating the characters (even with just a couple or frames) and lost steam - may have been different if I was working with someone (so that the game itself wasn't completely still while I animated).
 					</p>
-						<div style="text-align:center;">
-							<img style="padding:1%;" align="center" width="60%" src="game-prototypes-img/castleva_anim1.png"  />
-						</div>
-						<div style="text-align:center;">
-							<img style="padding:1%;" align="center" width="25%" src="game-prototypes-img/castleva_anim2.png"  />
-						</div>
-				<hr></section>
+					<div style="text-align:center;">
+						<img style="padding:1%;" align="center" height="64px" src="game-prototypes-img/castleva_anim1.png"  />
+					</div>
+					<div style="text-align:center;">
+						<img style="padding:1%;" align="center" height="64px" src="game-prototypes-img/castleva_anim2.png"  />
+					</div>
+				</section>
+
+				<hr>
+
 				<section id="dunes">
 					<h2>Dune Driver</h2>
 					<p>
@@ -210,11 +252,14 @@
 						This was also around the time when I was making the <a href="starsky.html">Nightsky</a> project.
 					</p>
 					<p>
+						I soon discovered that the game Sable was in development, which is far better than what I had!
+					</p>
+					<p>
 						The dunes are fairly straightforward - just a sum of 3D normal distributions. I made them oblong and facing the same direction to simulate how the wind shapes dunes.
 					</p>
-					<div class="img-row" style="width:80%;">
-						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\dunes1.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\dunes2.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row">
+						<div class="img-row-item iri2"> <img  src="game-prototypes-img\dunes1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri2"> <img  src="game-prototypes-img\dunes2.png" caption="with luminosity cycle"></img></div>
 					</div>
 					<p>
 						This was also the first time I tried to implement any kind of 3D movement. In particular, I focused on giving it a "natural motion" (rather than hugging the ground and always pointing to its normal). It feels pretty satisfying to control, especially at low speeds.
@@ -222,63 +267,70 @@
 					<p>
 						I also accidentally found out that Mario Kart's "drift" is mostly about adding an ortogonal component to the movement!
 					</p>
-					<div class="img-row" style="width:70%;">
-					<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\dune_rider1_redux.gif" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:34%;"> <img  src="game-prototypes-img\dune_rider2_redux2.gif" caption="with luminosity cycle"></img></div>
+					<div class="img-row">
+						<div class="img-row-item" style="height:400px;"> <img style="height:400px;" src="game-prototypes-img\dune_rider1_redux.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item" style="height:400px;"> <img style="height:400px;" src="game-prototypes-img\dune_rider2_redux2.gif" caption="with luminosity cycle"></img></div>
 					</div>
-					
-					
-					
-					
-					
-				<hr></section>
+				</section>
+				
+				<hr>
+
 				<section id="diablo">
 					<h2>Diablo-like ARPG</h2>
-				<hr></section>
-				<section id="angkhorror">
-					<h2>Angkhorror</h2>
 					<p>
-						This project came about at the intersection of <a href="https://kittyhorrorshow.itch.io/" target="_blank">KittyHorrorShow</a> and reading about <a href="https://www.amazon.com/Angkor-Civilization-Ancient-Peoples-Places/dp/0500284423" target="_blank">Angkor and the Khmer Civilization</a>. I really liked her games "Grandmother" and "Monastery", and I had wanted to experiment with low-res rendering ever since I had played Ultima Underworld in early 2020, so it all came together, here.
+						Unfortunately don't have any cool gifs or screenshots from this one. <br>I never got too deep into it, but I had implemented the basic point n' click movement/targetting, and a few different kinds of skills (a jump + AoE, a simple "set it and forget it" AoE, a chargeable beam, and the like).
 					</p>
-					<div class="img-row" style="width:70%;">
-						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\angkhorror.gif" caption="with luminosity cycle"></img></div>
-					</div>
 					<p>
-						It was very cool to work on, especially since I had never done any 3D modeling. I tried Blender for a while, but the program was incredibly bloated (for one who isn't specialized in modeling), so I decided to implement my own tools and see what came of it.
-						I modeled everything myself with these customs tools, except the statues' bodies - for which I used a basic rigged model and then set their positions (and duplicated arms and heads where applicable!).
+						Maybe I should fish the project files one day just to have something to fill the empty space, here...
 					</p>
-					<div class="img-row" style="width:70%;">
-						<div class="img-row-item" style="width:15.5%;"> <img  src="game-prototypes-img\angkhorror_model1.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:10%; "> <img  src="game-prototypes-img\angkhorror_model2.png" caption="with luminosity cycle"></img></div>
-					</div>
-					<div class="img-row" style="width:70%;">
-						<div class="img-row-item" style="width:17.5%;"> <img  src="game-prototypes-img\angkhorror_model3.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:10%; "> <img  src="game-prototypes-img\angkhorror_model4.png" caption="with luminosity cycle"></img></div>
-					</div>
-					<div class="img-row" style="width:70%;">
-						<div class="img-row-item" style="width:10%;"> <img  src="game-prototypes-img\angkhorror_model5.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:25%; "> <img  src="game-prototypes-img\angkhorror_model6.png" caption="with luminosity cycle"></img></div>
-					</div>
 					<p>
-						I've also generated most of the textures myself, with various kinds of <a href="shader-experiments.html#noise" target="_blank">noise</a>, as well as creating their normal maps. The downscaling was particularly interesting, since the algorithm for the textures and the actual rendering was different (for aesthetic purposes) - textures benefitted from averaging the pixels within a certain area to preserve the original image as much as possible; but the rendering worked better if you sampled a single pixel from the area rather than averaging, precisely because it more faithfully simulates "low" resolution (where you don't have the computational power to render more pixels than you see on the screen).
-						The sky also required a different approach described <a href="starsky.html#lowres" target="_blank">here</a>.
+						I still want to try to design a rogue-lite ARPG, one day. I really enjoy the core gameplay of Diablo, and love the possibilities of skill trees, but I find the structure really unpalatable. The grind, the compulsion, and the focus on min-maxing (which means following a guide instead of experimenting).
+						I feel like the gameplay would go along well with the rogue-like randomization, especially the way it forces you experimentation by randomizing your access to different skills.
 					</p>
-					<div class="img-row" style="width:70%;">
-						<div class="img-row-item" style="width:18%;"> <img  src="game-prototypes-img\angkhorror_tex1.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:10%; "> <img  src="game-prototypes-img\angkhorror_tex1_low.png" caption="with luminosity cycle"></img></div>
-					</div>
-					<div class="img-row" style="width:70%;">
-						<div class="img-row-item" style="width:11.5%;"> <img  src="game-prototypes-img\angkhorror_tex2.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:10%; "> <img  src="game-prototypes-img\angkhorror_tex2_low.png" caption="with luminosity cycle"></img></div>
-					</div>
-					<p>
-						Unfortunately, I also stopped working on this (scope creep plus an obsessive attention to the literary detail); <a href="shader-experiments.html#sun-shafts" target="_blank">here</a> you can see an offshoot of the project.
-					</p>
-				<hr></section>
+				</section>
+
+				<hr>
+				
 				<section id="jamelan">
-					<h2>Jamelan</h2>
-				<hr></section>
-				</div>
-				</div>
-				</body>
-				</html>				
+					<h2>Rhythm Games</h2>
+					<h3>Jamelan</h3>
+					<p>
+						This one never left the conceptual stage, because I began working at Classplash soon after (in fact, this game was one of my reasons for applying, as I was getting deeper into music again).
+					</p>
+					<p>
+						Basic idea was to have a straightforward rhythm game, though with a controller mimicking a gamelan instrument (whether a midi/arduino controller, or a normal compute keyboard).<br>
+						The music would come from traditional Balinese gamelan, and the visuals would enact the scenes from Wayang (shadow puppet theater).
+					</p>
+					<p>
+						It still an idea I'd love to explore, combining my love for music and cultures from around the world. Unfortunately, I don't know anyone in Bali or Indonesia. Maybe one day.<br>
+						If you're a musician with experience in Gamelan, or an artist interested in Wayang-like illustration and animation, feel free to drop me an e-mail! I'd collaborate on a project like this.
+					</p>
+					<h3>Trombone Master (2022)</h3>
+					<p>
+						I loved the idea and aesthetics of Trombone Champ. Coming from Classplash, a company that develops rhythm games with real instruments, I immediately wanted to create a prototype for a game with a slide-whistle.
+					</p>
+					<p>
+						... I mean, come on, how fun would that be?<br>
+						But I am not in a misanthropic mood and decided not to unleash the pain in all the parents, neighbours and pets of the world.
+					</p>
+					<h3>Hildegard (2022)</h3>
+					<p>
+						After playing Pentiment, I discovered Hildegard von Bingen. She was many things, among them a mystic and a very early composer.
+					</p>
+					<p>
+						She has a beautiful illuminated book, <a href ="https://en.wikipedia.org/wiki/Scivias">Scivias</a>. Her music is all monophonic, too, which would go along great with a recorder.
+					</p>
+					<p>
+						Putting the visual style of illuminated manuscripts with the early church's monophonic music would, I think, make for a really good, if niche, musical game. It is also very straightforward to make, programming-wise, given my experience with <a href="themagicflute.html">The Magic Flute</a>. Perhaps I will have a more concrete idea after I read her works.
+					</p>
+					<p>
+						If you're an artist with an interest/experience in animation and illustration of illuminated manuscripts, feel free to drop me an e-mail! I'd collaborate in making this a reality.
+					</p>
+				</section>
+
+				<div style = "height:50px;"></div>
+
+			</div>
+		</div>
+	</body>
+</html>				

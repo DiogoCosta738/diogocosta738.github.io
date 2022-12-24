@@ -1,64 +1,71 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="stylesheet" href="gallerysheet.css">
-		<link rel="stylesheet" href="imagesheet.css">
-		<script src="gallerycode.js"></script>
+		<title>Shader Experiments</title>
+		<meta name="description" content="Details for my Shader Experiments, exploring noise, ray marching and other techniques in shadertoy and Unity">
+	
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://www.jayvanhutten.com/fb_prev.jpg">
+		<script src="royalslider/jquery-1.8.3.min.js"></script>
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/layout.css" rel="stylesheet">
+		<link href="css/labels.css" rel="stylesheet">
+		<link href="css/jay.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+	
+		<link href="royalslider/royalslider.css" rel="stylesheet">
+		<link href="royalslider/skins/jay/rs-jay.css" rel="stylesheet">
+		
+		<link rel="shortcut icon" href="favicon.png">
+		
+		<script src="royalslider/config.js"></script>    
+		<script src="script-min.js"></script>
 	</head>
 	<body>
-		
-
-
-
-
-
-		<nav id="navbar">
-		  <ul>
-			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
-			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
-				<a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
-				<a class = "dropdown-item" href="amalgama.html">AmalgamA (missing gallery)</a>
-				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes (incomplete)</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
-				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
-				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
-				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
-				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
-				<a class = "dropdown-item" href="starsky.html">Starsky</a>
-				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
-				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
-				<a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
-				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
-				<a class = "dropdown-item" href="web-development.html">Web Development</a>
-				<a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
-				<!--
-				<a class = "dropdown-item" href="">(empty) Reading Log</a>
-				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
-				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
-				-->
-			  </div>
-			</li>
-		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
-		  </ul>
-		</nav>
-
-
-
-
-
-		
-		<div id="body">
+    <!-- nav -->
+    <div id="navbarContainer">
+      <div class="navbar">
+        <a class="navlink" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Games<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+            <a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
+            <a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
+            <a class = "dropdown-item" href="amalgama.html">AmalgamA</a>
+            <a class = "dropdown-item" href="angkhorror.html">Angkhorror</a>
+            <a class = "dropdown-item" href="game-prototypes.html">Game Prototypes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Projects<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+          <a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+          <a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+          <a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+          <a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+          <a class = "dropdown-item" href="starsky.html">Starsky</a>
+          <a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+          <a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+          <a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+          <a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Other<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="open-collaborations.html">Open Collaborations</a>
+          <a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
+          <a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
+          <!-- <a class = "dropdown-item" href="web-development.html">Web Development</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /nav -->   		
+		<!--
 			<div id="sidebar">
 				<a href="#introduction" class="sidelink">Introduction</a>
 				<a href="#noise" class="sidelink">Noise</a>
@@ -78,8 +85,12 @@
 					<a href="#reaction-diffusion" class="sidelink-inner">Reaction Diffusion</a>
 					<a href="#simple-mandelbrot" class="sidelink-inner">Simple Mandelbrot</a>
 			</div>
+		-->
+		<div id="body">
+			
 			<div id="main">
-				<h1>Shader Experiments</h1>
+				<div class="page-title">Shader Experiments</div>
+				<div class="page-subtitle">Solo (2017-2020)</div>
 				<section id="introduction">
 					<h2>Introduction</h2>
 					<p>
@@ -94,8 +105,14 @@
 						As I said, these are tiny experiments, and mostly proofs-of-concept. At the very least, they let me get my hands dirty and take the first step into implementing some effects I saw in games.
 					</p>
 					<div style="text-align:center;">
-					<i style="font-size:1.5em;">Note: most of these examples are static pictures that link to a dynamic shadertoy shader. Click on them to see the full effect!</i> 
+					<p style="font-size:1.5em; color:black; font-weight: bold;">Note: most of these examples are static pictures that link to a dynamic shadertoy shader. Click on them to see the full effect!</p> 
 					</div>
+					
+					<p>
+						<span style="color:black; font-weight: bold;">Update: </span>
+						I've had to opportunity to apply what I've learned in these experiments in <a href="themagicflute.html">The Magic Flute</a> game! Check it out if you want to see some of these effects used in the context of an actual game.
+					</p> 
+
 				<hr></section>
 				<section id="noise">
 					<h2>Noise</h2>
@@ -112,7 +129,7 @@
 						Now that I look at it years later, it can be polished up quite a bit, but I liked the idea anyway. I used two noise textures, slightly offset (on the third dimension) and averaged, to create more "smudged" black cracks. It was an improvement over the earliest marble textures from textbooks, at least, but there is obviously much better work nowadays.
 					</p>
 					<div style="text-align:center;">
-						<a style="text-align:center;" href="https://www.shadertoy.com/view/tt3BDf" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/marble.png"  /></a>
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/tt3BDf" target="_blank"><img style="padding:1%;" align="center" width="600px" src="shader-experiments-img/marble.png"  /></a>
 					</div>
 					
 					<h3 id="ridged-lava">Ridged Lava</h3>
@@ -120,7 +137,7 @@
 						Simple lava using a similar idea to the Marble's - two layers of ridged noise, slightly offset and averaged. Would probably benefit from some swirling noise like domain warping.
 					</p>
 					<div style="text-align:center;">
-						<a style="text-align:center;" href="https://www.shadertoy.com/view/3lVfDW" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/lava.png"  /></a>
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/3lVfDW" target="_blank"><img style="padding:1%;" align="center" width="600px" src="shader-experiments-img/lava.png"  /></a>
 					</div>
 					
 					<h3 id="ridged-warping">Ridged Warping</h3>
@@ -128,7 +145,7 @@
 						I must confess I didn't even remember writing this shader, but I like it! Looking at the code, it is simple domain warping with ridged noise instead of fbm.
 					</p>
 					<div style="text-align:center;">
-						<a style="text-align:center;" href="https://www.shadertoy.com/view/WlVfDW" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/turbulent_warp.png"  /></a>
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/WlVfDW" target="_blank"><img style="padding:1%;" align="center" width="600px" src="shader-experiments-img/turbulent_warp.png"  /></a>
 					</div>
 					
 					<h3 id="domain-warp-distortion">Domain Warp Distortion</h3>
@@ -136,15 +153,18 @@
 						This is straightforward domain warping applied to a texture, but changing its coordinates rather than color. It is mostly a proof-of-concept kind of thing, but I am a sucker for distortion effects in general, especially on explosions and sword slashes and so on. This is also the kind of distortion used in The Witcher 2, during the eternal battle.
 					</p>
 					<div style="text-align:center;">
-						<a style="text-align:center;" href="https://www.shadertoy.com/view/3lKBWD" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/distortion.png"  /></a>
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/3lKBWD" target="_blank"><img style="padding:1%;" align="center" width="600px" src="shader-experiments-img/distortion.png"  /></a>
 					</div>
 					
 					<h3 id="eyeris">Eyeris</h3>
 					<p>
 						Domain warping with a radial color palette, looks good in motion. The idea came from the game <a href="https://store.steampowered.com/app/308040/Back_to_Bed/" target="_blank">Back to Bed</a>, while I was proving its PSPACE-Completeness for my <a href="about.html" target="_blank">thesis</a>.
 					</p>
+					<p>
+						I actually went back to this one in <a href="themagicflute.html">The Magic Flute</a>, check the bottom of that page to see the result.
+					</p>
 					<div style="text-align:center;">
-						<a style="text-align:center;" href="https://www.shadertoy.com/view/3tKBDD" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/eyeris.png"  /></a>
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/3tKBDD" target="_blank"><img style="padding:1%;" align="center" width="600px" src="shader-experiments-img/eyeris.png"  /></a>
 					</div>
 					
 					<h3 id="planets">Planets</h3>
@@ -152,14 +172,13 @@
 					These are from when I was working on the <a href="starsky.html" target="_blank">Nightsky</a> project. Straightforward application of noise, sometimes with vertex displacement as well. Looks particularly good on gas giants (although some fluid dynamics also work great).
 					</p>
 					<div class="img-row">
-						<div class="img-row-item" style="width:20%;"> <img  src="shader-experiments-img\planets1.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:20%;"> <img  src="shader-experiments-img\planets2.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:20%;"> <img  src="shader-experiments-img\planets3.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:20%;"> <img  src="shader-experiments-img\planets4.png" caption="with luminosity cycle"></img></div>
-					</div>
-					<div class="img-row">
-						<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\planets5.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\planets6.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri4"> <img  src="shader-experiments-img\planets1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri4"> <img  src="shader-experiments-img\planets2.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri4"> <img  src="shader-experiments-img\planets3.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri4"> <img  src="shader-experiments-img\planets4.png" caption="with luminosity cycle"></img></div>
+
+						<div class="img-row-item iri2"> <img  src="shader-experiments-img\planets5.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri2"> <img  src="shader-experiments-img\planets6.png" caption="with luminosity cycle"></img></div>
 					</div>
 				<hr></section>
 				<section id="ray-marching">
@@ -174,7 +193,7 @@
 						This is fairly simple - it's just a sphere, with a couple of modifications. The first is the use of noise to modify its surface and make it blob-y. The second is to change its hue depending on the light and viewing angle - a kind of fake <a href="https://en.wikipedia.org/wiki/Iridescence" target="_blank">iridescence</a>.
 					</p>
 					<div style="text-align:center;">
-						<a style="text-align:center;" href="https://www.shadertoy.com/view/ltGfWD" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/iridescent.png"  /></a>
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/ltGfWD" target="_blank"><img style="padding:1%;" align="center" width="600px" src="shader-experiments-img/iridescent.png"  /></a>
 					</div>
 					
 					<h3 id="tower-of-timbuktu">Tower of Timbuktu</h3>
@@ -183,7 +202,7 @@
 						It's a simple trapezoidal prism, blended with a sphere at the top, and negatively blended with a box for a door. FBM noise is then applied to the surface to make it look sandy.
 					</p>
 					<div style="text-align:center;">
-						<a style="text-align:center;" href="https://www.shadertoy.com/view/XtGBRK" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/timbuktower.png"  /></a>
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/XtGBRK" target="_blank"><img style="padding:1%;" align="center" width="600px" src="shader-experiments-img/timbuktower.png"  /></a>
 					</div>
 					
 					<h3 id="fuji">Fuji</h3>
@@ -193,8 +212,8 @@
 					</p>
 					<a href="https://www.shadertoy.com/view/MlGBD1" target="_blank">
 					<div class="img-row">
-						<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\fuji1.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\fuji2.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri2"> <img  src="shader-experiments-img\fuji1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri2"> <img  src="shader-experiments-img\fuji2.png" caption="with luminosity cycle"></img></div>
 					</div>
 					</a>
 				<hr></section>
@@ -211,11 +230,11 @@
 						This scene was deliberately low-res, since it was part of a different project that I was working on, also in low res. The clouds are simple FBM noise and are animated.
 					</p>
 					<div class="img-row">
-						<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\sunshaft_redux.gif" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\sunshaft2.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri2" style="width:40%;"> <img  src="shader-experiments-img\sunshaft_redux.gif" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri2" style="width:40%;"> <img  src="shader-experiments-img\sunshaft2.png" caption="with luminosity cycle"></img></div>
 					</div>
 					<p>
-						The idea came from Rabindranath Tagore's <a href="https://en.wikipedia.org/wiki/Gitanjali" target="_blank">Gitanjali</a> (even though I am not a big fan of his poems; much prefer his novels "Gora" and "Home and the World").
+						This was an offshoot of the <a href = "angkhorror.html#sun-shaft">Angkhorror</a> game.
 					</p>
 					
 				<hr></section>
@@ -233,13 +252,13 @@
 								Below are just few superficial examples, with varying parameters. The first three you can interact with on shader toy - and I find it extremely satisfying to click and drag the mouse and see the patterns readjusting! The last two I made in Unity, so no interaction for you.
 							</p>
 							<div class="img-row">
-							<div class="img-row-item"><a href="https://www.shadertoy.com/view/4t3Bzn" target="_blank"> <img  src="shader-experiments-img\reacdif1.png" caption="with luminosity cycle"></img></a></div>
-							<div class="img-row-item"><a href="https://www.shadertoy.com/view/4lVcW3" target="_blank"> <img  src="shader-experiments-img\reacdif2.png" caption="with luminosity cycle"></img></a></div>
-							<div class="img-row-item"><a href="https://www.shadertoy.com/view/ltGcDd" target="_blank"> <img  src="shader-experiments-img\reacdif3.png" caption="with luminosity cycle"></img></a></div>
+								<div class="img-row-item iri3"><a href="https://www.shadertoy.com/view/4t3Bzn" target="_blank"> <img  src="shader-experiments-img\reacdif1.png" caption="with luminosity cycle"></img></a></div>
+								<div class="img-row-item iri3"><a href="https://www.shadertoy.com/view/4lVcW3" target="_blank"> <img  src="shader-experiments-img\reacdif2.png" caption="with luminosity cycle"></img></a></div>
+								<div class="img-row-item iri3"><a href="https://www.shadertoy.com/view/ltGcDd" target="_blank"> <img  src="shader-experiments-img\reacdif3.png" caption="with luminosity cycle"></img></a></div>
 							</div>
 							<div class="img-row">
-								<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\reacdif4.png" caption="with luminosity cycle"></img></div></a>
-								<div class="img-row-item" style="width:40%;"> <img  src="shader-experiments-img\reacdif5.png" caption="with luminosity cycle"></img></div></a>
+								<div class="img-row-item iri2"> <img  src="shader-experiments-img\reacdif4.png" caption="with luminosity cycle"></img></div></a>
+								<div class="img-row-item iri2"> <img  src="shader-experiments-img\reacdif5.png" caption="with luminosity cycle"></img></div></a>
 							</div>
 							
 						<h3 id="simple-mandelbrot">Simple Mandelbrot</h3>
@@ -247,7 +266,7 @@
 							Fractals are the bread and butter of computer graphics, but I had never tried to render any. I was reading <a href="https://en.wikipedia.org/wiki/Benoit_Mandelbrot" target="_blank">Benoit Mandelbrot</a>'s <a href="https://www.amazon.com/Fractalist-Memoir-Scientific-Maverick/dp/030738991X" target="_blank">autobiography</a> and got the gist of the computation, so I tried to implement it in a shader. It's nothing special and has some artifacts, but it captures the main idea.
 						</p>
 						<div style="text-align:center;">
-						<a style="text-align:center;" href="https://www.shadertoy.com/view/3tVfDW" target="_blank"><img style="padding:1%;" align="center" width="50%" src="shader-experiments-img/mandelbrot.png"  /></a>
+						<a style="text-align:center;" href="https://www.shadertoy.com/view/3tVfDW" target="_blank"><img style="padding:1%;" align="center" width="1000px" src="shader-experiments-img/mandelbrot.png"  /></a>
 						</div>
 				<hr></section>
 				</div>

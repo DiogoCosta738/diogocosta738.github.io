@@ -1,62 +1,90 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="stylesheet" href="gallerysheet.css">
-		<link rel="stylesheet" href="imagesheet.css">
-		<script src="gallerycode.js"></script>
+		<title>AmalgamA - algorithmic art meets puzzle game</title>
+		<meta name="description" content="Details for AmalgamA project, an artsy puzzle game where puzzles are generated using a cellular automaton.">
+	
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://www.jayvanhutten.com/fb_prev.jpg">
+		<script src="royalslider/jquery-1.8.3.min.js"></script>
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/layout.css" rel="stylesheet">
+		<link href="css/labels.css" rel="stylesheet">
+		<link href="css/jay.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+	
+		<link href="royalslider/royalslider.css" rel="stylesheet">
+		<link href="royalslider/skins/jay/rs-jay.css" rel="stylesheet">
+		
+		<link rel="shortcut icon" href="favicon.png">
+		
+		<script src="royalslider/config.js"></script>    
+		<script src="script-min.js"></script>
 	</head>
 	<body>
-		<nav id="navbar">
-		  <ul>
-			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
-			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
-				<a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
-				<a class = "dropdown-item" href="amalgama.html">AmalgamA (missing gallery)</a>
-				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes (incomplete)</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
-				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
-				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
-				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
-				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
-				<a class = "dropdown-item" href="starsky.html">Starsky</a>
-				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
-				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
-				<a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
-				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
-				<a class = "dropdown-item" href="web-development.html">Web Development</a>
-				<a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
-				<!--
-				<a class = "dropdown-item" href="">(empty) Reading Log</a>
-				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
-				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
-				-->
-			  </div>
-			</li>
-		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
-		  </ul>
-		</nav>
-
+    <!-- nav -->
+    <div id="navbarContainer">
+      <div class="navbar">
+        <a class="navlink" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Games<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+            <a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
+            <a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
+            <a class = "dropdown-item" href="amalgama.html">AmalgamA</a>
+            <a class = "dropdown-item" href="angkhorror.html">Angkhorror</a>
+            <a class = "dropdown-item" href="game-prototypes.html">Game Prototypes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Projects<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+          <a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+          <a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+          <a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+          <a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+          <a class = "dropdown-item" href="starsky.html">Starsky</a>
+          <a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+          <a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+          <a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+          <a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Other<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="open-collaborations.html">Open Collaborations</a>
+          <a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
+          <a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
+          <!-- <a class = "dropdown-item" href="web-development.html">Web Development</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /nav -->   		
 		<div id="body">
+			<!--
 			<div id="sidebar">
-			<a href="#intro" class="sidelink">Introduction</a>
-			<a href="#generation" class="sidelink">Puzzle Generation</a>
-			<a href="#rendering" class="sidelink">Rendering</a>
-			<a href="#music" class="sidelink">Music</a>
-			<a href="#itchio" class="sidelink">Software</a>
-		  </div>
+				<a href="#intro" class="sidelink">Introduction</a>
+				<a href="#generation" class="sidelink">Puzzle Generation</a>
+				<a href="#rendering" class="sidelink">Rendering</a>
+				<a href="#music" class="sidelink">Music</a>
+				<a href="#itchio" class="sidelink">Software</a>
+			</div>
+			-->
 		  <div id="main">
-			<h1>AmalgamA</h1>
+			<div class="page-title">AmalgamA</div>
+			<div class="page-subtitle">Solo, released (2016)</div>
+			<div class="page-tags">
+				<span class="label generaldesign">General Design</span>
+				<span class="label programming">Programming</span>
+				<span class="label art2D">2D Art</span>
+				<span class="label music">Music</span>
+			</div>
 			<section id="intro">
 			  <h2>Introduction</h2>
 				<p>
@@ -73,7 +101,6 @@
 				<p>
 					Once I realized how the cellular automata could generate puzzles, the game grew wings of its own and all I had to do was add some bells (quite literally) and whistles.
 				</p>
-				<!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor2.png" caption="!FIXME"></img></div> -->
 			<hr></section>
 			<section id="generation">
 			  <h2>Puzzle Generation</h2>
@@ -84,9 +111,8 @@
 				  <p>
 					Cellular automata are simple programs that run repeatedly on a grid of uniform cells, and their behavior depends on the states of their neighbors. In this case, cells have a binary state, 0 or 1, and their own state depends on the <i>sum</i> of their neighbors' states (hence the name totalistic). The nice thing about this is that you can encode the different rules in the form of a short number, making experimentation with many different patterns easy.
 				  </p>
-				  <!-- Perhaps I could explain things thoroughly, with the rule array and all that? It's too much work, though, probably not worth it. -->
 			  <h3>Puzzle Generation</h3>
-				<img src="amalgama-img\grid2.png" align="right" style="width: 25vw; margin-left:40px;"/>
+				<img src="amalgama-img\grid2.png" align="right" style="width: 300px; margin-left:40px;"/>
 				<p>
 					How do you go from a binary grid to a pattern of links? One idea is to create a link between adjacent cells with the same color (or state). This didn't look very good to me, though. Then I realized that I could superimpose a larger hexagonal grid on top of the CA, like the green hexagons in the figure to the right.
 					The game pieces are the cells marked with a blue dot, and the existence of an edge is marked by the state of the cell crossed by the green edge.
@@ -116,26 +142,32 @@
 					As I said before, I didn't know about Infinity Loop before starting this project. So the rendering I had in mind wasn't of "sticks", but of triangles. In the end, I put both in the game, with the player choosing between whichever mode they prefer. 
 					You can see the two kinds below:
 				</p>
-			  <div class="img-row">
-				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render1.png" caption="without luminosity cycle"></img></div><br>
-				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render2.png" caption="with luminosity cycle"></img></div>
-				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render3.png" caption="without luminosity cycle"></img></div>
-				<div class="img-row-item" style="width:20%;"> <img src="amalgama-img\render4.png" caption="without luminosity cycle"></img></div>
-			  </div>
+				<div class="img-row">
+					<div class="img-row-item iri4" > <img src="amalgama-img\render1.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4" > <img src="amalgama-img\render2.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4" > <img src="amalgama-img\render3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4" > <img src="amalgama-img\render4.png" caption="without luminosity cycle"></img></div>
+				</div>
 				<h3>Coloring</h3>
-				<p>
-					<img src="amalgama-img\complete.gif" align="right" style="max-width: 35%; margin-left:40px;"/>
-					The puzzles themselves are monotone. As a kind of "visual reward", however, I decided to add a bit of color to the triangle-rendering. It is fairly simple - I look for connected components in the CA graph and assign a different color to each isolated component, respecting symmetry. Each triangle also has a slight color variation for flavor.
-				</p>
+				<div>
+					<img src="amalgama-img\complete.gif" align="right" style="height: 300px; margin-left:40px;"/>
+					<p>
+						
+						The puzzles themselves are monotone. As a kind of "visual reward", however, I decided to add a bit of color to the triangle-rendering. It is fairly simple - I look for connected components in the CA graph and assign a different color to each isolated component, respecting symmetry. Each triangle also has a slight color variation for flavor.
+					</p>
+					
+				</div>
+				<div>
 				<p>
 					The palettes were a bit lacking, as I just settled on certain angle-relation on the color wheel and then chose a handful of different colors. It would have probably worked better with either hand-picked palettes (for best looking but limited colors), or a more versatile palette generator (for more variety but probably less aesthetic appeal).
 					Either way, I am still happy with the result, especially when you finally get to the larger puzzles, where there is more variety. 
-					<div class="img-row" style="max-width:65%;">
-						<div class="img-row-item"> <img src="amalgama-img\col1.png" caption="without luminosity cycle"></img></div><br>
-						<div class="img-row-item"> <img src="amalgama-img\col2.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item"> <img src="amalgama-img\col3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row">
+						<div class="img-row-item iri3"> <img src="amalgama-img\col1.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item iri3"> <img src="amalgama-img\col2.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri3"> <img src="amalgama-img\col3.png" caption="without luminosity cycle"></img></div>
 					  </div>
 				</p>
+			</div>
 			<hr></section>
 			<section id="music">
 			  <h2>Music</h2>
@@ -157,9 +189,9 @@
 				<p>You can download this one on my <a href="https://diogoc.itch.io/amalgama" target="_blank">itch.io page</a>. If you want to look into the code, feel free to ask.</p>
 				
 				<div class="img-row">
-					<div class="img-row-item"> <img src="amalgama-img\frame1.png" caption="without luminosity cycle"></img></div><br>
-					<div class="img-row-item"> <img src="amalgama-img\frame2.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="amalgama-img\frame3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="amalgama-img\frame1.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="amalgama-img\frame2.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="amalgama-img\frame3.png" caption="without luminosity cycle"></img></div>
 				</div>
 				<hr></section>
 		  </div>

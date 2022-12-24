@@ -1,8 +1,15 @@
 #navbar replacer in html files
 import os
 
+
+path = os.getcwd() + "/"
+navbar_source = "reusableElements/navbar.html"
+
+NAVBAR_START = "<!-- nav -->"
+NAVBAR_END = "<!-- /nav -->"
+
 def read_navbar(path):
-    file = open(path+"navbar.html")
+    file = open(path + navbar_source)
     return file.readlines()
 
 def replace_navbar(navbar, filename):
@@ -22,11 +29,13 @@ def replace_navbar(navbar, filename):
 
     newfile_list = []
     for line in file.readlines():
-        if state==1 and line.strip().startswith("</nav>"):
-            state=2
-        elif state==0 and line.strip().startswith("<nav"):
-            newfile_list+=navbar
+        if state==0 and line.strip() == NAVBAR_START:
+            print("Found start!")
             state=1
+        elif state==1 and line.strip() == NAVBAR_END:
+            print("Found end!")
+            newfile_list+=navbar
+            state=2
         elif state==0 or state==2: #state==0
             newfile_list+=[line]
 
@@ -47,11 +56,6 @@ def list_navbar_files(path):
     return retlst
 
 
-path = "C:/Users/ASUS/Downloads/diogocosta738.github.io/"
-
-navbar_source = "navbar.html"
-
-
 for f in os.listdir(path):
     print(f)
 
@@ -61,18 +65,19 @@ for f in list_navbar_files(path):
 
 navbar_code = read_navbar(path)
 for l in navbar_code:
-    
-    if(l.strip().startswith("<nav")):
+    if(l.strip() == NAVBAR_START):
         print(l)
-        print("Here!")
-    if(l.strip().startswith("</nav")):
+    if(l.strip() == NAVBAR_END):
         print(l)
-        print("There!")
+
+
 
 for f in list_navbar_files(path):
-    if f=="navbar.html" or f.startswith("copy"):
+    if f == navbar_source or f.startswith("copy"):
         continue
     print("Starting to process file: "+f)
     replace_navbar(navbar_code, f)
     print("Finished processing file: "+"copy_"+f)
+
+
 

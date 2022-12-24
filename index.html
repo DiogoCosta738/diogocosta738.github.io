@@ -1,62 +1,595 @@
-<html>
-	<head>
-		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="stylesheet" href="gallerysheet.css">
-		<link rel="stylesheet" href="imagesheet.css">
-		<script src="gallerycode.js"></script>
-	</head>
-	<body>
 
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+		<title>Diogo Costa - Game Design, Programming and Narrative Design Portfolio</title>
+		<meta name="description" content="Game Design, Programming and Narrative Design portfolio of Diogo Costa, a multi-disciplinary game developer from Portugal with insatiable curiosity and the will to bold games that make players question their actions that are aesthetically cohesive and original.">
 
-
-
-
-
-		<nav id="navbar">
-		  <ul>
-			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
-			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
-				<a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
-				<a class = "dropdown-item" href="amalgama.html">AmalgamA (missing gallery)</a>
-				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes (incomplete)</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
-				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
-				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
-				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
-				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
-				<a class = "dropdown-item" href="starsky.html">Starsky</a>
-				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
-				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
-				<a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
-				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
-				<a class = "dropdown-item" href="web-development.html">Web Development</a>
-				<a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
-				<!--
-				<a class = "dropdown-item" href="">(empty) Reading Log</a>
-				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
-				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
-				-->
-			  </div>
-			</li>
-		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
-		  </ul>
-		</nav>
-
-
-
-
-
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://www.jayvanhutten.com/fb_prev.jpg">
+		<script src="royalslider/jquery-1.8.3.min.js"></script>
+		<script src="royalslider/jquery.royalslider.min.js"></script>
 		
-	</body>
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/layout.css" rel="stylesheet">
+		<link href="css/labels.css" rel="stylesheet">
+		<link href="css/jay.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+
+		<link href="royalslider/royalslider.css" rel="stylesheet">
+		<link href="royalslider/skins/jay/rs-jay.css" rel="stylesheet">
+		
+		<link rel="shortcut icon" href="favicon.png">
+		
+		<script src="royalslider/config.js"></script>    
+		<script src="script-min.js"></script>
+	</head>
+
+  	<body>
+    <!-- nav -->
+    <div id="navbarContainer">
+      <div class="navbar">
+        <a class="navlink" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Games<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+            <a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
+            <a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
+            <a class = "dropdown-item" href="amalgama.html">AmalgamA</a>
+            <a class = "dropdown-item" href="angkhorror.html">Angkhorror</a>
+            <a class = "dropdown-item" href="game-prototypes.html">Game Prototypes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Projects<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+          <a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+          <a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+          <a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+          <a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+          <a class = "dropdown-item" href="starsky.html">Starsky</a>
+          <a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+          <a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+          <a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+          <a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Other<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="open-collaborations.html">Open Collaborations</a>
+          <a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
+          <a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
+          <!-- <a class = "dropdown-item" href="web-development.html">Web Development</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /nav -->   		<div style = "margin:auto; padding:20px; text-align:center; max-width:800px;">
+			<div class="page-title">Diogo Costa</div>
+			<div class="page-tags"><span class="label gamedesign label-large">Game Designer</span>, <span class="label programming label-large">Programmer</span>, <span class="label narrativedesign label-large">Narrative Designer</span></div>
+			<p class="normal-paragraph">... Who enjoys wearing many other hats when push comes to shove.</p>
+			<div style="text-align:center;">
+				<div style="display:inline-block;">
+					<a href = "https://diogoc.itch.io/" style = "margin:8px;" target="_blank"><img height=32 src="thumbnails/itch-io.svg"/></a>
+					<a href = "mailto:diogo_costa_95@hotmail.com" style = "margin:8px;"><img height=32 src="thumbnails/contact.png"/></a>
+					<a href = "resume.pdf" style = "margin:8px;"><img height=32 src="thumbnails/cv.png"/></a>
+					<a href = "msc.pdf" style = "margin:8px;"><img height=32 src="thumbnails/thesis.png"/></a>
+				</div>
+			</div>
+			<hr>
+		</div>
+
+		<div class="normal-paragraph text-align:center; margin:auto;">
+			<div style="width:900px; max-width:90%; margin:auto;">
+			My purpose is to craft meaningful and/or aesthetic experiences which make amaze players, makes them question their actions and hopefully improves their lives during and after playing.<br><br>
+			I do not design to distract, to addict, or to merely move money from one pocket to another pocket. I do not trade in souls.
+			</div>
+		</div>
+		<!--
+		<hr style ="width: 50%; margin-top:2em; margin-bottom:1em;">
+
+		<div class="normal-paragraph">
+			This page lists the most important projects in which I've worked, professionally or otherwise.<br>
+			A detailed page about each project can be reached through the project's slide or using the navbar at the top.<br>
+			Some personal information and contact are at the bottom. Enjoy! :)
+		</div>
+		-->
+
+		<div id ="wrap-wrap" id="games">
+			<p id="title">Games</p>
+			<div id="wrap" class="royalSlider rsDefault .rsContent">
+				<div class="slide">
+					<video class="slide-pic" loop="loop" class="video">
+						<source src="tmf-img/tmf_montage.mp4" type="video/mp4">
+					</video>        
+					<div class="description rsNoDrag">
+						<span class="title-project">THE MAGIC FLUTE (2022) • Classplash</span>
+						<p>
+							<span class="label programming">Programming</span>
+							<span class="label gamedesign">Game Design</span>
+							<span class="label vfx">VFX</span>
+							<span class="label tools">Tools</span>
+							<span class="label narrativedesign">Narrative Design</span>
+						</p>
+						<p>
+							The Magic Flute is the official companion game to the 2022 movie of the same name. <br>
+							It is a rhythm game designed to be played with a real recorder through the microphone input.<br> 
+							I was the main programmer working on the game, and also extended the design from the previous apps to provide a more polished and complex experience - I believe players can and should be challenged, when provided with tools that make learning smoother and empower the player.<br>
+							I also brought new techniques in animation and VFX to the table, resulting in a more polished look and feel.
+						</p>
+							<p><ul>
+								<li> Programmed most of the game</li>
+								<li> Co-designed and implemented basic gameplay</li>
+								<li> Designed additional training modes</li>
+								<li> Designed virtual touch instrument</li>
+								<li> Designed and implemented all animations and VFX</li>
+								<li> Revised the script and helped adapt it into a game format</li>
+								<li> Created tools used to script the narrative</li>
+							</ul></p>
+						<p>Download: <a href="https://apps.apple.com/us/app/the-magic-flute-the-game/id1608902917">App Store</a>, <a href="https://play.google.com/store/apps/details?id=com.classplash.themagicflute">Google Play</a></p>
+						<div><a class="project-details-link" href="themagicflute.html">Project details</a></div>
+						<img alt="" class="rsTmb" src="thumbnails/tmf.jpg">
+					</div>
+				</div>
+
+				<div class="slide">
+					<video class="slide-pic" loop="loop" class="video">
+					<source src="anarchima-img/anarchima-video.mp4" type="video/mp4">
+					</video>        
+					<div class="description rsNoDrag">
+						<span class="title-project">ANARCHIMA (2022) • Solo, in-development</span>
+						<p>
+							<span class="label narrativedesign">Narrative Design</span>
+							<span class="label gamedesign">Game Design</span>
+							<span class="label ai">AI</span>
+							<span class="label programming">Programming</span>
+							<span class="label tools">Tools</span>
+							<span class="label art2D">2D Art</span>
+						</p>
+						<p>
+							Anarchima (placeholder name) is a tactical cRPG I've been developing in my spare time in 2022.<br>
+							Its biggest influences are Ultima and the early Fallouts, with a heavy focus on narrative design, where quests set up conflicts between various towns with multiple solutions. The different solutions change internal variables that will determine the decision available in the end-game as well as their outcome in a game that goes beyond good/bad.<br>
+							The combat, although not as much of a focus, is being designed to provide a much wider toolbox to the player, allowing for both tactical depth (with positioning, flanking, tile attacks, etc.) as well as study and preparation for fights (with buffs and versatile equipment).<br>
+						</p>
+						<p><ul>
+							<li> Focus on choice, consequence and intention</li>
+							<li> Tactical combat (positioning, flanking, tile effects, buffs, elemental weaknesses)</li>
+							<li> Modding tools (branching dialogue with checks and rolls, tile editor, item/enemy editors, etc.)</li>
+						</ul></p>
+						<p>Download: Demo Soon</p>
+						<div><a class="project-details-link" href="anarchima.html">Project details</a></div>
+						<img alt="" class="rsTmb" src="thumbnails/anarchima1.png">
+					</div>
+				</div>
+
+				<div class="slide">
+					<video class="slide-pic" loop="loop" class="video">
+					<source src="amalgama-img/amalgama_montage.mp4" type="video/mp4">
+					</video>        
+					<div class="description rsNoDrag">
+						<span class="title-project">AMALGAMA (2016) • Solo</span>
+						<p>
+							<span class="label generaldesign">General Design</span>
+							<span class="label programming">Programming</span>
+							<span class="label art2D">2D Art</span>
+							<span class="label music">Music</span>
+						</p>
+						<p>
+							AmalgamA is a casual puzzle game where levels are generated using a cellular automaton.<br>
+							Everything came together beautifully in about a month and a half of work (although the ideas, unknowingly to me, required a brewing period during which I was learning about and playing around with cellular automata).<br> 
+							The cellular automaton provides puzzles that quite literally grow from a small seed, resulting in very aesthetically pleasing results (if I may say so myself!).<br>
+							The music, although not at all relaxing, was also procedurally generated, with dissonance tied to the puzzle state (it starts out very dissonance, but slowly becomes consonant and uplifting as you solve the puzzle).<br>
+							Despite its very apparent flaws, I am still very happy with it, especially in its symbolism and how each element reinforces each other. It was very organic to develop, with each element being the way it is almost out of necessity.
+						</p>
+						<p><ul>
+						<li> Infinite level generation using cellular automaton</li>
+						<li> Procedural music tied to puzzle state</li>
+						<li> Beautiful (if I may say so!) patterns</li>
+						</ul></p>
+						<p>Download: <a href="https://diogoc.itch.io/amalgama">itch.io</a></p>
+						<div><a class="project-details-link" href="amalgama.html">Project details</a></div>
+						<img alt="" class="rsTmb" src="thumbnails/amalgama.png">
+					</div>
+				</div>
+
+				<div class="slide">
+					<video class="slide-pic" loop="loop" class="video">
+					<source src="angkhorror-img/angkhorror-video.mp4" type="video/mp4">
+					</video>        
+					<div class="description rsNoDrag">
+						<span class="title-project">ANGKHORROR (2020) • Solo (abandoned)</span>
+						<p>
+							<span class="label generaldesign">General Design</span>
+							<span class="label vfx">VFX</span>
+							<span class="label programming">Programming</span>
+							<span class="label tools">Tools</span>
+							<span class="label art3D">3D Art</span>
+						</p>
+						<p>
+							Angkhorror is a prototype of a horror "walking-sim", inspired by Ultima Underworld, the works of KittyHorrorShow and Indian/Khmer Architecture.<br>
+							It unfortunately did not come together in the end, but I am happy with various of its elements, which I may still use in the future.<br>
+							I tried to capture the fractal nature of Indian architecture with custom 3D modelling tools.<br>
+							The combined use of the low-fi aesthetic also let me using various kinds of textural noise (using shaders) to design the abstract ornaments for friezes and other panels.<br>
+							I was very happy with the skybox, using a previous high-res starsky shader, coupled with dithering and larger stars to work in a low-res setting.<br>
+							Unfortunately, compression kind of killed the video, so please check the project page for crisper screenshots.
+						</p>
+						<p><ul>
+						<li> Created 3D modelling tools and used them to create all the architecture</li>
+						<li> Creation of various shaders for low-fi aesthetic and abstract ornament</li>
+						<li> Creation of a <a href="starsky.html">skybox shader</a> (day/night + twinkling stars) specifically designed for low-fi aeshetic</li>
+						</ul></p>
+						<p>Download: send me an e-mail and I'll provide the project!</p>
+						<div><a class="project-details-link" href="angkhorror.html">Project details</a></div>
+						<img alt="" class="rsTmb" src="thumbnails/angkhorror.png">
+					</div>
+				</div>
+
+				<div class="slide">
+					<iframe class="slide-pic" height="451" style="position:relative; float:left"; src="https://www.youtube.com/embed/_Kz8AtyPlu8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+					<div class="description rsNoDrag">
+						<span class="title-project">HARMONY CITY (2021) • Classplash</span>
+						<p>
+						<span class="label programming">Programming</span>
+						<span class="label tools">Tools</span>
+						<span class="label network">Network</span>
+						</p>
+						<p>
+							The Harmony City is a rhythm game designed to teach youngsters to play chords Guitar and Ukulele.<br>
+							I started my job there at the end of development programmed the tool used to create its weekly levels as well as several support features<br>. 
+							I also tweaked the practice mode to allow players to pause the game and practice the upcoming chords (a glaring blind spot in the then current design).
+						</p>
+						<p><ul>
+						<li> Implemented level creation tool used for weekly released songs</li>
+						<li> Extended practice mode</li>
+						<li> Implemented communication with external login provider</li>
+						<li> General support features, UI and maintenance</li>
+						</ul></p>
+						<p>Download: <a href="https://apps.apple.com/app/harmony-city-learn-chords/id1488443526">App Store</a>, <a href="https://play.google.com/store/apps/details?id=com.classplash.harmonycity">Google Play</a></p>
+						<img alt="" class="rsTmb" src="thumbnails/hc.png">
+					</div>
+				</div>
+
+
+
+				<div class="slide">
+					<video class="slide-pic" loop="loop" class="video">
+					<source src="game-prototypes-img/prototypes_montage.mp4" type="video/mp4">
+					</video>        
+					<div class="description rsNoDrag">
+						<span class="title-project">Prototypes (2014-2020) • Solo</span>
+						<p>
+							This is for smaller prototypes I've done over the years.<br>
+							It includes many different kinds of games and mechanics, mostly done during my university years, in my spare time.<br>
+							These are very unfinished and unpolished, but it gives a sense of my curiosity and tendency towards constant experimentation.<br>
+							A general overview of the prototypes includes:
+						</p>
+						<p><ul>
+							<li> 2D platformers (planet gravity based, castlevania-like, energy conserving grappling hook)</li>
+							<li> 3D Vehicle movement (almost Mario Kart-like, in a dune terrain)</li>
+							<li> Puzzle games (like Akari and other Nikoli-like games)</li>
+							<li> Weird strategy (using metaballs and immune-system inspired mechanics)</li>
+						</ul></p>
+						<div><a class="project-details-link" href="game-prototypes.html">Project details</a></div>
+						<img alt="" class="rsTmb" src="thumbnails/proto.png">
+					</div>
+				</div>
+		</div>
+
+		<div id ="wrap-wrap" id="projects">
+			<p id="title">Projects</p>
+			<div id="wrap" class="royalSlider royalSlider1 rsDefault .rsContent">
+				<div class="slide">
+					<video autoplay class="slide-pic" loop="loop" class="video">
+					<source src="weaving-img/weaving_montage.mp4" type="video/mp4">
+					</video>        
+					<div class="description rsNoDrag">
+						<span class="title-project">Digital Weaving (2020) • Solo</span>
+						<p>
+							This project started from Andrew Glassner's Digital Weaving articles.<br>
+							It's one of my favourite algorithmic art systems, especially for pixel-art like patterns.<br>
+							It's very understandable and, most importantly, controllable, and with multiple sub-systems to explore and extend. In particle, I love how you can keep a fairly stable (and aesthetically pleasing) structure that goes way beyond simple mirror symmetry while changing the low level pattern details.
+						</p>
+						<p><ul>
+							<li> Cultural-evolution simulation to create new patterns in a similar style;</li>
+							<li> Genetic simulation (akin to Dawkin's Biomorphs)</li>
+							<li> Cleaned up and optimized the algorithm (the articles had some extra convoluted and unnecessary step)</li>
+						</ul></p>
+						<div><a class="project-details-link" href="weaving.html">Project details</a></div>
+						<p>Download: send me an e-mail and I'll provide the project!</p>
+						<img alt="" class="rsTmb" src="thumbnails/weaving.png">
+					</div>
+				</div>
+
+				<div class="slide">
+					<video class="slide-pic" loop="loop" class="video">
+					<source src="4dcrosssection-img/4d-video.mp4" type="video/mp4">
+					</video>        
+					<div class="description rsNoDrag">
+						<span class="title-project">4D Crossections (2017) • Solo</span>
+						<p>
+							This was a project inspired by Flatland and Miegakure, and coalesced as I was reading Tegmark's Mathematical Universe.<br>
+							It takes a 4D convex object and renders it where it intersects with the our whole 3D space.<br>
+							This was my first time touching Unity. It was also my first time doing anything 3D - ironically enough.<br>
+							I really enjoyed it, and it confirmed my love for working with geometry.
+						</p>
+						<p><ul>
+							<li> Created a python program to visualize 4D PROJECTIONS (like a 3D shadow on a 2D wall)</li>
+							<li> Created a Unity program to visualize the 3D Cross-sections of the same 4D objects</li>
+							<li> Implemented QuickHull to do so, using a doubly linked edge list </li>
+							<li> Colored by characteristic of the 4D "volume" being intersected</li>
+						</ul></p>
+						<div><a class="project-details-link" href="4dcrosssection.html">Project details</a></div>
+						<p>Download: send me an e-mail and I'll provide the project!</p>
+						<img alt="" class="rsTmb" src="thumbnails/4d.png">
+					</div>
+				</div>
+
+				<div class="slide">
+					<video class="slide-pic" loop="loop" class="video">
+					<source src="chineselattice-img/chinese_montage.mp4" type="video/mp4">
+					</video>        
+					<div class="description rsNoDrag">
+						<span class="title-project">Chinese Lattice (2019) • Solo</span>
+						<p>
+							This was an algorithm art project dealing with Chinese Lattice Window/Door designs.<br>
+							I had already done projects with Celtic Knots (following Glassner, Peter Cromwell and George Bain) and Islamic Star Patterns (following Craig Kaplan), but the work was completely my own.<br>
+							I read through Daniel Sheets Dye's Chinese Lattice Windows book and inferred two different systems to generate more patterns, one based on overlapping tilings (with squares, octagons or hexagons), and one based on space-filling with tetrominos (roughly).<br>
+							I had another system based on Hamiltonian Paths (including an "easy" version of it) or Space filling curves, but I didn't get to try them out. Maybe one day!
+						</p>
+						<p><ul>
+							<li> Two original algorithmic systems to generate Chinese Lattice Designs</li>
+							<li> One based on overlapping tilings</li>
+							<li> The other based on tetromino-filling</li>
+							<li> Extended the above systems with additional "stylistic constraints"</li>
+							<li> Extended the above systems to different, non-traditional patterns</li>
+						</ul></p>
+						<div><a class="project-details-link" href="chineselattice.html">Project details</a></div>
+						<p>Download: send me an e-mail and I'll provide the project!</p>
+						<img alt="" class="rsTmb" src="thumbnails/chinese1.png">
+					</div>
+				</div>
+
+
+
+				<div class="slide">
+					<video class="slide-pic" loop="loop" class="video">
+						<source src="ltlca-img/ltca_montage.mp4" type="video/mp4">
+					</video>        
+					<div class="description rsNoDrag">
+						<span class="title-project">Larger-than-life Cellular Automaton (2017) • Solo</span>
+						<p>
+							This project was my first application of a shader.<br>
+							I had learned about much more expensive cellular automata after working on AmalgamA, but those were too slow to explore with my old tools.<br>
+							So I took an MSc course on graphics, learned the basics of shaders, and implemented this one. It's quite beautiful!<br>
+							The most important different is that cells look at every neighbour within a radius of 20 or more cells, instead of radius of 1. A shader's parallelization really makes it work in real time, enabling exploration, which is key to finding the coolest patterns!<br>
+							They grow really organically, it's really great to watch. I colored them with a simple gradient (based on time of stabilization), but then perturbed the saturation and luminosity of the colors for a better result. 
+						</p>
+						<p><ul>
+							<li> First time learning/using a fragment shader</li>
+							<li> 60 fps on a 2000x2000 grid with a neighbourhood radius >= 20</li>
+						</ul></p>
+						<div><a class="project-details-link" href="largerthanlifeca.html">Project details</a></div>
+						<p>Download: send me an e-mail and I'll provide the project!</p>
+						<img alt="" class="rsTmb" src="thumbnails/ltca.png">
+					</div>
+				</div>
+
+				<div class="slide">
+					<img class="slide-pic" src ="erosion-img/long.png"> 
+					<div class="description rsNoDrag">
+						<span class="title-project">Fluvial Erosion (2018) • Solo</span>
+						<p>
+							Having used shaders for a bit, at this point, I was very familiar with the applications of "fractal brownian noise" and the like for basic terrain generation, but something was missing.<br>
+							Then, I saw Loren Schmidt's own work (unfortunately lost to time), which excited me with the possibility of simulating erosion.<br>
+							This, then, was the result. I first implemented a shader-version (in shadertoy), based on a heightmap, but then found a paper to simulate erosion in meshes and decided to try it out.<br>
+							It combines erosion (from rain) with a constant, if slow, uplift due to tectonic movement.<br>
+							I love the results, has a great textural quality, and is quite fast, too (runs in linear time).
+						</p>
+						<p><ul>
+							<li> Create a fine-grained mesh</li>
+							<li> Compute voronoi diagram to analyze water motion (due to gravity)</li>
+							<li> Apply geology-based formula to increase/decrease height based on uplift vs. erosion</li>
+							<li> Simple shading</li>
+						</ul></p>
+						<div><a class="project-details-link" href="erosion.html">Project details</a></div>
+						<p>Download: send me an e-mail and I'll provide the project!</p>
+						<img alt="" class="rsTmb" src="thumbnails/erosion.png">
+					</div>
+				</div>
+
+				<div class="slide">
+					<video class="slide-pic" loop="loop" class="video">
+						<source src="starsky-img/starsky-video.mp4" type="video/mp4">
+					</video>        
+					<div class="description rsNoDrag">
+						<span class="title-project">Starsky (2018, 2020) • Solo</span>
+						<p>
+							One of the few projects I've done that I think could actually be used to spice up many other games, including AAA.<br>
+							It's a shader that maps stars onto a sphere and controls their intensity individually at little to no cost.<br>
+							Initial implementation used 3D noise, but it can easily be baked into a static texture.<br>
+							Also adapted it into into a low-fi setting for <a href="angkhorror.html">Angkhorror</a>, using larger stars and random dithering to prevent ugly color banding.
+						</p>
+						<p><ul>
+							<li> Colorful & customizable day-night cycle</li>
+							<li> Thousands (if not millions) of individually twinkling stars very cheaply</li>
+							<li> Adapted for low-res settings</li>
+						</ul></p>
+						<div><a class="project-details-link" href="starsky.html">Project details</a></div>
+						<p>Download: send me an e-mail and I'll provide the project!</p>
+						<img alt="" class="rsTmb" src="thumbnails/stars.png">
+					</div>
+				</div>
+
+				<div class="slide">
+					<video class="slide-pic" loop="loop" class="video">
+						<source src="" type="video/mp4">
+					</video>         
+					<div class="description rsNoDrag">
+						<span class="title-project">Others • Solo</span>
+						<p>
+							The previous slides include my favourite projects. This one is reserved for the remainder.<br>
+							Voronoi Tilings, as the name suggests, is a tool that uses voronoi diagrams to create floor tilings.<br>
+							Celtic Knots is a tool to create simple stylized celtic knots using the "cut method" and Bezier Curves for finer-grained stylization.<br>
+							Apollonian Gaskets is a tool to generate colorful ornaments using the fractal apollonian gaskets (circles all the way down).<br>
+							The shader experiments were especially important to learn how to use various kinds of noise to synthesize textures and created VFX. I have also experimented a bit with multi-pass effects like outlines and sun shafts.
+						</p>
+						<div style="text-align:center">
+							<a class="project-details-link" style="margin:0 1em 1em 0em; display:inline-block; width:300px;" href="voronoitiling.html">Voronoi Tilings</a>
+							<a class="project-details-link" style="margin:0 1em 1em 0em; display:inline-block; width:300px;" href="celticknot.html">Celtic Knots</a>
+							<a class="project-details-link" style="margin:0 1em 1em 0em; display:inline-block; width:300px;" href="apolloniangasket.html">Apollonian Gaskets</a>
+							<a class="project-details-link" style="margin:0 1em 1em 0em; display:inline-block; width:300px;" href="shader-experiments.html">Shader Experiments</a>
+						</div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<img alt="" class="rsTmb" src="thumbnails/otherprojs.png">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id ="wrap-wrap" id="about">
+			<p id="title">About</p>
+			<div id="wrap" class="royalSlider rsDefault .rsContent">
+				<div class="slide">   
+					<img class="slide-pic" style="width:600px;" src ="erosion-img/long.png">      
+					<div class="description rsNoDrag" style = "width:900px; font-size:17px;">
+						<span class="title-project">ABOUT ME</span>
+						<p>
+							Hey! My name is Diogo, and I'm a game designer and programmer from Portugal.<br>
+							My focus is on <span class="label gamedesign">Game Design</span> (specialized in Gameplay and Systems Design, always with an eye to aesthetics) and <span class="label programming">Programming</span>, but I am also skilled in <span class="label narrativedesign">Narrative Design</span> and <span class="label vfx">VFX</span>.
+						</p>
+						<p>
+							I have a Master's degree in Computer Science, where I focused on the more mathematical courses (the games/graphics' department wasn't much to my liking) on algorithms, complexity, multi-agent systems, etc.; my thesis was on the <a href="msc.pdf">Computational Complexity of Video Games</a>.
+						</p>
+						<p>
+							This section contains some more personal details about me - some related to games, some not at all. Neither strictly professional nor exhaustive.
+						</p>
+
+						<img alt="" class="rsTmb" src="thumbnails/profile.png">
+					</div>
+				</div>
+
+				<div class="slide">
+					<div class="intro verticalalign" style="height:400px; width:1250px;">
+					<div class=" description rsNoDrag" style="font-size:18px; width:100%; text-align:left;">
+						<span class="title-project">FAVOURITE GAMES</span>
+						<p >
+							My favourite genres are <b>cRPG</b> (especially the early Fallouts), <b>Rhythm</b> (like Thumper and Bit Trip Runner), <b>Weird</b> ((if it isn't a genre, it has become one) Mu Cartographer, Vesper5, Hyperrogue), and <b>City-Builder/Colony-Sim</b>(Anno, Rim World).
+							<br>I also have a deep but still distant fascination with grand-strategy and deep simulation games like Dwarf Fortress and Paradox Games.
+							<br>Finally, I must add <b>rogue-lite</b> not as a genre as much as an overarching "structure". I think it is a brilliant way to force players to experiment with the mechanics and to foster mastery.
+						</p>
+						<p>
+							That said, I enjoy almost all kinds of games and sample widely, from spectacle fighters, to logic puzzle games, to platformers and everything in between. 
+							<br>I am mostly an explorer and my favourite games (to play and to create) are usually flawed but brave and genuine in trying to break new ground.<br>
+						</p>
+						<p>
+							Some of my biggest influences (as a game developer, but also extending beyond it) are: Jonas Kyratzes, Michael Brough, Loren Schmidt, Devine Lu Linvega, Edmund Mcmillen, Will Wright (Vlambeer and Derek Yu get a lot of credit for when I was just starting out!).
+							<br>More general influences can be found <a href="coolpeople.html">here</a>.
+						</p>
+						<img alt="" class="rsTmb" src="thumbnails/game.png">
+					</div>
+					</div>
+				</div>
+
+				<div class="slide">       
+					<figure style="width:600px; height:100%; display:inline-block;">
+						<img class="slide-pic"  style="width:100%;" src ="about-img/sweden-trip.jpg">   
+						<figcaption>Jämnesjön (near Eggvena, Sweden) at 6am</figcaption>
+					</figure> 
+					<div class="description rsNoDrag" style="font-size:18px;">
+						<span class="title-project">BIKE TOURING</span>
+						<p>
+							I've recently discovered how enjoyable it is to raggedly travel on an old bicycle with little more than a tent, a sleeping bag and a book.<br>
+						</p>
+						<p>
+							I've taken a couple of short-tours (3/4 days) in Portugal and a week-long tour in Sweden.
+							I also take fairly long rides into the woods and hills on the weekends to clear my mind.
+						</p>
+						<img style="width:400px; margin:auto;" src ="about-img/bike.jpg">
+						<img alt="" class="rsTmb" src="thumbnails/bicycle.png">
+					</div>
+				</div>
+
+				<div class="slide">   
+					<figure style="width:400px; max-height:80%;">
+						<img class="slide-pic" src ="about-img/library of babel.png">   
+						<figcaption>Eric Desmazières's rendering of Borges' Library of Babel.</figcaption>
+					</figure> 
+					<div class=" description rsNoDrag" style="font-size:18px;">
+						<span class="title-project">READING</span>
+						<p class="p-section">
+							Aside from games, I am also a very avid reader. It's part of my routine, sometimes for pure enjoyment, sometimes for research (for games or something else), something just to broaden my horizons.<br>
+						</p>
+						<p>
+							Everything from evolutionary biology/psychology, to history, to mathematics, to biographies, to sci-fi (Le Guin and Greg Egan being particular favourites!), to epic poetry (from the Iliad to th Aeneid, to Beowulf, to El Cid, to Martin Fierro, to a retelling of the Ramayana because the Indian epics are waaay too long haha, etc.), to folk tales, to japanese literature (Soseki and Kawabata are especially dear to me), to Borges, and everything in between. Depending on my mood and my interests at the time.
+						</p>
+						<p>
+							Perhaps one day I'll set up a digital library (I do like to look back and see what tickled my fancy at specific periods over the years).
+						</p>
+						<img alt="" class="rsTmb" src="thumbnails/book.png">
+					</div>
+				</div>
+
+				<div class="slide">        
+					<figure style="width:600px; height:100%;">
+						<img class="slide-pic"  style="width:100%;" src ="about-img/fgc.png">   
+						<figcaption>Picture from Freak Guitar Camp 2022</figcaption>
+					</figure> 
+					<div class=" description rsNoDrag" style="font-size:18px">
+						<span class="title-project">MUSIC</span>
+						<p>
+							Music has played (pun intended) an important role in my life ever since I picked up the guitar as a 15 year old.<br>
+							Though I still play the instrument, music is not an area of output for my creative tendencies, but one of input, mostly.
+							I am grounded in classic and progressive rock/metal, but I have a fairly eclectic taste (from hindustani classical music, to klezmer, to norse/slavic folk, etc. etc.)
+						</p>
+						<p>
+							Beyond the electric guitar, I also dabble into other instruments (I've got a dobro slide guitar, a Shakuhachi, a violin and a keyboard, to name a few; the collection stopped growing once I started to lean towards nomadism...).<br>
+						</p>
+						<p>
+							Proud to have participated in the Freak Guitar Camp with the mad Mattias "IA" Eklundh. A week of sleeping in the woods reciting "tadikidatom" followed by a week of dreaming of "takita takita ta", strongly recommended.
+						</p>
+						<img alt="" class="rsTmb" src="thumbnails/music.png">
+					</div>
+				</div>
+
+				<div class="slide">
+					<div class="intro verticalalign" style="height:400px; width:900px;">
+						<div class="description rsNoDrag" style="text-align:left; font-size:18px; width:100%; max-width:100%;">
+							<span class="title-project">SAVE OR QUIT</span>
+							<p>
+								I have written extensively about games.
+							</p>
+							<p>
+								It started in my early university years, when I wrote long Steam reviews as a way to analyse games and their design while I learned my first programming steps. I have over 250 reviews (I'd say at least half of which are long and pondered).
+							</p>
+							<p>
+								Later, I was contacted by SaveOrQuit and wrote 27 long game reviews for them, which you can find <a href="https://saveorquit.com/author/maxmetpt/">here</a>.
+							</p>
+							<div style="padding:1em"></div>
+							<div style="text-align:center; margin:auto;"><img style="width:250px;" src ="about-img/soq-logo.png"></div>
+							<img alt="" class="rsTmb" src="thumbnails/soq-logo.png">
+						</div>
+					</div>
+				</div>
+
+				<div class="slide">
+					<div class="intro verticalalign" style="height:200px; width:900px;">
+						<div class="description rsNoDrag" style="text-align:left; font-size:18px; width:100%; max-width:100%;">
+							<span class="title-project">OTHER</span>
+							<p>
+								Some other pages can be found about <a href="coolpeople.html">people I appreciate</a>, about the application of <a href="cultural-evolution.html">cultural evolution</a> to video games and simulations, and some small ideas I have that I am <a href="open-collaborations.html">open to collaborating on</a> in a part-time/spare-time capacity.
+							
+							</p>
+
+							<img alt="" class="rsTmb" src="thumbnails/other.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </body>
 </html>

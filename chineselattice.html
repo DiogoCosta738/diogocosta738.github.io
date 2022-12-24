@@ -1,69 +1,90 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="stylesheet" href="gallerysheet.css">
-		<link rel="stylesheet" href="imagesheet.css">
-		<script src="gallerycode.js"></script>
+		<title>Chinese Lattices - two different algorithms to generate and extend Chinese Lattice Designs</title>
+		<meta name="description" content="Details for Chinese Lattices, an original algorithmic art project to generate and extend Chinese Lattice Designs">
+	
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://www.jayvanhutten.com/fb_prev.jpg">
+		<script src="royalslider/jquery-1.8.3.min.js"></script>
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/layout.css" rel="stylesheet">
+		<link href="css/labels.css" rel="stylesheet">
+		<link href="css/jay.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+	
+		<link href="royalslider/royalslider.css" rel="stylesheet">
+		<link href="royalslider/skins/jay/rs-jay.css" rel="stylesheet">
+		
+		<link rel="shortcut icon" href="favicon.png">
+		
+		<script src="royalslider/config.js"></script>    
+		<script src="script-min.js"></script>
 	</head>
 	<body>
-
-		<nav id="navbar">
-		  <ul>
-			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
-			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
-				<a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
-				<a class = "dropdown-item" href="amalgama.html">AmalgamA (missing gallery)</a>
-				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes (incomplete)</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
-				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
-				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
-				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
-				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
-				<a class = "dropdown-item" href="starsky.html">Starsky</a>
-				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
-				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
-				<a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
-				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
-				<a class = "dropdown-item" href="web-development.html">Web Development</a>
-				<a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
-				<!--
-				<a class = "dropdown-item" href="">(empty) Reading Log</a>
-				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
-				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
-				-->
-			  </div>
-			</li>
-		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
-		  </ul>
-		</nav>
-
-		  
-		<div id="body">
+    <!-- nav -->
+    <div id="navbarContainer">
+      <div class="navbar">
+        <a class="navlink" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Games<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+            <a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
+            <a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
+            <a class = "dropdown-item" href="amalgama.html">AmalgamA</a>
+            <a class = "dropdown-item" href="angkhorror.html">Angkhorror</a>
+            <a class = "dropdown-item" href="game-prototypes.html">Game Prototypes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Projects<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+          <a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+          <a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+          <a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+          <a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+          <a class = "dropdown-item" href="starsky.html">Starsky</a>
+          <a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+          <a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+          <a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+          <a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Other<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="open-collaborations.html">Open Collaborations</a>
+          <a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
+          <a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
+          <!-- <a class = "dropdown-item" href="web-development.html">Web Development</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /nav -->   
+		<!--
 		<div id="sidebar">
 			<a href="#intro" class="sidelink">Introduction</a>
 			<a href="#sys1" class="sidelink">System 1: Square Merging</a>
 			<a href="#sys2" class="sidelink">System 2: Overlapping Tilings</a>
 			<a href="#sys3" class="sidelink">System 3: Space-filling Curves, Hamiltonian Cycles, MSTs</a>
 			<a href="#related-work" class="sidelink">Related Work</a>
-		<!--<a href="#gallery" class="sidelink">Gallery</a>-->
 		</div>
+		-->
+
+		  
+		<div id="body">
+		
 		  <div id="main">
-			<h1>Chinese Lattice Designs</h1>
+			<div class="page-title">Chinese Lattices</div>
+			<div class="page-subtitle">Solo (2019)</div>
 			<section id="intro">
 			  <h2>Introduction</h2>
 				<p>
-				<img style="width:10%; height:auto;"align="right" src="chineselattice-img\hilbert-stiny.png"/>
+				<img style="width:250px; height:auto;"align="right" src="chineselattice-img\hilbert-stiny.png"/>
 					Having worked on Islamic Star Patterns and Celtic Knots, I wondered where else I could find other art systems that could be procedurally generated. In 2018 (according to a screenshot I have), I came across George Stiny's paper on a different kind of lattice window, 
 					which he called <a href="https://www.andrew.cmu.edu/user/ramesh/teaching/course/48-747/subFrames/readings/Stiny-1977-EPB3_89-98.Ice-ray..pdf" target="_blank">ice-ray</a>. Although I wasn't too keen on this kind of pattern or the 
 					<a href="https://en.wikipedia.org/wiki/Shape_grammar#:~:text=4%20Literature-,Definition,pointing%20from%20left%20to%20right." target="_blank">shape-grammar</a> method, his introduction contained the figure to the right. He writes nothing 
@@ -90,27 +111,27 @@
 					You can make this a hard constraint and try to make every single group contain exactly 4 squares, but this is probably an NP-Complete problem, so a soft constraint of merging with at most 4 squares will do.
 				</p>
 				<div class="img-row">
-					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\rot1.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\rot2.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\rot3.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\rot4.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="chineselattice-img\rot1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="chineselattice-img\rot2.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="chineselattice-img\rot3.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="chineselattice-img\rot4.png" caption="with luminosity cycle"></img></div>
 				</div>
 				<p> 
 					Another constraint is to merge squares only in the same ring around the center, say (although the book also has a couple of examples with only vertical merges). This is enough to generate pleasing and "real" examples as well.
 				</p>
 				<div class="img-row">
-					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\win5.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\win6.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\win7.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\win8.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="chineselattice-img\win5.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="chineselattice-img\win6.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="chineselattice-img\win7.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="chineselattice-img\win8.png" caption="with luminosity cycle"></img></div>
 				</div>
 				<p>
 					Given the last constraint, an idea is simply to flip it on its head - merge only squares that are <i>not</i> in the same ring.
 				</p>
 				<div class="img-row">
-					<div class="img-row-item"> <img  src="chineselattice-img\comp1.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="chineselattice-img\comp2.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="chineselattice-img\comp3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img  src="chineselattice-img\comp1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="chineselattice-img\comp2.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="chineselattice-img\comp3.png" caption="without luminosity cycle"></img></div>
 				</div>
 				<p>
 					Finally, and this should go without saying, every pattern will have some kind of symmetry applied (mirror or rotational). And you can always combine the above constraints.
@@ -124,28 +145,28 @@
 					but it does manage to reproduce a different kind of "real" patterns - all four of patterns below appear in the book (and there are other examples that start from such patterns but then change them in a less systematic way).
 				</p>
 				<div class="img-row">
-					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\interlock1.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\interlock2.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\interlock3.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img  src="chineselattice-img\interlock4.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="chineselattice-img\interlock1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="chineselattice-img\interlock2.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="chineselattice-img\interlock3.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="chineselattice-img\interlock4.png" caption="with luminosity cycle"></img></div>
 				</div>
 				<p>
 					It can also be extended to produce very different patterns if you allow different edge widths, rotations, and so on. It's a bit messier to work with and easy to create overcrowded patterns, but some of the examples are pretty cool.
 				</p>
 				<div class="img-row">
-					<div class="img-row-item"> <img  src="chineselattice-img\balustrade4.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="chineselattice-img\balustrade5.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="chineselattice-img\balustrade6.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img  src="chineselattice-img\balustrade4.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="chineselattice-img\balustrade5.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="chineselattice-img\balustrade6.png" caption="without luminosity cycle"></img></div>
 				</div>
 				<div class="img-row">
-					<div class="img-row-item"> <img  src="chineselattice-img\complex1.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="chineselattice-img\complex2.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="chineselattice-img\complex3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img  src="chineselattice-img\complex1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="chineselattice-img\complex2.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="chineselattice-img\complex3.png" caption="without luminosity cycle"></img></div>
 				</div>
 				<div class="img-row">
-					<div class="img-row-item"> <img  src="chineselattice-img\balustrade1.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="chineselattice-img\balustrade2.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="chineselattice-img\balustrade3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="chineselattice-img\balustrade2.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="chineselattice-img\balustrade3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img  src="chineselattice-img\balustrade1.png" caption="with luminosity cycle"></img></div>
 				</div>
 			<hr></section>
 			<section id="sys3">

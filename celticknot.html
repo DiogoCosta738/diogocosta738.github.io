@@ -1,73 +1,85 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="stylesheet" href="gallerysheet.css">
-		<link rel="stylesheet" href="imagesheet.css">
-		<script src="gallerycode.js"></script>
+		<title>Celtic Knots - tool to create celtic knots on a grid</title>
+		<meta name="description" content="Details for Celtic Knots project, a tool to create simple celtic knots using a grid">
+	
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://www.jayvanhutten.com/fb_prev.jpg">
+		<script src="royalslider/jquery-1.8.3.min.js"></script>
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/layout.css" rel="stylesheet">
+		<link href="css/labels.css" rel="stylesheet">
+		<link href="css/jay.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+	
+		<link href="royalslider/royalslider.css" rel="stylesheet">
+		<link href="royalslider/skins/jay/rs-jay.css" rel="stylesheet">
+		
+		<link rel="shortcut icon" href="favicon.png">
+		
+		<script src="royalslider/config.js"></script>    
+		<script src="script-min.js"></script>
 	</head>
 	<body>
-
-
-
-
-
-
-		<nav id="navbar">
-		  <ul>
-			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
-			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
-				<a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
-				<a class = "dropdown-item" href="amalgama.html">AmalgamA (missing gallery)</a>
-				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes (incomplete)</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
-				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
-				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
-				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
-				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
-				<a class = "dropdown-item" href="starsky.html">Starsky</a>
-				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
-				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
-				<a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
-				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
-				<a class = "dropdown-item" href="web-development.html">Web Development</a>
-				<a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
-				<!--
-				<a class = "dropdown-item" href="">(empty) Reading Log</a>
-				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
-				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
-				-->
-			  </div>
-			</li>
-		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
-		  </ul>
-		</nav>
-
-
-
-
-
+    <!-- nav -->
+    <div id="navbarContainer">
+      <div class="navbar">
+        <a class="navlink" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Games<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+            <a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
+            <a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
+            <a class = "dropdown-item" href="amalgama.html">AmalgamA</a>
+            <a class = "dropdown-item" href="angkhorror.html">Angkhorror</a>
+            <a class = "dropdown-item" href="game-prototypes.html">Game Prototypes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Projects<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+          <a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+          <a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+          <a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+          <a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+          <a class = "dropdown-item" href="starsky.html">Starsky</a>
+          <a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+          <a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+          <a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+          <a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Other<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="open-collaborations.html">Open Collaborations</a>
+          <a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
+          <a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
+          <!-- <a class = "dropdown-item" href="web-development.html">Web Development</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /nav -->   		
+			<!--
+			
+				<div id="sidebar">
+				<a href="#intro" class="sidelink">Introduction</a>
+				<a href="#rules" class="sidelink">How does it work?</a>
+				<a href="#rendering" class="sidelink">Rendering</a>
+				<a href="#use" class="sidelink">Use in videogames</a>
+				<a href="#related" class="sidelink">Related work</a>
+				<a href="#gallery" class="sidelink">Gallery</a>
+			</div>
+			-->
 		<div id="body">
-			<div id="sidebar">
-			<a href="#intro" class="sidelink">Introduction</a>
-			<a href="#rules" class="sidelink">How does it work?</a>
-			<a href="#rendering" class="sidelink">Rendering</a>
-			<a href="#use" class="sidelink">Use in videogames</a>
-			<a href="#related" class="sidelink">Related work</a>
-			<a href="#gallery" class="sidelink">Gallery</a>
-		  </div>
 		  <div id="main">
-			<h1>Celtic Knots</h1>
+			<div class="page-title">Celtic Knots</div>
+			<div class="page-subtitle">Solo (2018)</div>
 			<section id="intro">
 			  <h2>Introduction</h2>
 				<p>
@@ -91,10 +103,10 @@
 				The idea is that you start from a dense "basket weave" (crossing bands that alternate being on the top and bottom at crossings), and you successively remove crossings to form a full pattern. As you can see in the figures below, you have 2 implied square grids, the red and the green grid. If you join two adjacent cells of this grid, you remove a crossing.
 				The only rule is that you can't cross green and red edges.
 				<div class="img-row">
-					<div class="img-row-item" style="width:25%;"> <img  src="celticknot-img\rule1.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:25%;"> <img src="celticknot-img\rule2.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:25%;"> <img src="celticknot-img\rule3.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:25%;"> <img src="celticknot-img\rule4.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="celticknot-img\rule1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="celticknot-img\rule2.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="celticknot-img\rule3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="celticknot-img\rule4.png" caption="without luminosity cycle"></img></div>
 				</div>
 			  </p>
 			  <p>
@@ -108,10 +120,10 @@
 					The trickiest part of the rendering was understand how Bezier Curves work, but after that things went fairly smoothly, and I still use them quite often. Once you know how to generate the curves, you can easily change the band width and its texture, as seen below.
 				</p>
 				<div class="img-row">
-					<div class="img-row-item" style="width:25%;"> <img  src="celticknot-img\render1.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:25%;"> <img src="celticknot-img\render2.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:25%;"> <img src="celticknot-img\render3.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:25%;"> <img src="celticknot-img\render4.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="celticknot-img\render1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="celticknot-img\render2.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="celticknot-img\render3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="celticknot-img\render4.png" caption="without luminosity cycle"></img></div>
 				</div>
 				<p>
 					When I worked on this project, I didn't know how to write shaders, so the patterns look a bit flat. It would be simple to change the band to a heightmap, say, with more interesting materials and even project them onto stone, say, to replicate Celtic crosses.
@@ -132,7 +144,7 @@
 						<li>Tattoos, etc.</li>
 					</ul>
 				</p>
-				<div style="width:100%; margin:auto; text-align:center;"><img align="middle" src="celticknot-img/hor2.png" caption="band pannel"></img></div>
+				<div style="width:1000px; margin:auto; text-align:center;"><img style="width:1000px;" align="middle" src="celticknot-img/hor2.png" caption="band pannel"></img></div>
 			<hr></section>
 			<section id="related">
 			  <h2>Related Work</h2>
@@ -149,11 +161,27 @@
 				<p>
 					Finally, you can also find similar <a href="https://en.wikipedia.org/wiki/Kolam" target="_blank">Kolam</a> patterns in India, which has been given yet another algorithmic treatment using <a href="https://architecture.mit.edu/sites/architecture.mit.edu/files/attachments/publications/Knight%7CCraft%2C%20Performance%2C%20and%20Grammars.pdf" target="_blank">shape-grammars</a>.
 				</p>
-			<hr></section>
+			</section>
+
+			<hr>
+
 			<section id="gallery">
-			  <h2>Gallery</h2>
-			  
-			<hr></section>
+				<h2>Gallery</h2>
+			  	<div class="img-row">
+					<div class="img-row-item iri1"> <img src="celticknot-img\frieze_long.png" caption="without luminosity cycle"></img></div>
+					<div style="padding:0.1em"></div>
+					<div class="img-row-item iri3"> <img src="celticknot-img\knot1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="celticknot-img\knot2.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="celticknot-img\knot3.png" caption="without luminosity cycle"></img></div>
+					
+					<div class="img-row-item iri1"> <img src="celticknot-img\frieze_3.png" caption="without luminosity cycle"></img></div>
+					<div style="padding:0.1em"></div>
+					<div class="img-row-item iri1"> <img src="celticknot-img\panel.png" caption="without luminosity cycle"></img></div>
+				</div>
+			</section>
+			
+			<hr>
+
 		  </div>
 		</div>
 	</body>

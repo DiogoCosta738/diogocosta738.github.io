@@ -1,0 +1,88 @@
+
+.label
+{
+  border-radius: 4px;
+  font-family: Helvetica;
+  font-size: 0.9em;
+  text-align: center;
+  color: #fff;
+  padding: 5px;
+  line-height: normal;
+  padding-left: 6px;
+  padding-right: 6px;
+  display: inline-block;
+  margin-bottom: 0.3em;
+  margin-right: 0.3em;
+}
+
+.label-large
+{
+  font-size:1.5em;
+  padding:10px;
+}
+
+.programming
+{
+  background-color: #0080ff;
+  content: "Programming";
+}
+
+.tools
+{
+  background-color: #0046a7;
+  content: "Tools";
+}
+
+.network
+{
+  background-color: #00265a;
+  content: "Network";
+}
+
+.gamedesign
+{
+  background-color: #7C334B;
+  content: "Game Design";
+}
+
+.generaldesign
+{
+  background-color: #972d7c;
+  content: "General Design";
+}
+
+.ai
+{
+  background-color: #8d1616;
+  content: "AI";
+}
+
+.narrativedesign
+{
+  background-color: #e78e00;
+  content: "Narrative Design";
+}
+
+.vfx
+{
+  background-color: #059d00;
+  content: "VFX";
+}
+
+.art2D
+{
+  background-color: #047100;
+  content: "VFX";
+}
+
+.art3D
+{
+  background-color: #024800;
+  content: "VFX";
+}
+
+.music
+{
+  background-color: #6f0098;
+  content: "Music";
+}

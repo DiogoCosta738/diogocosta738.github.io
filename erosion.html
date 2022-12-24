@@ -1,70 +1,82 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="stylesheet" href="gallerysheet.css">
-		<link rel="stylesheet" href="imagesheet.css">
-		<script src="gallerycode.js"></script>
+		<title>Terrain Generation through Tectonic Uplift and Fluvial Erosion</title>
+		<meta name="description" content="Details for the Terrain Generation project, using rain erosion for more realistic topography.">
+	
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://www.jayvanhutten.com/fb_prev.jpg">
+		<script src="royalslider/jquery-1.8.3.min.js"></script>
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/layout.css" rel="stylesheet">
+		<link href="css/labels.css" rel="stylesheet">
+		<link href="css/jay.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+	
+		<link href="royalslider/royalslider.css" rel="stylesheet">
+		<link href="royalslider/skins/jay/rs-jay.css" rel="stylesheet">
+		
+		<link rel="shortcut icon" href="favicon.png">
+		
+		<script src="royalslider/config.js"></script>    
+		<script src="script-min.js"></script>
 	</head>
 	<body>
-
-
-
-
-
-
-		<nav id="navbar">
-		  <ul>
-			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
-			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
-				<a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
-				<a class = "dropdown-item" href="amalgama.html">AmalgamA (missing gallery)</a>
-				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes (incomplete)</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
-				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
-				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
-				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
-				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
-				<a class = "dropdown-item" href="starsky.html">Starsky</a>
-				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
-				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
-				<a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
-				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
-				<a class = "dropdown-item" href="web-development.html">Web Development</a>
-				<a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
-				<!--
-				<a class = "dropdown-item" href="">(empty) Reading Log</a>
-				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
-				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
-				-->
-			  </div>
-			</li>
-		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
-		  </ul>
-		</nav>
-
-
-
-
-
-		<div id="body">
-			<div id="sidebar">
+    <!-- nav -->
+    <div id="navbarContainer">
+      <div class="navbar">
+        <a class="navlink" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Games<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+            <a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
+            <a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
+            <a class = "dropdown-item" href="amalgama.html">AmalgamA</a>
+            <a class = "dropdown-item" href="angkhorror.html">Angkhorror</a>
+            <a class = "dropdown-item" href="game-prototypes.html">Game Prototypes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Projects<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+          <a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+          <a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+          <a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+          <a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+          <a class = "dropdown-item" href="starsky.html">Starsky</a>
+          <a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+          <a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+          <a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+          <a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Other<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="open-collaborations.html">Open Collaborations</a>
+          <a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
+          <a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
+          <!-- <a class = "dropdown-item" href="web-development.html">Web Development</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /nav -->   
+		<!--	
+		<div id="sidebar">
 			<a href="#intro" class="sidelink">Introduction</a>
 			<a href="#rules" class="sidelink">How does it work?</a>
 			<a href="#coloring" class="sidelink">Rendering</a>
-		  </div>
+		</div>
+		-->
+		
+		<div id="body">
 		  <div id="main">
-			<h1>Terrain Generation through Tectonic Uplift and Fluvial Erosion</h1>
+			<div class="page-title">Terrain Generation through Tectonic Uplift and Fluvial Erosion</div>
+			<div class="page-subtitle">Solo (2018)</div>
 			<section id="intro">
 			  <h2>Introduction</h2>
 				<p>
@@ -77,10 +89,11 @@
 				<!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor2.png" caption="!FIXME"></img></div> -->
 			<hr></section>
 			<section id="rules">
-			<div id="image-div-test">
-				<img  src="erosion-img\basins.png" align="right" caption="without luminosity cycle"></img>
-			  <h2>How does it work?</h2>
-				The algorithm is roughly as follows:
+				<h2>How does it work?</h2>
+				<p>
+					The algorithm is roughly as follows:
+				</p>
+				<img  src="erosion-img\basins.png" style="width:400px" align="right" caption="without luminosity cycle"></img>
 				<ol>
 					<li>Create a tectonic lift map (basically a heightmap with the different "growth rates" of the terrain (mountains will be areas with higher growth, etc.)); I used simple perlin noise for this, but you read the paper for other examples, like a "depression line" to simulate an ancient river which forms a canyon;</li>
 					<li>Create a Voronoi Diagram of points spread over the terrain (I used a simple Poisson distribution to keep distances fairly uniform but still maintain a "natural" randomness and avoid artifacts of an orthogonal grid);</li>
@@ -88,16 +101,17 @@
 					<li>Compute that water flow to each voronoi cell (based on the aggregated area of the cells that transport water into it);</li>
 					<li>Apply the stream power equation (given in the paper).</li>
 				</ol>
-				This is basically it. This short description hopefully gives you a rough idea of how it works, though I recommend looking into the paper if you want more details.
+					This is basically it. This short description hopefully gives you a rough idea of how it works, though I recommend looking into the paper if you want more details.
 				<p>
-				It also runs surprisingly quickly. I limited myself to 65 000 vertices, since that's what Unity's meshes allow, and it took less than a minute to run, even without any particular care of optimization. It's also very flexible, since you can apply iterations individually (for more or less erosion) and the initial heightmap gives you control over the rough features of the terrain (a mountain here, a plain there, etc.).
+					It also runs surprisingly quickly. I limited myself to 65 000 vertices, since that's what Unity's meshes allow, and it took less than a minute to run, even without any particular care of optimization. It's also very flexible, since you can apply iterations individually (for more or less erosion) and the initial heightmap gives you control over the rough features of the terrain (a mountain here, a plain there, etc.).
 				</p>
 				<p>
 					It was also cool that I had some familiarity with Voronoi diagrams from the <a href="voronoitiling.html" target="_blank">Voronoi Tilings project</a>, since I could just reuse the algorithms without much friction, and it is surprising where apparently idiosyncratic experiments turn out to be applicable in completely unrelated areas!
 				</p>
-				
-			</div>
-			<hr></section>
+			</section>
+
+			<hr>
+
 			<section id="coloring">
 			  <h2>Rendering</h2>
 				<p>
@@ -106,17 +120,17 @@
 					And, either way, they certainly look more natural than the pure techniques using noise!
 				</p>
 			  <div class="img-row">
-				<div class="img-row-item" style="width:25%;"> <img src="erosion-img\land.png" caption="without luminosity cycle"></img></div><br>
-				<div class="img-row-item" style="width:25%;"> <img src="erosion-img\river2.png" caption="with luminosity cycle"></img></div>
-				<div class="img-row-item" style="width:25%;"> <img src="erosion-img\river3.png" caption="without luminosity cycle"></img></div>
-				<div class="img-row-item" style="width:25%;"> <img src="erosion-img\river4.png" caption="without luminosity cycle"></img></div>
+				<div class="img-row-item iri4"> <img src="erosion-img\land.png" caption="without luminosity cycle"></img></div>
+				<div class="img-row-item iri4"> <img src="erosion-img\river2.png" caption="with luminosity cycle"></img></div>
+				<div class="img-row-item iri4"> <img src="erosion-img\river3.png" caption="without luminosity cycle"></img></div>
+				<div class="img-row-item iri4"> <img src="erosion-img\river4.png" caption="without luminosity cycle"></img></div>
 			  </div>
 			  <p>
-				  You can also get some very natural-looking patterns like those of Van de Graaf Generators (not to be confused with the band <a href="https://www.youtube.com/watch?v=8fF2H5kVUXc" target="_blank">van DER graaf generator</a> or veins. These are also similar but "sharper" than <a href="https://en.wikipedia.org/wiki/Diffusion-limited_aggregation" target="_blank">Diffusion-limited Aggregation</a> patterns.
+				  You can also get some very natural-looking patterns like those of Van de Graaf Generators (not to be confused with the amazing band <a href="https://www.youtube.com/watch?v=8fF2H5kVUXc" target="_blank">van DER graaf generator</a> or veins. These are also similar but "sharper" than <a href="https://en.wikipedia.org/wiki/Diffusion-limited_aggregation" target="_blank">Diffusion-limited Aggregation</a> patterns.
 				  <div class="img-row">
-					<div class="img-row-item"> <img src="erosion-img\pat1.png" caption="without luminosity cycle"></img></div><br>
-					<div class="img-row-item"> <img src="erosion-img\pat2.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="erosion-img\pat3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="erosion-img\pat1.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="erosion-img\pat2.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="erosion-img\pat3.png" caption="without luminosity cycle"></img></div>
 				  </div>
 			  </p>
 			  <!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor1.png" caption="!FIXME"></img></div> -->

@@ -1,71 +1,82 @@
 <html>
-	<head>
-		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="stylesheet" href="gallerysheet.css">
-		<link rel="stylesheet" href="imagesheet.css">
-		<script src="gallerycode.js"></script>
-	</head>
+	<title>Apollonian Gasket - algorithmic art using fractal circles</title>
+		<meta name="description" content="Details for Apollonian Gasket project, an algorithmic art tool using the fractal known as Apollonian Gasket">
+	
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://www.jayvanhutten.com/fb_prev.jpg">
+		<script src="royalslider/jquery-1.8.3.min.js"></script>
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/layout.css" rel="stylesheet">
+		<link href="css/labels.css" rel="stylesheet">
+		<link href="css/jay.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+	
+		<link href="royalslider/royalslider.css" rel="stylesheet">
+		<link href="royalslider/skins/jay/rs-jay.css" rel="stylesheet">
+		
+		<link rel="shortcut icon" href="favicon.png">
+		
+		<script src="royalslider/config.js"></script>    
+		<script src="script-min.js"></script>
 	<body>
-
-
-
-
-
-
-		<nav id="navbar">
-		  <ul>
-			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
-			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
-				<a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
-				<a class = "dropdown-item" href="amalgama.html">AmalgamA (missing gallery)</a>
-				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes (incomplete)</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
-				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
-				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
-				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
-				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
-				<a class = "dropdown-item" href="starsky.html">Starsky</a>
-				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
-				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
-				<a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
-				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
-				<a class = "dropdown-item" href="web-development.html">Web Development</a>
-				<a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
-				<!--
-				<a class = "dropdown-item" href="">(empty) Reading Log</a>
-				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
-				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
-				-->
-			  </div>
-			</li>
-		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
-		  </ul>
-		</nav>
-
-
-
-
-
-		<div id="body">
-			<div id="sidebar">
+    <!-- nav -->
+    <div id="navbarContainer">
+      <div class="navbar">
+        <a class="navlink" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Games<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+            <a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
+            <a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
+            <a class = "dropdown-item" href="amalgama.html">AmalgamA</a>
+            <a class = "dropdown-item" href="angkhorror.html">Angkhorror</a>
+            <a class = "dropdown-item" href="game-prototypes.html">Game Prototypes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Projects<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+          <a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+          <a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+          <a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+          <a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+          <a class = "dropdown-item" href="starsky.html">Starsky</a>
+          <a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+          <a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+          <a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+          <a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Other<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="open-collaborations.html">Open Collaborations</a>
+          <a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
+          <a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
+          <!-- <a class = "dropdown-item" href="web-development.html">Web Development</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /nav -->   
+		<!--
+		<div id="sidebar">
 			<a href="#intro" class="sidelink">Introduction</a>
 			<a href="#rules" class="sidelink">How does it work?</a>
 			<a href="#coloring" class="sidelink">Coloring</a>
 			<a href="#itchio" class="sidelink">Software</a>
-		  </div>
+		</div>
+		-->
+
+		<div id="body">
+			
 		  <div id="main">
-			<h1>Apollonian Flowers</h1>
+			<div class="page-title">Apollonian Gaskets</div>
+			<div class="page-subtitle">Solo, released (2018)</div>
 			<section id="intro">
 			  <h2>Introduction</h2>
 				<p>
@@ -94,9 +105,9 @@
 				The circles have a certain "rhythm". The angle between two adjacent circle is a "full step". If you duplicate the ring and turn it only a "half step", you get a "syncopated" ring. I hope the analogy makes sense!
 			  </p>
 			  <div class="img-row">
-				<div class="img-row-item"> <img src="apolloniangasket-img\frame1.png" caption="without luminosity cycle"></img></div><br>
-				<div class="img-row-item"> <img src="apolloniangasket-img\frame2.png" caption="with luminosity cycle"></img></div>
-				<div class="img-row-item"> <img src="apolloniangasket-img\frame3.png" caption="without luminosity cycle"></img></div>
+				<div class="img-row-item iri3"> <img src="apolloniangasket-img\frame1.png" caption="without luminosity cycle"></img></div>
+				<div class="img-row-item iri3"> <img src="apolloniangasket-img\frame2.png" caption="with luminosity cycle"></img></div>
+				<div class="img-row-item iri3"> <img src="apolloniangasket-img\frame3.png" caption="without luminosity cycle"></img></div>
 			  </div>
 			<hr></section>
 			<section id="coloring">
@@ -106,9 +117,9 @@
 				I just set some rough variables like hue speed and offset which aren't very customizable (I could have used a custom palette generator like in the LtLCA, but this was just a quick experiment). If you actually want to use these patterns, it would be nice to assign colors to sizes more directly - especially since the smaller circles correspond to detail, while the larger ones are like the background (imagine a golden necklace with tiny gems).
 			  </p>
 			  <div class="img-row">
-				<div class="img-row-item"> <img src="apolloniangasket-img\flower1.png" caption="without luminosity cycle"></img></div><br>
-				<div class="img-row-item"> <img src="apolloniangasket-img\flower2.png" caption="with luminosity cycle"></img></div>
-				<div class="img-row-item"> <img src="apolloniangasket-img\flower3.png" caption="without luminosity cycle"></img></div>
+				<div class="img-row-item iri3"> <img src="apolloniangasket-img\flower1.png" caption="without luminosity cycle"></img></div>
+				<div class="img-row-item iri3"> <img src="apolloniangasket-img\flower2.png" caption="with luminosity cycle"></img></div>
+				<div class="img-row-item iri3"> <img src="apolloniangasket-img\flower3.png" caption="without luminosity cycle"></img></div>
 			  </div>
 			  <h3>In sum</h3>
 			  <p>
@@ -121,19 +132,50 @@
 				  </ul>
 				  You can also get a different kind of pattern when you choose many circles per ring (more circles means smaller circles to fit in the same space), working perhaps as a frame to be filled.
 				  <div class="img-row">
-					<div class="img-row-item" style="width:25%;"> <img src="apolloniangasket-img\ring1.png" caption="without luminosity cycle"></img></div><br>
-					<div class="img-row-item" style="width:25%;"> <img src="apolloniangasket-img\ring2.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:25%;"> <img src="apolloniangasket-img\ring3.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:25%;"> <img src="apolloniangasket-img\ring4.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="apolloniangasket-img\ring1.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="apolloniangasket-img\ring2.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="apolloniangasket-img\ring3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="apolloniangasket-img\ring4.png" caption="without luminosity cycle"></img></div>
 				  </div>
 			  </p>
 			  <!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor1.png" caption="!FIXME"></img></div> -->
-			<hr></section>
+			</section>
+			<hr>
+
 			<section id="itchio">
-			<h2>Software</h2>
-			<p>You can download this one on my <a href="https://diogoc.itch.io/apollonian-gasket" target="_blank">itch.io page</a>. If you want to look into the code, feel free to ask.</p>
-			<hr></section>
-		  </div>
+				<h2>Software</h2>
+				<p>You can download this one on my <a href="https://diogoc.itch.io/apollonian-gasket" target="_blank">itch.io page</a>. If you want to look into the code, feel free to ask.</p>
+			</section>
+
+			<hr>
+
+			<section id="gallery">
+				<h2>Gallery</h2>
+				<p>
+					Some more examples.
+				</p>
+				<p>
+					Some actually have a bug, missing one of the cicles... OOPS. I later fixed it, but didn't redo all the screenshots. You get the idea!
+				</p>
+				<p> 
+					Others also fail to fit perfectly on the outer circle. I also solved this, later, by introducing a small gap in the "middle" of the radius, where you see an empty ring in some patterns.
+				</p>
+
+				<div class="img-row">
+					<div class="img-row-item iri4"> <img src="apolloniangasket-img\flower6.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="apolloniangasket-img\flower4.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="apolloniangasket-img\flower5.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="apolloniangasket-img\flower7.png" caption="without luminosity cycle"></img></div>
+					
+					<div class="img-row-item iri3"> <img src="apolloniangasket-img\flower8.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="apolloniangasket-img\flower10.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="apolloniangasket-img\flower9.png" caption="without luminosity cycle"></img></div>
+				</div>
+			</section>
+			
+			<hr>
+		  
+			</div>
 		</div>
 	</body>
 </html>

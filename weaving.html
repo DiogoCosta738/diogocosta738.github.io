@@ -1,66 +1,88 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="stylesheet" href="gallerysheet.css">
-		<link rel="stylesheet" href="imagesheet.css">
-		<script src="gallerycode.js"></script>
+		<title>Digital Weaving - algorithmic art meets cultural/genetic evolution</title>
+		<meta name="description" content="Details for Digital Weaving project, an algorithmic art system combining traditional weaving drafts with cultural/genetic simulations.">
+	
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://www.jayvanhutten.com/fb_prev.jpg">
+		<script src="royalslider/jquery-1.8.3.min.js"></script>
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/layout.css" rel="stylesheet">
+		<link href="css/labels.css" rel="stylesheet">
+		<link href="css/jay.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+	
+		<link href="royalslider/royalslider.css" rel="stylesheet">
+		<link href="royalslider/skins/jay/rs-jay.css" rel="stylesheet">
+		
+		<link rel="shortcut icon" href="favicon.png">
+		
+		<script src="royalslider/config.js"></script>    
+		<script src="script-min.js"></script>
 	</head>
 	<body>
-
-		<nav id="navbar">
-		  <ul>
-			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
-			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
-				<a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
-				<a class = "dropdown-item" href="amalgama.html">AmalgamA (missing gallery)</a>
-				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes (incomplete)</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
-				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
-				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
-				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
-				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
-				<a class = "dropdown-item" href="starsky.html">Starsky</a>
-				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
-				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
-				<a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
-				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
-				<a class = "dropdown-item" href="web-development.html">Web Development</a>
-				<a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
-				<!--
-				<a class = "dropdown-item" href="">(empty) Reading Log</a>
-				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
-				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
-				-->
-			  </div>
-			</li>
-		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
-		  </ul>
-		</nav>
+    <!-- nav -->
+    <div id="navbarContainer">
+      <div class="navbar">
+        <a class="navlink" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Games<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+            <a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
+            <a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
+            <a class = "dropdown-item" href="amalgama.html">AmalgamA</a>
+            <a class = "dropdown-item" href="angkhorror.html">Angkhorror</a>
+            <a class = "dropdown-item" href="game-prototypes.html">Game Prototypes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Projects<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+          <a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+          <a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+          <a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+          <a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+          <a class = "dropdown-item" href="starsky.html">Starsky</a>
+          <a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+          <a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+          <a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+          <a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Other<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="open-collaborations.html">Open Collaborations</a>
+          <a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
+          <a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
+          <!-- <a class = "dropdown-item" href="web-development.html">Web Development</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /nav -->   		
+		<!--
+			<div id="sidebar">
+				<a href="#introduction" class="sidelink">Introduction</a>
+				<a href="#rules" class="sidelink">What are weaving drafts?</a>
+				<a href="#rules-basics" class="sidelink-inner">Basics</a>
+				<a href="#rules-structure" class="sidelink-inner">Structure</a>
+				<a href="#rendering" class="sidelink">Coloring</a>
+				<a href="#cultural-evolution" class="sidelink">Cultural Evolution</a>
+				<a href="#beyond" class="sidelink">Beyond</a>
+				<a href="#gallery" class="sidelink">Gallery</a>
+		  	</div>
+		-->
 
 		<div id="body">
-		<div id="sidebar">
-			<a href="#introduction" class="sidelink">Introduction</a>
-			<a href="#rules" class="sidelink">What are weaving drafts?</a>
-			<a href="#rules-basics" class="sidelink-inner">Basics</a>
-			<a href="#rules-structure" class="sidelink-inner">Structure</a>
-			<a href="#rendering" class="sidelink">Coloring</a>
-			<a href="#cultural-evolution" class="sidelink">Cultural Evolution</a>
-			<a href="#beyond" class="sidelink">Beyond</a>
-			<a href="#gallery" class="sidelink">Gallery</a>
-		  </div>
+		
 		  <div id="main">
-			<h1>Digital Weaving</h1>
+			<div class="page-title">Digital Weaving</div>
+			<div class="page-subtitle">Solo (2020)</div>
 			<section id="introduction">
 			  <h2>Introduction</h2>
 				<p>
@@ -77,43 +99,36 @@
 			<section id="rules">
 			  <h2>What are weaving drafts?</h2>
 			  <h3 id="rules-basics">Basics</h3>
-				  <img style="width:30%; padding-left:2%;" align="right" src="weaving-img\draft-binary-code.png" caption="with luminosity cycle"></img>
+				  <img style="width:300px; padding-left:2%;" align="right" src="weaving-img\draft-binary-code.png" caption="with luminosity cycle"></img>
 				  <p>
 					Looms (of the kind this emulates) have horizontal and vertical threads; let's say the horizontal ones are black, the vertical ones are white. A weaving draft is a diagram that describes which thread in on top (and thus visible) at each crossing. The best way to understand it is visually!
 				  </p>
 				  <p>
-					There are three elements to the weaving draft:
-					<ul>
-						<li>Horizontal array (or warp threads), at the top;</li>
-						<li>Vertical array (or weft threads), on the right;</li>
-						<li>Motif (or tie-up), on the upper right.</li>
-					</ul>
-					These three elements determine the woven pattern, on the bottom left.
+					There are three elements to the weaving draft: the <b>horizontal array</b> (or warp threads), at the top; the <b>vertical array</b> (or weft threads), on the right; the <b>motif</b> (or tie-up), on the upper right; together, they fully determine the woven pattern, on the bottom left.
 				  </p>
 				  <p>
-					The horizontal and vertical arrays have exactly one "black" square per column and row, respectively. The motif can be any combination of black and white squares. As you can see (I hope) by following the picture on the right. You start in any square of the pattern, and look at the black square in the horizontal and vertical arrays (as shown by the red and blue lines, respectively). Then, you see you send horizontal and vertical beams from the arrays and see where they intersect in the motif.
+					The <b>horizontal and vertical arrays</b> have exactly one "black" square per column and row, respectively. The motif can be any combination of black and white squares. As you can see (I hope) by following the picture on the right. You start in any square of the pattern, and look at the black square in the horizontal and vertical arrays (as shown by the red and blue lines, respectively). Then, you see you send horizontal and vertical beams from the arrays and see where they intersect in the motif.
 					The black square of the pattern leads to a black square on the motif, and the white square on the pattern leads to a white square on the motif. You can see, then, how the three elements determine the final woven pattern.
 				  </p>
 				  <p>
-					The thing I love about this system is that it has a clear element of "information compression". If you make the arrays and motif large enough, you can determine the color of every single square of the pattern, so you could represent any picture with it. The interest comes in when you reduce the sizes. Now, you can't represent every picture; if your pattern is large enough, it means that some squares are reused <i>somewhere</i>. It is not always predictable where, and that's where the fun lies! You play around with the elements and see what comes up.  
+					The thing I love about this system is that it has a clear element of "information compression". If you make the arrays and motif large enough, you can the color of each square individually, so you could represent any picture with it. The interest comes in when you reduce the sizes. Now, you can't represent every picture; if your pattern is large enough, it means that some squares are reused <b>somewhere</b>. It is not always predictable where, and that's where the fun begins! You play around with the elements and see what comes up.  
 				  </p>
 			  <h3 id="rules-structure">Structure</h3>
 				  <p>
-				To my own system (different from Glassner's), I add two others:
-				<ul>
-					<li>Unit;</li>
-					<li>Symmetry String.</li>
-				</ul>
-				<img style="width:30%; padding-left:2%; padding-top:1%;" align="right" src="weaving-img\draft-binary-unit.png" caption="with luminosity cycle"></img>
-				The <i>unit</i> is simply a small pattern on the array. This unit is repeated throughout, but transformed. You can see it the figure to the right, where I highlight three occurrences of the unit.
-				The red pattern, on the left, is the basic unit. The blue pattern, on the center, is reflected across the y-axis. The green pattern, on the right, is reflected across the x-axis. Rotations also occur, as well as both reflections. 
-				The <i>symmetry string</i> is simply a string of characters that describes how the unit is transformed to make the full array. In this example, it is "NRYNXY" (N=normal, R=rotated, X=reflected across x, Y=reflected across y). This string itself can be symmetrical (not the same as a palindrome).
-			  </p>
-			  <div style="text-align:center;">
-				<img style="padding:1%;" align="center" width="25%" src="weaving-img/draft.png"  />
-			  </div>
-			  <!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor1.png" caption="!FIXME"></img></div> -->
-			<hr></section>
+					<img style="width:300px; padding-left:2%; padding-top:1%;" align="right" src="weaving-img\draft-binary-unit.png" caption="with luminosity cycle"></img>
+					To my own system (extending Glassner's), I add two others: the <b>Unit</b> and the <b>Symmetry String</b>.
+					
+					The <i>unit</i> is simply a small pattern on the array. This unit is repeated throughout, but transformed. You can see it the figure to the right, where I highlight three occurrences of the unit.
+					The red pattern, on the left, is the basic unit. The blue pattern, on the center, is reflected across the y-axis. The green pattern, on the right, is reflected across the x-axis. Rotations also occur, as well as both reflections. 
+					The <i>symmetry string</i> is simply a string of characters that describes how the unit is transformed to make the full array. In this example, it is "NRYNXY" (N=normal, R=rotated, X=reflected across x, Y=reflected across y). This string itself can be symmetrical (not the same as a palindrome).
+			  	</p>
+			  	<div style="text-align:center;">
+					<img style="padding:1%;" align="center" width="400px" src="weaving-img/draft.png"  />
+			  	</div>
+			</section>
+
+			<hr>
+
 			<section id="rendering">
 			  <h2>Coloring</h2>
 				<p>
@@ -121,43 +136,47 @@
 					The obvious answer, of course, is with two colors - but this isn't very interesting. In real world weaving, you color the threads themselves - but the fun of a formal system is, in part, which constraints you can drop (or add).
 					I tried coloring the strands with alternating variations of the same color, but the result wasn't spectacular.
 				<div class="img-row">
-					<div class="img-row-item"> <img  src="weaving-img\color-binary1.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="weaving-img\color-binary2.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="weaving-img\color-binary4.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img  src="weaving-img\color-binary1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="weaving-img\color-binary2.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="weaving-img\color-binary4.png" caption="without luminosity cycle"></img></div>
 				</div>
 				</p>
 				<p>
 					After some poking around, I came across an interesting idea, and that is of <a href="https://en.wikipedia.org/wiki/Lightness" target="_blank">perceived lightness</a>. The basic idea is that different hues (like yellow, red, blue) have different "brightness" levels (I saw a grayscale photo of vegetables and fruits, which were still very distinguishable in grayscale). This is a bit different from HSL's lightness value, and there are difference definitions for how lightness is actually computed, but the rough idea is a good start!
 					The pictures that follow used completely random colors, except that ones with low lightness were chosen for the black squares and vice-versa for white squares.
 					<div class="img-row">
-						<div class="img-row-item"> <img  src="weaving-img\col-lum1.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item"> <img src="weaving-img\col-lum2.png" caption="without luminosity cycle"></img></div>
-						<div class="img-row-item"> <img src="weaving-img\col-lum3.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item iri3"> <img  src="weaving-img\col-lum1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri3"> <img src="weaving-img\col-lum2.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item iri3"> <img src="weaving-img\col-lum3.png" caption="without luminosity cycle"></img></div>
 					</div>
 				</p>
 				<p>
 					Not perfect, but certainly a solid start. And, of course, the hue of the palette also matters.
 					<div class="img-row">
-						<div class="img-row-item"> <img  src="weaving-img\col1.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item"> <img src="weaving-img\col2.png" caption="without luminosity cycle"></img></div>
-						<div class="img-row-item"> <img src="weaving-img\col3.png" caption="without luminosity cycle"></img></div>
-						<div class="img-row-item"> <img  src="weaving-img\col4.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item"> <img src="weaving-img\col6.png" caption="without luminosity cycle"></img></div>
-						<div class="img-row-item"> <img src="weaving-img\col5.png" caption="without luminosity cycle"></img></div>
-						<div class="img-row-item"> <img  src="weaving-img\col7.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item"> <img src="weaving-img\col8.png" caption="without luminosity cycle"></img></div>
-						<div class="img-row-item"> <img src="weaving-img\col9.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item iri3"> <img  src="weaving-img\col1.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri3"> <img src="weaving-img\col2.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item iri3"> <img src="weaving-img\col3.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item iri3"> <img  src="weaving-img\col4.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri3"> <img src="weaving-img\col6.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item iri3"> <img src="weaving-img\col5.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item iri3"> <img  src="weaving-img\col7.png" caption="with luminosity cycle"></img></div>
+						<div class="img-row-item iri3"> <img src="weaving-img\col8.png" caption="without luminosity cycle"></img></div>
+						<div class="img-row-item iri3"> <img src="weaving-img\col9.png" caption="without luminosity cycle"></img></div>
 					</div>
 				</p>
 				<p>
-					<img style="width:20%;" align="right" src="weaving-img\draft-color.png" caption="with luminosity cycle"></img>
+					<img style="width:300px;" align="right" src="weaving-img\draft-color.png" caption="with luminosity cycle"></img>
 					Adding a more controlled palette, but still largely clustered by lightness, the results are significantly better! Also, if you notice, these pictures seem to have somehow more structure. Where there would be large zones of black or white before, now there are colorful patterns. This is because I colored the motif rather than the threads, as seen to the right.
-					The final coloring system was:
-					<ul>
+				</p>
+				<p style="tab-size: 12;">
+					The coloring system I settled on was:
+					<ul style="padding-left:3em;" class="normal-text">
 						<li>Choose a color palette;</li>
 						<li>Distribute colors into two groups according to lightness (and drop ones too close to the middle);</li>
 						<li>Assign colors to the motif with light colors going to white squares and dark colors to the black.</li>
 					</ul>
+				</p>
+				<p>
 					You can see how this changes the initial black and white pattern - the figure on the right is the same as the one from the <a href="#introduction">introduction</a>, with added colors to pattern and motif.
 				</p>
 				<p>
@@ -181,10 +200,10 @@
 					It did, sometimes, create a more coherent sequence of patterns, but it wasn't reliable enough to be usable.
 				</p>
 				<div class="img-row">
-					<div class="img-row-item" style="width:20%;"> <img  src="weaving-img\cult1.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img  src="weaving-img\cult2.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img  src="weaving-img\cult3.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img  src="weaving-img\cult4.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="weaving-img\cult1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="weaving-img\cult2.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="weaving-img\cult3.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="weaving-img\cult4.png" caption="with luminosity cycle"></img></div>
 				</div>
 			  <h3>Approach 2: Dawkins' Culto-morphs</h3>
 				<p>
@@ -194,9 +213,9 @@
 					Basically, you encode the pattern in a single string, like genes in DNA, and variations are produce with random mutations. The downside to this is that it doesn't generalize to multiple agents as well (sure, you imagine an orgy-like reproduction, but it gets messy), but works great for single or pairs, where combining two strings it straightforward.
 				</p>
 				<div class="img-row">
-					<div class="img-row-item"> <img  src="weaving-img\morph4.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="weaving-img\morph3.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item"> <img src="weaving-img\morph5.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img  src="weaving-img\morph4.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="weaving-img\morph3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri3"> <img src="weaving-img\morph5.png" caption="without luminosity cycle"></img></div>
 				</div>
 				<p>
 					As you can see, there is a sense of style to the patterns. Two aspects warrant some comment: 
@@ -211,9 +230,10 @@
 				<p>
 					It was interesting to work on regardless, and opened some doors while closing others, so hopefully the next project involving cultural evolution will be more fruitful!
 				</p>
-			<hr></section>
+			</section>
 			
-			
+			<hr>
+
 			<section id="beyond">
 			  <h2>Beyond</h2>
 			  <p>
@@ -229,14 +249,11 @@
 			  <p>
 				Here's a little extra:
 					<div style="text-align:center;">
-						<img style="padding:1%;" align="center" width="25%" src="weaving-img/anim.gif"  />
+						<img style="padding:1%;" align="center" width="500px" src="weaving-img/anim.gif"  />
 					</div>
 			  </p>
-			<hr></section>
-			<section id="gallery">
-			  <h2>Gallery</h2>
-			  
-			<hr></section>
+			</section>
+			<hr>
 		  </div>
 		</div>
 	</body>

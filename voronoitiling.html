@@ -1,73 +1,85 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="stylesheet" href="gallerysheet.css">
-		<link rel="stylesheet" href="imagesheet.css">
-		<script src="gallerycode.js"></script>
+		<title>Voronoi Tilings - using voronoi diagrams and symmetry groups to generate tilings</title>
+		<meta name="description" content="Details for Voronoi Tilings project, an algorithmic art tool using voronoi diagrams and symmetry groups to generate tilings">
+	
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://www.jayvanhutten.com/fb_prev.jpg">
+		<script src="royalslider/jquery-1.8.3.min.js"></script>
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/layout.css" rel="stylesheet">
+		<link href="css/labels.css" rel="stylesheet">
+		<link href="css/jay.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+	
+		<link href="royalslider/royalslider.css" rel="stylesheet">
+		<link href="royalslider/skins/jay/rs-jay.css" rel="stylesheet">
+		
+		<link rel="shortcut icon" href="favicon.png">
+		
+		<script src="royalslider/config.js"></script>    
+		<script src="script-min.js"></script>
 	</head>
 	<body>
-
-
-
-
-
-
-		<nav id="navbar">
-		  <ul>
-			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
-			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
-				<a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
-				<a class = "dropdown-item" href="amalgama.html">AmalgamA (missing gallery)</a>
-				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes (incomplete)</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
-				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
-				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
-				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
-				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
-				<a class = "dropdown-item" href="starsky.html">Starsky</a>
-				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
-				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
-				<a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
-				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
-				<a class = "dropdown-item" href="web-development.html">Web Development</a>
-				<a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
-				<!--
-				<a class = "dropdown-item" href="">(empty) Reading Log</a>
-				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
-				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
-				-->
-			  </div>
-			</li>
-		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
-		  </ul>
-		</nav>
-
-
-
-
+    <!-- nav -->
+    <div id="navbarContainer">
+      <div class="navbar">
+        <a class="navlink" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Games<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+            <a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
+            <a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
+            <a class = "dropdown-item" href="amalgama.html">AmalgamA</a>
+            <a class = "dropdown-item" href="angkhorror.html">Angkhorror</a>
+            <a class = "dropdown-item" href="game-prototypes.html">Game Prototypes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Projects<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+          <a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+          <a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+          <a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+          <a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+          <a class = "dropdown-item" href="starsky.html">Starsky</a>
+          <a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+          <a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+          <a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+          <a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Other<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="open-collaborations.html">Open Collaborations</a>
+          <a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
+          <a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
+          <!-- <a class = "dropdown-item" href="web-development.html">Web Development</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /nav -->   		
+		<!--
+			<div id="sidebar">
+				<a href="#intro" class="sidelink">Introduction</a>
+				<a href="#rules" class="sidelink">How does it work?</a>
+				<a href="#rendering" class="sidelink">Coloring</a>
+				<a href="#related" class="sidelink">Related work</a>
+				<a href="#gallery" class="sidelink">Gallery</a>
+				<a href="#itchio" class="sidelink">Software</a>
+		  	</div>
+		-->
 
 		<div id="body">
-		  <div id="sidebar">
-			<a href="#intro" class="sidelink">Introduction</a>
-			<a href="#rules" class="sidelink">How does it work?</a>
-			<a href="#rendering" class="sidelink">Coloring</a>
-			<a href="#related" class="sidelink">Related work</a>
-			<a href="#gallery" class="sidelink">Gallery</a>
-			<a href="#itchio" class="sidelink">Software</a>
-		  </div>
 		  <div id="main">
-			<h1>Voronoi Tilings</h1>
+			<div class="page-title">Voronoi Tilings</div>
+			<div class="page-subtitle">Solo, released (2018)</div>
 			<section id="intro">
 			  <h2>Introduction</h2>
 				<p>
@@ -76,8 +88,8 @@
 				<p>
 					Then, I was looking into <a href="https://www.gregegan.net/" target="_blank"> Greg Egan</a>'s <a href="https://www.gregegan.net/ZENDEGI/ZENDEGI.html" target="_blank">Zendegi</a> and saw a comment by <a href="https://cs.uwaterloo.ca/~csk/" target="_blank">Craig Kaplan</a>, on <a href="https://en.wikipedia.org/wiki/Girih" target="_blank">Islamic Star Patterns</a>. This unveiled the huge amount of mathematical work done of Islamic Tilings and, in particular, I thought to apply <a href="https://en.wikipedia.org/wiki/Ernest_Hanbury_Hankin" target="_blank">Hankin</a><a href="https://dl.acm.org/doi/pdf/10.5555/1089508.1089538" target="_blank">'s method</a> to less regular tilings, like those generate by Voronoi diagrams! I had by this point taken more algorithmically heavy classes, so I was more comfortable with looking into <a href="https://en.wikipedia.org/wiki/Fortune%27s_algorithm" target="_blank">Fortune's algorithm</a> (which is very unique!) and things got going. Unfortunately, my idea didn't pan out at all,since the regularity of the tilings was more important than I expected.
 					<div class="img-row">
-						<div class="img-row-item"> <img src="voronoitiling-img\islamic-regular.png" caption="islamic star pattern on a regular tiling"></img></div>
-						<div class="img-row-item"> <img src="voronoitiling-img\islamic-irregular.png" caption="islamic star pattern on an irregular tiling"></img></div>
+						<div class="img-row-item iri2"> <img src="voronoitiling-img\islamic-regular.png" caption="islamic star pattern on a regular tiling"></img></div>
+						<div class="img-row-item iri2"> <img src="voronoitiling-img\islamic-irregular.png" caption="islamic star pattern on an irregular tiling"></img></div>
 					</div>
 				</p>
 				<p>
@@ -86,16 +98,18 @@
 				<!-- <div style="margin:auto; text-align:center;"><img src="celticknot-img/hor2.png" caption="!FIXME"></img></div> -->
 			<hr></section>
 			<section id="rules">
-			  <h2>How does it work?</h2>
-			  
-			  <h3> Voronoi diagram</h3>
-			  <img align="right" src="voronoitiling-img\voronoi.png" caption="with luminosity cycle"></img>
-			  <p>
-				A voronoi tiling is a pretty elegant idea - you start with a set of generator-points, and the diagram divides the plane by the set of points that are closer to the generator than any one. It's a kind of nearest-neighbor, but the results are pretty cool!
-			  </p>
-			  <p>
-				To generate a symmetrical tiling, you just generate to use a symmetrical distribution of generator-points. To do this, enter wallpaper groups.
-			  </p>
+				<h2>How does it work?</h2>
+			  	<h3> Voronoi diagram</h3>
+			  	
+				<p>
+					A voronoi tiling is a pretty elegant idea - you start with a set of generator-points, and the diagram divides the plane by the set of points that are closer to the generator than any one. It's a kind of nearest-neighbor, but the results are pretty cool!
+				</p>
+				<p>
+					To generate a symmetrical tiling, you just generate to use a symmetrical distribution of generator-points. To do this, enter wallpaper groups.
+				</p>
+				<div class="img-row">
+					<div class="img-row-item iri1"> <img src="voronoitiling-img\voronoi.png" caption="with luminosity cycle"></img></div>
+				</div>
 			  <h3>Wallpaper Groups</h3>
 			  <p>
 				Wallpaper Groups are 17 different ways of transforming set of points symmetrically, in a way that extends infinitely in every direction. You typically start from a simple triangle and then copy it, rotate it, mirror it, and so on, throughout the plain.
@@ -117,25 +131,23 @@
 					The easiest way to color a voronoi tiling is to assing a color to each of the points, and let the wallpaper groups take care of the rest. You can also change the color whenever you transform the triangle. This was harder to work with, but some of the examples could be pretty cool, as you can see below.
 				</p>
 				<div class="img-row">
-					<div class="img-row-item" style="width:20%;"> <img  src="voronoitiling-img\scol1.png" caption="with luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img src="voronoitiling-img\scol2.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img src="voronoitiling-img\scol3.png" caption="without luminosity cycle"></img></div>
-					<div class="img-row-item" style="width:20%;"> <img src="voronoitiling-img\scol4.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img  src="voronoitiling-img\scol1.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="voronoitiling-img\scol2.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="voronoitiling-img\scol3.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="voronoitiling-img\scol4.png" caption="without luminosity cycle"></img></div>
 				</div>
 				<p>
 					Conway et. al's book <a href="https://www.amazon.com/Symmetries-Things-John-H-Conway/dp/1568812205" target="_blank">The Symmetry of Things</a> has a pretty good treatment of frieze and wallpaper groups, and also color symmetry, but I confess I haven't look deeply into it at didn't implement it at the time. Instead, I contented myself with coloring the initial points (on the triangle) and let that be.
-					<div class="img-row">
-					<!--<div class="img-row-item"> <img src="voronoitiling-img\col1.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item"> <img src="voronoitiling-img\col2.png" caption="without luminosity cycle"></img></div>
-						<div class="img-row-item"> <img src="voronoitiling-img\col3.png" caption="without luminosity cycle"></img></div>
-						<div class="img-row-item"> <img src="voronoitiling-img\col7.png" caption="without luminosity cycle"></img></div>-->
-						<div class="img-row-item" style="width:20%;"> <img src="voronoitiling-img\col4.png" caption="without luminosity cycle"></img></div><br>
-						<div class="img-row-item" style="width:20%;"> <img src="voronoitiling-img\col5.png" caption="with luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:20%;"> <img src="voronoitiling-img\col6.png" caption="without luminosity cycle"></img></div>
-						<div class="img-row-item" style="width:20%;"> <img src="voronoitiling-img\col8.png" caption="without luminosity cycle"></img></div>
-				</div>
 				</p>
-			<hr></section>
+				<div class="img-row">
+					<div class="img-row-item iri4"> <img src="voronoitiling-img\col4.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="voronoitiling-img\col5.png" caption="with luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="voronoitiling-img\col6.png" caption="without luminosity cycle"></img></div>
+					<div class="img-row-item iri4"> <img src="voronoitiling-img\col8.png" caption="without luminosity cycle"></img></div>
+				</div>
+			</section>
+
+			<hr>
 			
 			<section id="related">
 			  <h2>Related Work</h2>
@@ -149,7 +161,19 @@
 			<hr></section>
 			<section id="gallery">
 			  <h2>Gallery</h2>
-			  
+			  <div class="img-row">
+				<div class="img-row-item iri3"> <img src="voronoitiling-img\col10.png" caption="without luminosity cycle"></img></div>
+				<div class="img-row-item iri3"> <img src="voronoitiling-img\gray2.png" caption="without luminosity cycle"></img></div>
+				<div class="img-row-item iri3"> <img src="voronoitiling-img\col11.png" caption="with luminosity cycle"></img></div>
+				
+				<div class="img-row-item iri3"> <img src="voronoitiling-img\weird1.png" caption="with luminosity cycle"></img></div>
+				<div class="img-row-item iri3"> <img src="voronoitiling-img\col9.png" caption="with luminosity cycle"></img></div>
+				<div class="img-row-item iri3"> <img src="voronoitiling-img\gray1.png" caption="without luminosity cycle"></img></div>
+				
+				<div class="img-row-item iri3"> <img src="voronoitiling-img\col12.png" caption="without luminosity cycle"></img></div>
+				<div class="img-row-item iri3"> <img src="voronoitiling-img\gray3.png" caption="without luminosity cycle"></img></div>
+				<div class="img-row-item iri3"> <img src="voronoitiling-img\col14.png" caption="without luminosity cycle"></img></div>
+			</div>
 			<hr></section>
 			<section id="itchio">
 				<h3>Software</h3>

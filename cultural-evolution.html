@@ -1,54 +1,72 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="stylesheet" href="gallerysheet.css">
-		<link rel="stylesheet" href="imagesheet.css">
-		<script src="gallerycode.js"></script>
+		<title>Thoughts on cultural evolution</title>
+		<meta name="description" content="General thoughts about cultural evolutions as it relates to computer simulations and incorporation into video games.">
+	
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://www.jayvanhutten.com/fb_prev.jpg">
+		<script src="royalslider/jquery-1.8.3.min.js"></script>
+		<script src="royalslider/jquery.royalslider.min.js"></script>
+		
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/layout.css" rel="stylesheet">
+		<link href="css/labels.css" rel="stylesheet">
+		<link href="css/jay.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+	
+		<link href="royalslider/royalslider.css" rel="stylesheet">
+		<link href="royalslider/skins/jay/rs-jay.css" rel="stylesheet">
+		
+		<link rel="shortcut icon" href="favicon.png">
+		
+		<script src="royalslider/config.js"></script>    
+		<script src="script-min.js"></script>
 	</head>
 	<body>
-
-		<nav id="navbar">
-		  <ul>
-			<li class="navlink"><a class="navanchor" href="index.html">Home</a></li>
-			<li class="navlink"><a class="navanchor" href="#">Games<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
-				<a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
-				<a class = "dropdown-item" href="amalgama.html">AmalgamA (missing gallery)</a>
-				<a class = "dropdown-item" href="game-prototypes.html">Game Prototypes (incomplete)</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Projects<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
-				<a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
-				<a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
-				<a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
-				<a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
-				<a class = "dropdown-item" href="starsky.html">Starsky</a>
-				<a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
-				<a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
-				<a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
-				<a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
-			  </div>
-			</li>
-			<li class="navlink"><a class="navanchor" href="#">Other<span>&#9658;</span></a>
-			  <div class="dropdown-content">
-				<a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
-				<a class = "dropdown-item" href="web-development.html">Web Development</a>
-				<a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
-				<!--
-				<a class = "dropdown-item" href="">(empty) Reading Log</a>
-				<a class = "dropdown-item" href="">(empty) Protein Quality (AA Composition)</a>
-				<a class = "dropdown-item" href="">(empty) Circle of Fifths</a>
-				-->
-			  </div>
-			</li>
-		  <li class="navlink"><a class="navanchor" href="about.html">About</a></li>
-		  </ul>
-		</nav>
-
+    <!-- nav -->
+    <div id="navbarContainer">
+      <div class="navbar">
+        <a class="navlink" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Games<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+            <a class = "dropdown-item" href="anarchima.html">Anarchima (in development)</a>
+            <a class = "dropdown-item" href="themagicflute.html">The Magic Flute</a>
+            <a class = "dropdown-item" href="amalgama.html">AmalgamA</a>
+            <a class = "dropdown-item" href="angkhorror.html">Angkhorror</a>
+            <a class = "dropdown-item" href="game-prototypes.html">Game Prototypes</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Projects<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="weaving.html">Digital Weaving</a>
+          <a class = "dropdown-item" href="chineselattice.html">Chinese Lattice Windows</a>
+          <a class = "dropdown-item" href="4dcrosssection.html">4D Cross-section</a>
+          <a class = "dropdown-item" href="largerthanlifeca.html">Larger-than-Life Cellular Automaton (missing gallery)</a>
+          <a class = "dropdown-item" href="voronoitiling.html">Voronoi Tiling(missing gallery)</a>
+          <a class = "dropdown-item" href="starsky.html">Starsky</a>
+          <a class = "dropdown-item" href="erosion.html">Fluvial Erosion</a>
+          <a class = "dropdown-item" href="apolloniangasket.html">Apollonian Flower(missing gallery) </a>
+          <a class = "dropdown-item" href="celticknot.html">Celtic Knots (missing gallery) </a>
+          <a class = "dropdown-item" href="shader-experiments.html">Shader Experiments</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn navlink">Other<div class="caret">&#9658;</div></button>
+          <div class="dropdown-content">
+          <a class = "dropdown-item" href="open-collaborations.html">Open Collaborations</a>
+          <a class = "dropdown-item" href="cultural-evolution.html">Cultural Evolution</a>
+          <a class = "dropdown-item" href="coolpeople.html">Cool people (perennially incomplete)</a>
+          <!-- <a class = "dropdown-item" href="web-development.html">Web Development</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /nav -->   
 		<div id="body">
+			<!--
 			<div id="sidebar">
 				<a href="#introduction" class="sidelink">Introduction</a>
 				<a href="#iterated-learning" class="sidelink">Iterated Learning</a>
@@ -62,12 +80,13 @@
 					<a href="#epic-poetry" class="sidelink-inner">Epic Poetry</a>
 					<a href="#shadowplay" class="sidelink-inner">Shadowplay</a>
 			</div>
+			-->
 			<div id="main">
-			<h1>Cultural Evolution</h1>
+				<div class="page-title">Cultural Evolution</div>
 				<section id="introduction">
 					<h2>Introduction</h2>
 					<p>
-						This is one of my main interests, at the moment, especially when applied to video games, but also more generally. It basically started when I took a Complex Networks course in university (about computational networks, multi-agent simulations on them, and game theory), and then read the book <a href="" target="_blank">Evolution of Language</a>, an edited set of paper on the evolution of language. 
+						This is was one of my main interests, between 2016 and 2020, but it's still something that I want to explore deeply at some point, especially when applied to video games, but also more generally. It basically started when I took a Complex Networks course in university (about computational networks, multi-agent simulations on them, and game theory), and then read the book <a href="" target="_blank">Evolution of Language</a>, an edited set of paper on the evolution of language. 
 						This book had a huge influence on me, in particular the chapter by <a href="https://en.wikipedia.org/wiki/Simon_M._Kirby" target="_blank">Simon Kirby</a> on an <a href="http://www.lel.ed.ac.uk/~kenny/publications/smith_03_iterated.pdf" target="_blank">Iterated Learning Model</a> where fairly simple rules led to the creation of structured (recursive) language. 
 					</p>
 					<p>
@@ -172,16 +191,12 @@
 					<p>
 						What I love about it is that it is that it is not only a very clear example of art being tied to political relations, but it is also a fairly specificialized form that nonetheless finds its own local flavor wherever it flourished.
 					</p>
-					<div style="display:flex; flex-direction:row; width:50%; margin:auto;">
-						<div style="width:44.15%;">
-							<a href="https://en.wikipedia.org/wiki/Persian_miniature" target="_blank"><img style="padding:1%; max-height:50%; width:100%;" src="https://upload.wikimedia.org/wikipedia/commons/5/50/Baysunghur%27s_Shahname_001.jpg" caption="persian miniature painting"></img></a>
-							<a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fbrewminate.com%2Fthe-art-of-miniature-painting-in-the-medieval-east%2F&psig=AOvVaw3iFXbv8bWQ187xs9rKB1xo&ust=1614868310421000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPDVjcGrlO8CFQAAAAAdAAAAABBo" target="_blank"><img style="padding:1%; max-height:100%; width:100%;" src="https://brewminate.com/wp-content/uploads/2017/03/ArtMiniature03.jpg" caption="chinese miniature painting"></img></a>
-							
-						</div>
-						<div style="width:60%;">
-							<a href="https://www.artisera.com/blogs/expressions/miniature-paintings-of-india-chronicling-history-through-the-ages" target="_blank"><img style="padding:1%; max-height:100%; width:100%;" src="http://cdn.shopify.com/s/files/1/0849/4704/files/Miniature_FB-Size-Image.jpg?v=1472470034" caption="mughal miniature painting" ></img></a>
-							<a href="https://en.wikipedia.org/wiki/Ottoman_miniature" target="_blank"><img style="padding:1%; max-height:100%; width:100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/OttomanJanissariesAndDefendingKnightsOfStJohnSiegeOfRhodes1522.jpg/1024px-OttomanJanissariesAndDefendingKnightsOfStJohnSiegeOfRhodes1522.jpg" caption="ottoman miniature painting"></img></a>
-						</div>
+					<div class="img-row">
+						<div class="img-row-item iri2"> <a href="https://www.artisera.com/blogs/expressions/miniature-paintings-of-india-chronicling-history-through-the-ages" target="_blank"><img src="http://cdn.shopify.com/s/files/1/0849/4704/files/Miniature_FB-Size-Image.jpg?v=1472470034" caption="mughal miniature painting" ></img></a></div>
+						
+						<div class="img-row-item iri2"> <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fbrewminate.com%2Fthe-art-of-miniature-painting-in-the-medieval-east%2F&psig=AOvVaw3iFXbv8bWQ187xs9rKB1xo&ust=1614868310421000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPDVjcGrlO8CFQAAAAAdAAAAABBo" target="_blank"><img src="https://brewminate.com/wp-content/uploads/2017/03/ArtMiniature03.jpg" caption="chinese miniature painting"></img></a></div>
+						<div class="img-row-item iri2"> <a href="https://en.wikipedia.org/wiki/Persian_miniature" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Baysunghur%27s_Shahname_001.jpg" caption="persian miniature painting"></img></a></div>
+						<div class="img-row-item iri2"> <a href="https://en.wikipedia.org/wiki/Ottoman_miniature" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/OttomanJanissariesAndDefendingKnightsOfStJohnSiegeOfRhodes1522.jpg/1024px-OttomanJanissariesAndDefendingKnightsOfStJohnSiegeOfRhodes1522.jpg" caption="ottoman miniature painting"></img></a></div>
 					</div>
 					
 					<h3 id="epic-poetry">Epic poetry</h3>
