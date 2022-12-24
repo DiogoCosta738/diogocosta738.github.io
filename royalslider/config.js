@@ -48,7 +48,7 @@ jQuery(document).ready(function($)
 
     
 
-    var slider = $(".royalSlider").data('royalSlider'),
+    var slider = $(".royalSlider2").data('royalSlider'),
       prevSlideVideo,
       playSlideVideo = function() {
         if(prevSlideVideo) {
@@ -64,11 +64,10 @@ jQuery(document).ready(function($)
         
       };
   slider.ev.on('rsAfterSlideChange', playSlideVideo);
-  playSlideVideo();
   
   var slider1 = $(".royalSlider1").data('royalSlider'),
       prevSlideVideo,
-      playSlideVideo = function() {
+      playSlideVideo1 = function() {
         if(prevSlideVideo) {
           prevSlideVideo.pause();
         }
@@ -81,6 +80,5 @@ jQuery(document).ready(function($)
         }
         
       };
-  slider1.ev.on('rsAfterSlideChange', playSlideVideo);
-  playSlideVideo();
+  slider1.ev.on('rsAfterSlideChange', playSlideVideo1);
 });
